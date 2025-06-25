@@ -8,14 +8,20 @@
 import "@/style/style.css";
 import globalStyle from "@/style/style";
 
+// Import for the components
+import Home from "@/Components/Pages/Home";
+
 // style for the Hero component
 const HeroStyle = {
-    Hero: "bg-green-500"
+    Hero: `flex flex-col bg-green-500 w-[70%]`
 }
+
 
 export default function Hero() {
     return (
-        <div className={HeroStyle.Hero}>Hero</div>
+        <div className={HeroStyle.Hero}>
+            <Home />
+        </div>
     )
 }
 

@@ -14,6 +14,7 @@ const globalStyle = {
     FlexRowContainer: "container mx-auto flex flex-row",
     FlexColContainer: "container mx-auto flex flex-col",
     FullWidthScreenContainer: "w-full",
+    FullHeightScreenContainer: "h-full",
 }
 
 export default globalStyle;
