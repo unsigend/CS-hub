@@ -1,12 +1,32 @@
-# React + Vite
+# CS Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive resource hub for Computer Science (CS) Resources and Road Maps, featuring curated learning paths and Road Maps. Also include some practical projects.
 
-Currently, two official plugins are available:
+## 📚 What's Inside
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Full-Stack Development Roadmap** - Complete guide from frontend to backend
+- **Low-Level Systems Roadmap** - Deep dive into systems programming and architecture
+- **Curated CS Resources** - Essential tools, tutorials, and references
+- **Interactive Learning Paths** - Step-by-step guidance for different specializations
 
-## Expanding the ESLint configuration
+## 🛠️ Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** - Frontend framework
+- **Tailwind CSS** - Styling and responsive design
+- **Static Site** - Fast and lightweight
+
+## 📖 Usage
+
+Navigate through different sections to explore:
+- Road Maps tailored to your learning goals
+- Curated resources for each topic
+- Progress tracking for your learning journey
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+- Add new resources
+- Improve existing Road Maps
+- Fix bugs or enhance UI/UX
+
+
