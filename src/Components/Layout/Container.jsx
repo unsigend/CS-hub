@@ -18,7 +18,7 @@ import Hero from "@/Components/Content/Hero";
 
 // style for the Container component
 const ContainerStyle = {
-    Container: `${globalStyle.FlexRowContainer} bg-blue-500`
+    Container: `${globalStyle.FlexRowContainer} bg-blue-500 justify-between`
 }
 
 export default function Container() {
