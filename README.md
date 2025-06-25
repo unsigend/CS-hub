@@ -28,5 +28,3 @@ Contributions are welcome! Feel free to:
 - Add new resources
 - Improve existing Road Maps
 - Fix bugs or enhance UI/UX
-
-

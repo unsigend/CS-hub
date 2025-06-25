@@ -1,0 +1,9 @@
+/*
+ * @author: Qiu Yixiang
+ * @date: 2025-06-24
+ * @description: Main CSS file for the CS-hub project
+ * @note: This file is used to import the tailwindcss library 
+ * and apply the tailwindcss classes to the project
+ */
+
+@import "tailwindcss";
