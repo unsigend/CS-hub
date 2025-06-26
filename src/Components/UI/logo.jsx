@@ -14,7 +14,7 @@ import globalStyle from "@/style/style";
  * @style: Logo is build based on the tailwind css
  *         Using white and black as the theme color
  */
-// style for the Logo component
+
 const LogoStyle = {
     Logo: `
         flex items-center gap-2
@@ -30,7 +30,7 @@ const LogoStyle = {
     `,
     LogoFrame: `
         flex items-center justify-center
-        w-8 h-8
+        w-9 h-9
         bg-black
         text-white font-bold text-md
         rounded
