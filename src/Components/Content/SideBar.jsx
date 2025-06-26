@@ -8,28 +8,29 @@
 import "@/style/style.css";
 import globalStyle from "@/style/style";
 
+// Import for the data
+import CategoryList from "@/data/Category";
+
 // Import for the components
 import Category from "@/Components/Content/Category";
 
 
-// Category List
-const CategoryList = [
-
-]
 
 /**
  * @description: Style for the SideBar component
- * @style: Fixed sidebar with clean professional styling
- *         Similar to documentation site navigation
+ * @style: Fixed positioned sidebar that stays in place
+ *         Independent of page scrolling with its own internal scroll
  */
 const SideBarStyle = {
-
+    SideBar: "",
 }
 
 export default function SideBar() {
     return (
-        <div>
-            SideBar
+        <div className={SideBarStyle.SideBar}>
+            {CategoryList.map((category) => (
+                <Category key={category.ID} category={category} />
+            ))}
         </div>
     )
 }

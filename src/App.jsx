@@ -16,7 +16,6 @@ import NavBar from "@/Components/Layout/NavBar";
 import Container from "@/Components/Layout/Container";
 import Footer from "@/Components/Layout/Footer";
 
-
 export default function App() {
   return (
     <div>

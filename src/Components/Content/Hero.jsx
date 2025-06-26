@@ -13,18 +13,18 @@ import Home from "@/Components/Pages/Home";
 
 /**
  * @description: Style for the Hero component
- * @style: Clean main content area that scrolls independently
- *         No width constraints as Container handles the layout
+ * @style: Full width and height main content with independent scrolling
+ *         Takes all available space next to fixed sidebar
  */
 const HeroStyle = {
-
+    Hero: "",
 }
 
 
 export default function Hero() {
     return (
-        <div>
-            Hero
+        <div className={HeroStyle.Hero}>
+            <Home />
         </div>
     )
 }

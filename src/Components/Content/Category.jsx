@@ -15,13 +15,13 @@ import globalStyle from "@/style/style";
  *         Each category is a clickable card with hover effects
  */
 const CategoryStyle = {
-
+    Category: "",
 }
 
-export default function Category() {
+export default function Category({ category }) {
     return (
-        <div>
-            Category
+        <div className={CategoryStyle.Category}>
+            {category.name}
         </div>
     )
 }

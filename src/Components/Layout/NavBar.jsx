@@ -21,12 +21,12 @@ import NavList from "@/Components/UI/NavList";
  *         Hides on scroll down, shows on scroll up
  */
 const NavBarStyle = {
-
+    NavBar: "",
 }
 
 export default function NavBar() {
     return (
-        <div>
+        <div className={NavBarStyle.NavBar}>
             NavBar
         </div>
     )

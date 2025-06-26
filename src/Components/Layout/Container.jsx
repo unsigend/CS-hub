@@ -18,17 +18,18 @@ import Hero from "@/Components/Content/Hero";
 
 /**
  * @description: Style for the Container component
- * @style: Flex row layout with SideBar and Hero close together
- *         Clean and organized structure with proper spacing
+ * @style: Container with left margin to account for fixed sidebar
+ *         Hero takes full remaining space
  */
 const ContainerStyle = {
-
+    Container: "",
 }
 
 export default function Container() {
     return (
-        <div>
-            Container
+        <div className={ContainerStyle.Container}>
+            <SideBar />
+            <Hero />
         </div>
     )
 }
