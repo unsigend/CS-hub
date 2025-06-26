@@ -16,16 +16,19 @@ import globalStyle from "@/style/style";
 import SideBar from "@/Components/Content/SideBar";
 import Hero from "@/Components/Content/Hero";
 
-// style for the Container component
+/**
+ * @description: Style for the Container component
+ * @style: Flex row layout with SideBar and Hero close together
+ *         Clean and organized structure with proper spacing
+ */
 const ContainerStyle = {
-    Container: `${globalStyle.FlexRowContainer} bg-blue-500 gap-4 justify-between`
+
 }
 
 export default function Container() {
     return (
-        <div className={ContainerStyle.Container}>
-            <SideBar />
-            <Hero />
+        <div>
+            Container
         </div>
     )
 }

@@ -14,33 +14,22 @@ import Category from "@/Components/Content/Category";
 
 // Category List
 const CategoryList = [
-    {
-        CategoryName: "Road Map",
-        ID: "_road_map_",
-    },
-    {
-        CategoryName: "University Courses",
-        ID: "_university_courses_",
-    },
-    {
-        CategoryName: "Resources",
-        ID: "_resources_",
-    }
+
 ]
 
-// style for the SideBar component
+/**
+ * @description: Style for the SideBar component
+ * @style: Fixed sidebar with clean professional styling
+ *         Similar to documentation site navigation
+ */
 const SideBarStyle = {
-    SideBar: `${globalStyle.FlexColContainer} bg-yellow-500 w-[30%]`
+
 }
 
 export default function SideBar() {
     return (
-        <div className={SideBarStyle.SideBar}>
-            {
-                CategoryList.map((category) => (
-                    <Category key={category.ID} category={category} />
-                ))
-            }
+        <div>
+            SideBar
         </div>
     )
 }

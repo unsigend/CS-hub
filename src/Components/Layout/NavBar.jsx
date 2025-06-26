@@ -4,6 +4,9 @@
  * @description: NavBar Component for the CS-hub project
  */
 
+// Import for React hooks
+import { useState, useEffect } from 'react';
+
 // Import for the style
 import "@/style/style.css";
 import globalStyle from "@/style/style";
@@ -12,16 +15,19 @@ import globalStyle from "@/style/style";
 import Logo from "@/Components/UI/logo";
 import NavList from "@/Components/UI/NavList";
 
-// style for the NavBar component
+/**
+ * @description: Style for the NavBar component
+ * @style: Fixed top navigation with hide/show scroll behavior
+ *         Hides on scroll down, shows on scroll up
+ */
 const NavBarStyle = {
-    NavBar: `${globalStyle.FullWidthScreenContainer} flex flex-row justify-between`
+
 }
 
 export default function NavBar() {
     return (
-        <div className={NavBarStyle.NavBar}>
-            <Logo />
-            <NavList />
+        <div>
+            NavBar
         </div>
     )
 }

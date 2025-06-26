@@ -10,11 +10,13 @@ import globalStyle from "@/style/style";
 
 // style for the Home component
 const HomeStyle = {
-    Home: `bg-green-500`
+    Home: ``
 }
 
 export default function Home() {
     return (
-        <div className={HomeStyle.Home}>Home This is the Home Page</div>
+        <div>
+            Home Page
+        </div>
     )
 }

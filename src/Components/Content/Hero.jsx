@@ -11,16 +11,20 @@ import globalStyle from "@/style/style";
 // Import for the components
 import Home from "@/Components/Pages/Home";
 
-// style for the Hero component
+/**
+ * @description: Style for the Hero component
+ * @style: Clean main content area that scrolls independently
+ *         No width constraints as Container handles the layout
+ */
 const HeroStyle = {
-    Hero: `flex flex-col bg-green-500 w-[70%]`
+
 }
 
 
 export default function Hero() {
     return (
-        <div className={HeroStyle.Hero}>
-            <Home />
+        <div>
+            Hero
         </div>
     )
 }

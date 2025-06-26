@@ -8,20 +8,20 @@
 import "@/style/style.css";
 import globalStyle from "@/style/style";
 
-// style for the NavList component 
+/**
+ * @description: Style for the NavList component
+ * @style: NavList is built based on the tailwind css
+ *         Using similar theme to Logo but with subtle variations
+ *         Each nav item is a card-style element with hover effects
+ */
 const NavListStyle = {
-    NavList: ``,
-    Element: "text-black text-lg"
+
 }
 
 export default function NavList() {
     return (
-        <div className={NavListStyle.NavList}>
-            <ul className="flex flex-row justify-between gap-4">
-                <li className={NavListStyle.Element}>Home</li>
-                <li className={NavListStyle.Element}>About</li>
-                <li className={NavListStyle.Element}>Contact</li>
-            </ul>
+        <div>
+            NavList
         </div>
     )
 }

@@ -10,12 +10,14 @@ import globalStyle from "@/style/style";
 
 // style for the Footer component
 const FooterStyle = {
-    Footer: "bg-purple-500"
+    Footer: ""
 }
 
 // Footer component
 export default function Footer() {
     return (
-        <div className={FooterStyle.Footer}>Footer</div>
+        <div>
+            Footer
+        </div>
     )
 }

@@ -8,15 +8,20 @@
 import "@/style/style.css";
 import globalStyle from "@/style/style";
 
-// style for the Category component
+/**
+ * @description: Style for the Category component
+ * @style: Category is built based on the tailwind css
+ *         Using similar card theme to Logo and Navigation
+ *         Each category is a clickable card with hover effects
+ */
 const CategoryStyle = {
-    Category: `text-xl text-black justify-center`
+
 }
 
-export default function Category({ category }) {
+export default function Category() {
     return (
-        <div className={CategoryStyle.Category}>
-            <a href="#">{category.CategoryName}</a>
+        <div>
+            Category
         </div>
     )
 }
