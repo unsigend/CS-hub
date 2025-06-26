@@ -22,7 +22,11 @@ import Hero from "@/Components/Content/Hero";
  *         Hero takes full remaining space
  */
 const ContainerStyle = {
-    Container: "",
+    Container: `flex flex-row
+    ml-64 mr-40
+    justify-center items-center
+    bg-gray-100
+    `,
 }
 
 export default function Container() {

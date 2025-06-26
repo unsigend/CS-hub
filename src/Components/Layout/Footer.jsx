@@ -10,7 +10,10 @@ import globalStyle from "@/style/style";
 
 // style for the Footer component
 const FooterStyle = {
-    Footer: ""
+    Footer: `flex flex-row
+    justify-around items-center
+    bg-gray-200
+    `,
 }
 
 // Footer component

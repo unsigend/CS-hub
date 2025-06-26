@@ -22,7 +22,11 @@ import Category from "@/Components/Content/Category";
  *         Independent of page scrolling with its own internal scroll
  */
 const SideBarStyle = {
-    SideBar: "",
+    SideBar: `flex flex-col 
+    justify-around items-center
+    fixed top-30 left-10
+    bg-gray-200
+    `,
 }
 
 export default function SideBar() {

@@ -17,7 +17,9 @@ import Home from "@/Components/Pages/Home";
  *         Takes all available space next to fixed sidebar
  */
 const HeroStyle = {
-    Hero: "",
+    Hero: `flex flex-col
+    
+    `,
 }
 
 
