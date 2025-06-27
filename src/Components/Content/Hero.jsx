@@ -9,7 +9,7 @@ import "@/style/style.css";
 import globalStyle from "@/style/style";
 
 // Import for the components
-import Home from "@/Components/Pages/Home";
+import HomePage from "@/Components/Pages/HomePage";
 
 /**
  * @description: Style for the Hero component
@@ -17,8 +17,7 @@ import Home from "@/Components/Pages/Home";
  *         Takes all available space next to fixed sidebar
  */
 const HeroStyle = {
-    Hero: `flex flex-col
-    
+    Hero: `flex flex-col mt-20
     `,
 }
 
@@ -26,7 +25,7 @@ const HeroStyle = {
 export default function Hero() {
     return (
         <div className={HeroStyle.Hero}>
-            <Home />
+            <HomePage />
         </div>
     )
 }

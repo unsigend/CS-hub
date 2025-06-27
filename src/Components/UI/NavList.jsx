@@ -11,6 +11,9 @@ import {  EqualApproximately, Github, Home } from "lucide-react";
 import "@/style/style.css";
 import globalStyle from "@/style/style";
 
+// Import for the data
+import global from "@/data/general";
+
 /**
  * @description: Style for the NavList component
  * @style: NavList is built based on the tailwind css
@@ -52,7 +55,8 @@ export default function NavList() {
                 <Home size={20}/>
                 Home
             </li>
-            <li className={NavListStyle.NavItem}>
+            <li className={NavListStyle.NavItem} 
+                onClick={() => window.open(global.GitHubLink, "_blank")}>
                 <Github size={20}/>
                 Github
             </li>

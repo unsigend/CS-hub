@@ -9,7 +9,6 @@ import { useState, useEffect } from 'react';
 
 // Import for the style
 import "@/style/style.css";
-import globalStyle from "@/style/style";
 
 // Import for the components
 import Logo from "@/Components/UI/logo";
@@ -21,19 +20,47 @@ import NavList from "@/Components/UI/NavList";
  *         Hides on scroll down, shows on scroll up
  */
 const NavBarStyle = {
-    NavBar: `flex flex-row
-    justify-around items-center
-    fixed top-0 left-0 right-0
-    bg-gray-200
-    fixed top-0
+    NavBar: "w-full fixed top-0 z-50 bg-white",
+    _NavBar: `w-[80%] mx-auto 
+    flex flex-row 
+    justify-between items-center
     `,
 }
-
+/**
+ * @description: NavBar Component for the CS-hub project
+ * @returns: NavBar component with scroll behavior
+ * @usage: NavBar is used in the Container component, 
+ * if the user scrolls down, the NavBar will hide, 
+ * if the user scrolls up, the NavBar will show
+ */
 export default function NavBar() {
+
+    // State for the scroll behavior
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
+
+    // Effect for the scroll behavior
+    useEffect(() => {
+        const ScrollHandler = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setIsVisible(false);
+            }else{
+                setIsVisible(true);
+            }
+            setLastScrollY(currentScrollY);
+        }
+        window.addEventListener("scroll", ScrollHandler);
+        return () => window.removeEventListener("scroll", ScrollHandler);
+    }, [])
+
+    if (!isVisible) return null;
     return (
-        <div className={NavBarStyle.NavBar}>
-            <Logo />
-            <NavList />
-        </div>
+        <nav className={NavBarStyle.NavBar}>
+            <div className={NavBarStyle._NavBar}>
+                <Logo />
+                <NavList />
+            </div>
+        </nav>
     )
 }

@@ -23,9 +23,10 @@ import Hero from "@/Components/Content/Hero";
  */
 const ContainerStyle = {
     Container: `flex flex-row
-    ml-64 mr-40
     justify-center items-center
-    bg-gray-100
+    w-[80%] mx-auto
+    mt-3
+    md:ml-70 md:mr-40
     `,
 }
 

@@ -22,19 +22,23 @@ import Category from "@/Components/Content/Category";
  *         Independent of page scrolling with its own internal scroll
  */
 const SideBarStyle = {
-    SideBar: `flex flex-col 
-    justify-around items-center
+    SideBar: `
+    hidden
+    justify-evenly items-start
     fixed top-30 left-10
-    bg-gray-200
+    gap-3
+    md:flex flex-col 
     `,
 }
 
 export default function SideBar() {
     return (
         <div className={SideBarStyle.SideBar}>
-            {CategoryList.map((category) => (
-                <Category key={category.ID} category={category} />
-            ))}
+            {
+                CategoryList.map((category) => (
+                    <Category key={category.ID} category={category}/>
+                ))
+            }
         </div>
     )
 }
