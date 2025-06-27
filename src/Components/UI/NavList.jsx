@@ -22,8 +22,9 @@ import global from "@/data/general";
  */
 const NavListStyle = {
     NavList: `
-    flex flex-row
+    hidden
     gap-2
+    md:flex md:flex-row
     `,
     NavItem: `
     flex flex-row items-center gap-2

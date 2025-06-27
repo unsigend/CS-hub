@@ -39,8 +39,6 @@ export default function CodeBar() {
                         <span className=" bg-opacity-30 text-green-400 px-1 rounded">'amazing'</span><span className="text-white">;</span>
                     </div>
                     
-                    
-                    
                     <div className="mb-1 ml-4">
                         <span className="text-purple-400">return</span>
                         <span className="text-green-400"> 'success'</span><span className="text-white">;</span>
