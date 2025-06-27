@@ -4,6 +4,9 @@
  * @description: Category Component for the CS-hub project
  */
 
+// Import for the useState
+import { useState } from "react";
+
 // Import for the style
 import "@/style/style.css";
 
@@ -34,8 +37,8 @@ const CategoryStyle = {
     SubCategory: `
     flex flex-row
     justify-between items-center
-    text-base w-full
-    ml-8 mr-2
+    text-base w-[calc(100%-2rem)]
+    ml-8
     bg-gray-50 border border-gray-50
     rounded-lg px-4 py-3 mb-2
     shadow-sm hover:shadow-md
@@ -55,21 +58,50 @@ const CategoryStyle = {
     group-active:scale-110 group-active:rotate-0
     transform-gpu select-none
     drop-shadow-sm group-hover:drop-shadow-md
-    `
+    `,
+    CategoryContainer: `
+    flex flex-col
+    w-full
+    `,
 }
 
-export default function Category({ category, isSubCategory = false}) {
-    if (isSubCategory) {
+/**
+ * @description: Category Component for the CS-hub project
+ * @usage: Category will render the category and its subcategories recursively
+ * @note: Category will be rendered as a card with a title and an arrow
+ * @returns: Category Component
+ */
+export default function Category({category}) {
+    const [isOpen, setIsOpen] = useState(true);
+
+    const toggleCategory = () => {
+        setIsOpen(!isOpen);
+    }
+
+    const renderCategory = (category) => {
+        const hasSubCategory = category.subCategories && category.subCategories.length > 0;
         return (
-            <div className={CategoryStyle.SubCategory}>
-                <h2>{category.name}</h2>
+            <div className={CategoryStyle.CategoryContainer} key={category.ID + "-category"}>
+                {/* Main Category */}
+                <div className={CategoryStyle.Category} key={category.ID} onClick={toggleCategory}>
+                    <h2>{category.name}</h2>
+                    {isOpen ? <ArrowUp size={20} className={CategoryStyle.Arrow}/> 
+                            : <ArrowDown size={20} className={CategoryStyle.Arrow}/>}
+                </div>
+
+                {/* Sub Category */}
+                { hasSubCategory && isOpen && (
+                    category.subCategories.map((subCategory) => (
+                        <div className={CategoryStyle.SubCategory} key={subCategory.ID}>
+                            <h2>{subCategory.name}</h2>
+                        </div>
+                    ))
+                )}
             </div>
         )
     }
+
     return (
-        <div className={CategoryStyle.Category}>
-            <h2>{category.name}</h2>
-            <ArrowDown size={20} className={CategoryStyle.Arrow}/>
-        </div>
+        renderCategory(category)
     )
 }

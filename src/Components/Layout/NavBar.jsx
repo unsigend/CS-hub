@@ -26,6 +26,7 @@ const NavBarStyle = {
     justify-between items-center
     `,
 }
+
 /**
  * @description: NavBar Component for the CS-hub project
  * @returns: NavBar component with scroll behavior
@@ -41,8 +42,10 @@ export default function NavBar() {
 
     // Effect for the scroll behavior
     useEffect(() => {
-        const ScrollHandler = () => {
+        const scrollHandler = () => {
             const currentScrollY = window.scrollY;
+
+            // hidden the NavBar when the user scrolls down past 100px
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 setIsVisible(false);
             }else{
@@ -50,13 +53,14 @@ export default function NavBar() {
             }
             setLastScrollY(currentScrollY);
         }
-        window.addEventListener("scroll", ScrollHandler);
-        return () => window.removeEventListener("scroll", ScrollHandler);
-    }, [])
+        window.addEventListener("scroll", scrollHandler);
+        return () => window.removeEventListener("scroll", scrollHandler);
+    }, [lastScrollY])
 
-    if (!isVisible) return null;
     return (
-        <nav className={NavBarStyle.NavBar}>
+        <nav className={`${NavBarStyle.NavBar} 
+            ${isVisible ? "translate-y-0" : "-translate-y-full"}
+            transition-transform duration-300 ease-in-out`}>
             <div className={NavBarStyle._NavBar}>
                 <Logo />
                 <NavList />
