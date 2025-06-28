@@ -14,8 +14,6 @@ import CategoryList from "@/data/Category";
 // Import for the components
 import Category from "@/Components/Content/Category";
 
-
-
 /**
  * @description: Style for the SideBar component
  * @style: Fixed positioned sidebar that stays in place

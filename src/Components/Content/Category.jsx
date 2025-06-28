@@ -11,7 +11,7 @@ import { useState } from "react";
 import "@/style/style.css";
 
 // Import for the icons from lucide-react
-import { ArrowDown, ArrowUp } from "lucide-react";
+import { ArrowRight, ArrowDown } from "lucide-react";
 
 /**
  * @description: Style for the Category component
@@ -37,8 +37,8 @@ const CategoryStyle = {
     SubCategory: `
     flex flex-row
     justify-between items-center
-    text-base w-[calc(100%-2rem)]
-    ml-8
+    text-base w-[calc(100%-1rem)]
+    ml-4
     bg-gray-50 border border-gray-50
     rounded-lg px-4 py-3 mb-2
     shadow-sm hover:shadow-md
@@ -85,7 +85,7 @@ export default function Category({category}) {
                 {/* Main Category */}
                 <div className={CategoryStyle.Category} key={category.ID} onClick={toggleCategory}>
                     <h2>{category.name}</h2>
-                    {isOpen ? <ArrowUp size={20} className={CategoryStyle.Arrow}/> 
+                    {isOpen ? <ArrowRight size={20} className={CategoryStyle.Arrow}/> 
                             : <ArrowDown size={20} className={CategoryStyle.Arrow}/>}
                 </div>
 
