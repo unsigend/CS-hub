@@ -6,7 +6,6 @@
 
 // Import for the style
 import "@/style/style.css";
-import globalStyle from "@/style/style";
 
 // style for the Logo component
 /**

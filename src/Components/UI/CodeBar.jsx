@@ -6,23 +6,33 @@
 
 // Import for the style
 import "@/style/style.css";
-import globalStyle from "@/style/style";
 
 // style for the CodeBar component
 const CodeBarStyle = {
     CodeBar: `
     flex items-center justify-center p-8
-    `
+    `,
+    CodeBarContainer: `
+    bg-gray-900 rounded-2xl p-6 shadow-2xl 
+    transform rotate-3 hover:rotate-0 
+    transition-transform duration-500 max-w-md
+    `,
+    CodeBarHeader: `
+    flex gap-2 mb-4
+    `,
+    CodeBarHeaderItem: `
+    w-3 h-3 rounded-full
+    `,
 }
 
 export default function CodeBar() {
     return (
         <div className={CodeBarStyle.CodeBar}>
-            <div className="bg-gray-900 rounded-2xl p-6 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 max-w-md">
-                <div className="flex gap-2 mb-4">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            <div className={CodeBarStyle.CodeBarContainer}>
+                <div className={CodeBarStyle.CodeBarHeader}>
+                    <div className={CodeBarStyle.CodeBarHeaderItem + " bg-red-500"}></div>
+                    <div className={CodeBarStyle.CodeBarHeaderItem + " bg-yellow-500"}></div>
+                    <div className={CodeBarStyle.CodeBarHeaderItem + " bg-green-500"}></div>
                 </div>
                 
                 <div className="font-mono text-sm leading-relaxed">

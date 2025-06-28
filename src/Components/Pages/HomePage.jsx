@@ -6,7 +6,6 @@
 
 // Import for the style
 import "@/style/style.css";
-import globalStyle from "@/style/style";
 
 // Import for the components
 import CodeBar from "@/Components/UI/CodeBar";
@@ -25,6 +24,17 @@ const HomePageStyle = {
     justify-between gap-10
     mt-10
     md:flex-row md:gap-30 md:mt-0
+    `,
+    TitleContainer: `
+    flex flex-col
+    justify-center items-center
+    gap-3 md:items-start
+    `,
+    Title: `
+    text-4xl font-bold
+    `,
+    Description: `
+    text-lg text-gray-500
     `,
     IntroductionBar: `
     mx-auto w-[80%]
@@ -45,9 +55,9 @@ export default function HomePage() {
     return (
         <div className={HomePageStyle.HomePage}>
             <div className={HomePageStyle.TitleBar}>
-                <div className="flex flex-col justify-center items-center gap-3 md:items-start">
-                    <h1 className="text-4xl font-bold">Welcome to CS-hub</h1>
-                    <p className="text-lg text-gray-500">
+                <div className={HomePageStyle.TitleContainer}>
+                    <h1 className={HomePageStyle.Title}>Welcome to CS-hub</h1>
+                    <p className={HomePageStyle.Description}>
                         Your one-stop shop for all your CS needs
                     </p>
                 </div>
@@ -55,7 +65,8 @@ export default function HomePage() {
             </div>
             <div className={HomePageStyle.CategoryCardBar}>
                 {CategoryCardData.map((card) => (
-                    <CategoryCard key={card.title} title={card.title} description={card.description} icon={card.icon} />
+                    <CategoryCard key={card.title} title={card.title} description={card.description}
+                     icon={card.icon} />
                 ))}
             </div>
         </div>

@@ -9,8 +9,7 @@ import {  EqualApproximately, Github, Home } from "lucide-react";
 
 // Import for the style
 import "@/style/style.css";
-import globalStyle from "@/style/style";
-
+    
 // Import for the data
 import global from "@/data/general";
 
