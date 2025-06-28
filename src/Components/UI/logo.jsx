@@ -7,13 +7,15 @@
 // Import for the style
 import "@/style/style.css";
 
+// Import for the components
+import HamburgerMenu from "@/Components/UI/HamburgerMenu";
+
 // style for the Logo component
 /**
  * @description: Style for the Logo component
  * @style: Logo is build based on the tailwind css
  *         Using white and black as the theme color
  */
-
 const LogoStyle = {
     Logo: `
         flex items-center gap-2
@@ -26,6 +28,9 @@ const LogoStyle = {
         transform hover:-translate-y-0.5Add commentMore actions
         transition-all duration-200 ease-in-out
         cursor-pointer
+    `,
+    LogoContainer: `
+        flex flex-row items-center gap-4
     `,
     LogoFrame: `
         flex items-center justify-center
@@ -44,9 +49,12 @@ const LogoStyle = {
 
 export default function Logo() {
     return (
-        <div className={LogoStyle.Logo}>
-            <div className={LogoStyle.LogoFrame}>CS</div>
-            <div className={LogoStyle.LogoText}>Hub</div>
+        <div className={LogoStyle.LogoContainer}>
+            <HamburgerMenu />
+            <div className={LogoStyle.Logo}>
+                <div className={LogoStyle.LogoFrame}>CS</div>
+                <div className={LogoStyle.LogoText}>Hub</div>
+            </div>
         </div>
     )
 }

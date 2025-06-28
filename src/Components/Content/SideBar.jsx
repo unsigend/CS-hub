@@ -15,8 +15,8 @@ import Category from "@/Components/Content/Category";
 
 /**
  * @description: Style for the SideBar component
- * @style: Fixed positioned sidebar that stays in place
- *         Independent of page scrolling with its own internal scroll
+ * @style: Fixed positioned sidebar that stays in place on desktop
+ *         Overlay sidebar on mobile that covers main content
  */
 const SideBarStyle = {
     SideBar: `
