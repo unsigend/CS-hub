@@ -53,7 +53,7 @@ export default function SideBar() {
     
     // Handle backdrop click to close sidebar
     const handleBackdropClick = (e) => {
-        // Only close if clicking the backdrop, not the sidebar content
+        // Only close if clicking the backdrop (empty space), not the sidebar content
         if (e.target.id === 'SideBar') {
             closeSidebar();
         }

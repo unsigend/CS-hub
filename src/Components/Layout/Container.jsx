@@ -25,7 +25,7 @@ const ContainerStyle = {
     justify-center items-center
     w-[80%] mx-auto
     mt-3
-    md:ml-70 md:mr-40
+    md:ml-50 
     `,
 }
 

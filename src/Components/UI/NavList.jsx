@@ -23,7 +23,7 @@ const NavListStyle = {
     NavList: `
     hidden
     gap-2
-    md:flex md:flex-row
+    sm:flex sm:flex-row
     `,
     NavItem: `
     flex flex-row items-center gap-2

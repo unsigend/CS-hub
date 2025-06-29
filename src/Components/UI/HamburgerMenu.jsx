@@ -39,11 +39,13 @@ export default function HamburgerMenu() {
         return () => window.removeEventListener('closeMobileSidebar', handleCloseSidebar);
     }, []);
     
+    // this function will be called only when the hamburger menu is clicked
     function toggleMenu() {
         const newState = !isOpen;
         setIsOpen(newState);
         const sideBar = document.getElementById("SideBar");
         
+        // If the sidebar is open, show it
         if (newState) {
             // Show overlay with smooth transitions
             sideBar.style.display = "flex";
@@ -64,7 +66,9 @@ export default function HamburgerMenu() {
             setTimeout(() => {
                 sideBar.style.opacity = "1";
             }, 10);
-        } else {
+        }
+        // If the sidebar is closed, hide it
+        else {
             // Hide overlay with smooth transitions
             sideBar.style.opacity = "0";
             sideBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
