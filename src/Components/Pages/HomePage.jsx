@@ -23,6 +23,7 @@ const HomePageStyle = {
     flex flex-col
     items-center
     gap-5
+    mb-10
     `,
     TitleBar: `
     flex flex-col
@@ -49,7 +50,7 @@ const HomePageStyle = {
     gap-5
     `,
     CategoryCardBar: `
-    w-[80%]
+    w-[80%] mb-10
     flex flex-row
     justify-center
     flex-wrap
@@ -88,12 +89,31 @@ function About(){
                 All of these resources are free and open-source. Dedicated for self-learners, CS-lovers, and anyone who
                 wants to learn more about Computer Science.
             </p>
+            <strong className="text-xl">How to use</strong>
+            <p>
+                Whether you're a complete beginner starting your programming journey or an experienced developer looking 
+                to expand your skill set, CS-hub provides carefully curated pathways tailored to different learning styles. 
+                This site bridges the gap between theoretical knowledge and practical application.
+            </p>
+            <p>
+                The beauty of self-directed learning lies in its flexibility and personalized pace. 
+                CS-hub empowers you to take control of your education, whether you prefer diving deep into academic coursework, 
+                following step-by-step road maps, or jumping straight into hands-on projects that challenge your problem-solving 
+                abilities.
+            </p>
+
             <p>
                 <strong>Note:</strong> This site is a work in progress. Any suggestions and contributions are welcome. 
                 Contribute and fork here:
                 <Link href={global.GitHubLink}>
                     GitHub
                 </Link>
+            </p>
+            <p>
+                Now ! Choose your dedicated road map or field of interest, and start your learning journey.
+                Can be top-university based courses if you like a more structured learning experience. Or just follow the 
+                provided road map if you like a concept or skill based learning journey. Or can be a practical project
+                based learning if you like to learn by doing and challenge yourself. 
             </p>
         </>
     );
@@ -120,8 +140,8 @@ export default function HomePage() {
     return (
         <div className={HomePageStyle.HomePage}>
             <TitleBar />
-            <About />
             <CategoryCardBar />
+            <About />
         </div>
     )
 }

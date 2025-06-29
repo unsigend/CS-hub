@@ -19,11 +19,7 @@ const NoteStyle = {
     p-4 sm:p-6 md:p-8 lg:p-12
     shadow-lg hover:shadow-xl
     transition-all duration-300
-    relative overflow-hidden
     mx-auto
-    before:absolute before:top-0 before:left-0 
-    before:w-full before:h-1 
-    before:bg-gradient-to-r before:from-black before:via-gray-600 before:to-black
     `,
     NoteTitle: `
     text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6
