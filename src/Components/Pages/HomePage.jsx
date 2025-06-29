@@ -103,17 +103,18 @@ function About(){
             </p>
 
             <p>
+                Now ! Choose your dedicated road map or field of interest, and start your learning journey.
+                Can be top-university based courses if you like a more structured learning experience. Or just follow the 
+                provided road map if you like a concept or skill based learning journey. Or can be a practical project
+                based learning if you like to learn by doing and challenge yourself. 
+            </p>
+
+            <p>
                 <strong>Note:</strong> This site is a work in progress. Any suggestions and contributions are welcome. 
                 Contribute and fork here:
                 <Link href={global.GitHubLink}>
                     GitHub
                 </Link>
-            </p>
-            <p>
-                Now ! Choose your dedicated road map or field of interest, and start your learning journey.
-                Can be top-university based courses if you like a more structured learning experience. Or just follow the 
-                provided road map if you like a concept or skill based learning journey. Or can be a practical project
-                based learning if you like to learn by doing and challenge yourself. 
             </p>
         </>
     );
