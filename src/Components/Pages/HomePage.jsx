@@ -21,14 +21,15 @@ const HomePageStyle = {
     `,
     TitleBar: `
     flex flex-col
-    justify-between gap-10
-    mt-10
-    md:flex-row md:gap-30 md:mt-0
+    justify-between gap-4
+    mt-6
+    md:flex-row md:gap-8 md:mt-0
+    md:w-[60%]
     `,
     TitleContainer: `
     flex flex-col
-    justify-center items-center
-    gap-3 md:items-start
+    justify-center items-start
+    flex-1 gap-3
     `,
     Title: `
     text-4xl font-bold
@@ -59,7 +60,8 @@ export default function HomePage() {
                 <div className={HomePageStyle.TitleContainer}>
                     <h1 className={HomePageStyle.Title}>Welcome to CS-hub</h1>
                     <p className={HomePageStyle.Description}>
-                        Your one-stop shop for all your CS needs
+                        This is a platform for you to learn Computer Science. Dedicated for self-learners better
+                        navigate the learning path.
                     </p>
                 </div>
                 <CodeBar />
