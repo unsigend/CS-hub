@@ -39,7 +39,7 @@ const SideBarStyle = {
 
 export default function SideBar() {
     return (
-        <div className={SideBarStyle.SideBar}>
+        <div className={SideBarStyle.SideBar} id="SideBar">
             {CategoryList.map((category) => (
                 <Category key={category.ID} category={category}/>
             ))}

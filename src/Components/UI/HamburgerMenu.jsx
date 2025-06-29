@@ -26,6 +26,13 @@ export default function HamburgerMenu() {
     const [isOpen, setIsOpen] = useState(false);
     function toggleMenu() {
         setIsOpen(!isOpen);
+        if (isOpen) {
+            document.getElementById("SideBar").style.display = "flex";
+            document.getElementById("SideBar").style.zIndex = "100";
+        } else {
+            document.getElementById("SideBar").style.display = "none";
+            document.getElementById("SideBar").style.zIndex = "0";
+        }
     }
     return (
         <div className={HamburgerMenuStyle.HamburgerMenu} onClick={toggleMenu}>

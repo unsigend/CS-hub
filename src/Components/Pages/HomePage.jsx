@@ -48,6 +48,7 @@ const HomePageStyle = {
     justify-center
     flex-wrap
     gap-5
+    lg:w-[60%]
     `,
 }
 
