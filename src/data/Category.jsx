@@ -7,52 +7,60 @@
 import FullStackPage from "../Components/Pages/FullStackPage";
 import LowLevelPage from "../Components/Pages/LowLevelPage";
 
-const BASE_URL = "/CS-hub";
-const ROAD_MAP_URL = `${BASE_URL}/road-map`;
-
 const CategoryList = [
     {
         name: "Road Map",
         ID: "road-map",
-        url: ROAD_MAP_URL,
+        url: "road-map",
         subCategories: [
             {
                 name: "Full Stack",
                 ID: "full-stack",
-                page: <FullStackPage />,
-                url: `${ROAD_MAP_URL}/full-stack`,
+                page: null,
+                url: "full-stack",
             },
             {
                 name: "Low Level",
                 ID: "low-level",
-                page: <LowLevelPage />,
-                url: `${ROAD_MAP_URL}/low-level`,
+                page: null,
+                url: "low-level",
             },
             {
                 name: "AI",
                 ID: "ai",
+                page: null,
+                url: "ai",
             },
             {
                 name: "Block Chain",
                 ID: "block-chain",
+                page: null,
+                url: "block-chain",
             }
         ]
     },
     {
         name: "University Course",
         ID: "university-course",
+        url: "university-course",
         subCategories: [
             {
                 name: "MIT",
                 ID: "mit",
+                page: null,
+                url: "mit",
             },
             {
                 name: "Stanford",
                 ID: "stanford",
+                page: null,
+                url: "stanford",
             },
             {
                 name: "Harvard",
                 ID: "harvard",
+                page: null,
+                url: "harvard",
             },
         ]
     },
@@ -65,10 +73,14 @@ const CategoryList = [
             {
                 name: "Books",
                 ID: "books",
+                page: null,
+                url: "books",
             },
             {
                 name: "Projects",
                 ID: "projects",
+                page: null,
+                url: "projects",
             },
         ]
     },

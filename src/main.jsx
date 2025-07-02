@@ -10,9 +10,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import App from '@/App.jsx'
 import HomePage from '@/Components/Pages/HomePage.jsx'
-import FullStackPage from '@/Components/Pages/FullStackPage.jsx'
-import LowLevelPage from '@/Components/Pages/LowLevelPage.jsx'
+import UnderConstructionPage from '@/Components/Pages/UnderConstructionPage.jsx'
 
+import CategoryList from '@/data/Category.jsx'
 
 // Render the App component with the BrowserRouter
 createRoot(document.getElementById('root')).render(
@@ -20,11 +20,21 @@ createRoot(document.getElementById('root')).render(
     <Router>
       <Routes>
         <Route path="/CS-hub" element={<App />}>
+          {/* Home Page by default */}
           <Route index element={<HomePage />} />
-          <Route path="road-map">
-            <Route path="full-stack" element={<FullStackPage />} />
-            <Route path="low-level" element={<LowLevelPage />} />
-          </Route>
+
+          {/* Base Route for Category List */}
+          {CategoryList.map((category) => 
+            category.subCategories.map((subCategory) => (
+              // If the subCategory has a page, render the page
+              // Otherwise, render the UnderConstructionPage
+              <Route 
+                path={subCategory.url} 
+                element={subCategory.page || <UnderConstructionPage pageName={subCategory.name} />} 
+                key={subCategory.ID} 
+              />
+            ))
+          )}
         </Route>
       </Routes>
     </Router>
