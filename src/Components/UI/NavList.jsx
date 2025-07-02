@@ -4,6 +4,9 @@
  * @description: NavList Component for the CS-hub project
  */
 
+// Import for React Router
+import { Link } from "react-router-dom";
+
 // Import for the icons
 import {  EqualApproximately, Github, Home } from "lucide-react";
 
@@ -51,18 +54,28 @@ const NavListStyle = {
 export default function NavList() {
     return (
         <ul className={NavListStyle.NavList}>
-            <li className={NavListStyle.NavItem}>
-                <Home size={20}/>
-                Home
+            <li>
+                <Link to="/CS-hub" className={NavListStyle.NavItem}>
+                    <Home size={20}/>
+                    Home
+                </Link>
             </li>
-            <li className={NavListStyle.NavItem} 
-                onClick={() => window.open(global.GitHubLink, "_blank")}>
-                <Github size={20}/>
-                Github
+            <li>
+                <a 
+                    href={global.GitHubLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={NavListStyle.NavItem}
+                >
+                    <Github size={20}/>
+                    Github
+                </a>
             </li>
-            <li className={NavListStyle.NavItem}>
-                <EqualApproximately size={20}/>
-                About
+            <li>
+                <button className={NavListStyle.NavItem}>
+                    <EqualApproximately size={20}/>
+                    About
+                </button>
             </li>
         </ul>
     )
