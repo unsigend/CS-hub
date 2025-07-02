@@ -6,6 +6,7 @@
 
 // Import for the useState
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Import for the style
 import "@/style/style.css";
@@ -92,9 +93,11 @@ export default function Category({category}) {
                 {/* Sub Category */}
                 { hasSubCategory && isOpen && (
                     category.subCategories.map((subCategory) => (
-                        <div className={CategoryStyle.SubCategory} key={subCategory.ID}>
-                            <h2>{subCategory.name}</h2>
-                        </div>
+                        <Link to={subCategory.url} key={subCategory.ID}>
+                            <div className={CategoryStyle.SubCategory}>
+                                <h2>{subCategory.name}</h2>
+                            </div>
+                        </Link>
                     ))
                 )}
             </div>

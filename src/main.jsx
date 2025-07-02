@@ -12,7 +12,6 @@ import App from '@/App.jsx'
 import HomePage from '@/Components/Pages/HomePage.jsx'
 import FullStackPage from '@/Components/Pages/FullStackPage.jsx'
 import LowLevelPage from '@/Components/Pages/LowLevelPage.jsx'
-import ResourcesPage from '@/Components/Pages/ResourcesPage.jsx'
 
 
 // Render the App component with the BrowserRouter
@@ -26,7 +25,6 @@ createRoot(document.getElementById('root')).render(
             <Route path="full-stack" element={<FullStackPage />} />
             <Route path="low-level" element={<LowLevelPage />} />
           </Route>
-          <Route path="resources" element={<ResourcesPage />} />
         </Route>
       </Routes>
     </Router>
