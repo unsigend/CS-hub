@@ -7,8 +7,8 @@
 // Import for the style
 import "@/style/style.css";
 
-// Import for the components
-import HomePage from "@/Components/Pages/HomePage";
+// Import for React Router
+import { Outlet } from "react-router-dom";
 
 /**
  * @description: Style for the Hero component
@@ -20,11 +20,10 @@ const HeroStyle = {
     `,
 }
 
-
 export default function Hero() {
     return (
         <div className={HeroStyle.Hero}>
-            <HomePage />
+            <Outlet />
         </div>
     )
 }
