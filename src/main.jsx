@@ -4,37 +4,57 @@
  * @description: Main Entry Point for the CS-hub project
  */
 
+// Import the React and ReactDOM libraries
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+
+// Import the BrowserRouter and Routes from react-router-dom
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import App from '@/App.jsx'
-import HomePage from '@/Components/Pages/HomePage.jsx'
-import UnderConstructionPage from '@/Components/Pages/UnderConstructionPage.jsx'
+// Import the App component
+import App from '@/App'
+import HomePage from '@/Components/Pages/Main/HomePage'
+import UnderConstructionPage from '@/Components/Pages/Main/UnderConstructionPage'
 
-import CategoryList from '@/data/Category.jsx'
+// Import the CategoryList data
+import CategoryList from '@/data/Category'
+import global from '@/data/general'
+
+// Recursively flatten all categories and subcategories into a flat array of routes
+function flattenRoutes(categories) {
+  const routes = [];
+  function processCategory(category) {
+    const hasSubCategory = category.subCategories && category.subCategories.length > 0;
+    
+    if (hasSubCategory) {
+      // Process subcategories recursively
+      category.subCategories.forEach(processCategory);
+    } else {
+      // Add leaf categories (no subcategories) as routes
+      routes.push(
+        <Route 
+          path={category.url} 
+          element={category.page || <UnderConstructionPage pageName={category.name} />} 
+          key={category.ID} 
+        />
+      );
+    }
+  }
+  
+  categories.forEach(processCategory);
+  return routes;
+}
 
 // Render the App component with the BrowserRouter
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>
       <Routes>
-        <Route path="/CS-hub" element={<App />}>
+        <Route path={global.BasePath} element={<App />}>
           {/* Home Page by default */}
           <Route index element={<HomePage />} />
-
-          {/* Base Route for Category List */}
-          {CategoryList.map((category) => 
-            category.subCategories.map((subCategory) => (
-              // If the subCategory has a page, render the page
-              // Otherwise, render the UnderConstructionPage
-              <Route 
-                path={subCategory.url} 
-                element={subCategory.page || <UnderConstructionPage pageName={subCategory.name} />} 
-                key={subCategory.ID} 
-              />
-            ))
-          )}
+          {/* Flattened routes for all categories */}
+          {flattenRoutes(CategoryList)}
         </Route>
       </Routes>
     </Router>

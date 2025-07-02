@@ -27,7 +27,7 @@ const CategoryStyle = {
     Category: `
     flex flex-row
     justify-between items-center
-    text-lg w-full
+    text-base w-full
     bg-white border border-gray-100
     rounded-xl px-6 py-3
     shadow-sm hover:shadow-lg
@@ -41,10 +41,9 @@ const CategoryStyle = {
     SubCategory: `
     flex flex-row
     justify-between items-center
-    text-base w-[calc(100%-1rem)]
-    ml-4
+    text-base w-full
     bg-gray-50 border border-gray-50
-    rounded-lg px-4 py-3 mb-2
+    rounded-lg px-5 py-3 mb-2
     shadow-sm hover:shadow-md
     transition-all duration-400 ease-out
     cursor-pointer group
@@ -55,13 +54,12 @@ const CategoryStyle = {
     `,
     Arrow: `
     ml-4 text-gray-400 text-lg font-medium
-    transition-all duration-500 ease-out
+    transition-all duration-300 ease-out
     cursor-pointer
-    group-hover:text-black group-hover:scale-125 
-    group-hover:translate-x-2 group-hover:rotate-12
-    group-active:scale-110 group-active:rotate-0
+    group-hover:text-black group-hover:scale-110
+    group-hover:translate-x-1
     transform-gpu select-none
-    drop-shadow-sm group-hover:drop-shadow-md
+    flex-shrink-0
     `,
     CategoryContainer: `
     flex flex-col
@@ -69,46 +67,59 @@ const CategoryStyle = {
     `,
 }
 
+// Margin factor for the subcategories - reduced for better width utilization
+const MARGIN_FACTOR = 1.5;
+
 /**
  * @description: Category Component for the CS-hub project
  * @usage: Category will render the category and its subcategories recursively
- * @note: Category will be rendered as a card with a title and an arrow
+ * @note: Category will be rendered as a card with text and an arrow
  * @returns: Category Component
  */
-export default function Category({category}) {
-    const [isOpen, setIsOpen] = useState(true);
+export default function Category({category, depth = 0}) {
+    const [isOpen, setIsOpen] = useState(false);
 
-    const toggleCategory = () => {
+    const ClickCategory = () => {
         setIsOpen(!isOpen);
     }
 
+    // check if the category has subcategories
+    const hasSubCategory = category.subCategories && category.subCategories.length > 0;
 
-    const renderCategory = (category) => {
-        const hasSubCategory = category.subCategories && category.subCategories.length > 0;
+    // Calculate dynamic margin based on depth
+    const dynamicMarginStyle = depth > 0 ? { marginLeft: `${depth * MARGIN_FACTOR * 0.5}rem` } : {};
+    
+    // Add spacing between subcategories based on depth
+    const spacingStyle = depth > 0 ? { marginBottom: '0.75rem' } : {};
+
+    // if the category has subcategories, render the category with subcategories
+    if (hasSubCategory){
         return (
-            <div className={CategoryStyle.CategoryContainer} key={category.ID + "-category"}>
-                {/* Main Category */}
-                <div className={CategoryStyle.Category} key={category.ID} onClick={toggleCategory}>
+            <div className={CategoryStyle.CategoryContainer} style={spacingStyle} key={category.ID + "-category"}>
+                <div className={CategoryStyle.Category} style={dynamicMarginStyle} key={category.ID} onClick={ClickCategory}>
                     <h2>{category.name}</h2>
-                    {isOpen ? <ArrowRight size={20} className={CategoryStyle.Arrow}/> 
-                            : <ArrowDown size={20} className={CategoryStyle.Arrow}/>}
+                    {!isOpen ? <ArrowRight size={20} className={CategoryStyle.Arrow}/> 
+                             : <ArrowDown size={20} className={CategoryStyle.Arrow}/>}
                 </div>
-
-                {/* Sub Category */}
-                { hasSubCategory && isOpen && (
-                    category.subCategories.map((subCategory) => (
-                        <Link to={subCategory.url} key={subCategory.ID} onClick={closeSidebar}>
-                            <div className={CategoryStyle.SubCategory}>
-                                <h2>{subCategory.name}</h2>
-                            </div>
-                        </Link>
-                    ))
+                {isOpen && (
+                    <div style={{ marginTop: '0.5rem' }}>
+                        {category.subCategories.map((subcategory) => 
+                        <Category key={subcategory.ID} category={subcategory} depth={depth + 1} />)}
+                    </div>
                 )}
             </div>
         )
     }
 
+    // if the category doesn't have subcategories, render the category directly with subcategories style
+    // no arrow
     return (
-        renderCategory(category)
+        <div className={CategoryStyle.CategoryContainer} style={spacingStyle} key={category.ID + "-category"}>
+            <Link to={category.url} key={category.ID} onClick={closeSidebar}>
+                <div className={CategoryStyle.SubCategory} style={dynamicMarginStyle}>
+                    <h2>{category.name}</h2>
+                </div>
+            </Link>
+        </div>
     )
 }

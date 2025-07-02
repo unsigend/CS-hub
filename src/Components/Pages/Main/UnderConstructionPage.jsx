@@ -8,7 +8,7 @@
 import "@/style/style.css";
 
 // Import for the Link component
-import Link from "@/Components/UI/Link";
+import {LinkExternal, LinkInner} from "@/Components/UI/Link";
 
 // Import for the Github URL
 import global from "@/data/general";
@@ -67,12 +67,12 @@ export default function UnderConstructionPage({pageName}) {
 
                 {/* Description */}
                 <p className={UnderConstructionStyle.Description}>
-                    Currently, working on something. Coming soon. Go back to <Link href="/CS-hub/" target="_self">Home</Link>
+                    Currently, working on something. Coming soon. Go back to <LinkInner to={global.BasePath}>Home</LinkInner>
                 </p>
 
                 {/* Contribution */}
                 <p className={UnderConstructionStyle.ContributionText}>
-                    Contributions are welcome.  <Link href={global.GitHubLink}>Github</Link>
+                    Contributions are welcome.  <LinkExternal href={global.GitHubLink}>Github</LinkExternal>
                 </p>
             </div>
         </div>

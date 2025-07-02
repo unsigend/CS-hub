@@ -4,6 +4,9 @@
  * @description: Link Component for the CS-hub project
  */
 
+// Import for the Link component
+import { Link } from "react-router-dom";
+
 // Import for the style
 import "@/style/style.css";
 
@@ -24,19 +27,32 @@ const LinkStyle = {
  * @description: Link Component for the CS-hub project
  * @param {string} href - The href of the link
  * @param {React.ReactNode} children - The children of the link
- * @param {string} target - The target of the link
- * @param {string} rel - The rel of the link
  * @returns {React.ReactNode} - The link component
  */
-export default function Link({ href, children, target = "_blank", rel = "noopener noreferrer" }) {
+export function LinkExternal({ href, children}) {
     return (
         <a 
             href={href}
-            target={target}
-            rel={rel}
+            target="_blank"
+            rel="noopener noreferrer"
             className={LinkStyle.Link}
         >
             {children}
         </a>
     )
 } 
+
+/**
+ * @description: Inner Link Component for the CS-hub project
+ * @param {string} to - The to of the link
+ * @param {React.ReactNode} children - The children of the link
+ * @returns {React.ReactNode} - The inner link component
+ */
+export function LinkInner({to, children}) {
+    return (
+        <Link to={to} className={LinkStyle.Link} target="_self">
+            {children}
+        </Link>
+    )
+}
+

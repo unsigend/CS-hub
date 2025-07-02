@@ -24,17 +24,20 @@ const SideBarStyle = {
     justify-start items-start
     fixed top-30 left-10
     gap-3
-    w-58 min-w-58
+    opacity-0
+    w-74 min-w-74
+    md:py-6 md:pl-3
     md:flex md:flex-col
     md:opacity-100
-    opacity-0
+    md:max-h-[calc(100vh-8rem)]
+    md:overflow-y-auto
     `,
     // Mobile sidebar content container
     SideBarMobileContent: `
     bg-white shadow-2xl
     w-80 max-w-[85vw] h-full
     flex flex-col gap-4
-    p-6 pt-24
+    p-6 pt-24 pr-10
     overflow-y-auto
     transform transition-transform duration-300 ease-out
     translate-x-0
@@ -52,6 +55,7 @@ const closeSidebar = () => {
     if (window.innerWidth > 768) {
         return;
     }
+
     const sideBar = document.getElementById("SideBar");
     sideBar.style.opacity = "0";
     sideBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
@@ -69,7 +73,6 @@ const closeSidebar = () => {
     // Reset hamburger menu state
     window.dispatchEvent(new CustomEvent('closeMobileSidebar'));
 };
-
 export { closeSidebar };
 
 /**
@@ -92,7 +95,7 @@ export default function SideBar() {
     return (
         <div className={SideBarStyle.SideBar} id="SideBar" onClick={handleBackdropClick}>
             {/* Desktop sidebar content - hidden on mobile */}
-            <div className="hidden md:flex md:flex-col gap-3">
+            <div className="hidden md:flex md:flex-col gap-3 w-[calc(100%-2.5rem)]">
                 {CategoryList.map((category) => (
                     <Category key={category.ID} category={category}/>
                 ))}

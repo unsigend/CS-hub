@@ -11,7 +11,7 @@ import "@/style/style.css";
 import CodeBar from "@/Components/UI/CodeBar";
 import CategoryCard from "@/Components/UI/CategoryCard";
 import Note from "@/Components/UI/Note";
-import Link from "@/Components/UI/Link";
+import {LinkExternal, LinkInner} from "@/Components/UI/Link";
 import CategoryCardData from "@/data/CategoryCard";
 
 // Import for the global data
@@ -112,9 +112,9 @@ function About(){
             <p>
                 <strong>Note:</strong> This site is a work in progress. Any suggestions and contributions are welcome. 
                 Contribute and fork here:
-                <Link href={global.GitHubLink}>
+                <LinkExternal href={global.GitHubLink}>
                     GitHub
-                </Link>
+                </LinkExternal>
             </p>
         </>
     );

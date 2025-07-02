@@ -6,7 +6,7 @@ import path from 'path'
 // https://vite.dev/config/
 
 export default defineConfig({
-  base: '/CS-hub/',
+  base: '/CS-hub',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
