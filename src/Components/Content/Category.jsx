@@ -14,6 +14,9 @@ import "@/style/style.css";
 // Import for the icons from lucide-react
 import { ArrowRight, ArrowDown } from "lucide-react";
 
+// Import for the closeSidebar function
+import { closeSidebar } from "./SideBar";
+
 /**
  * @description: Style for the Category component
  * @style: Category is built based on the tailwind css
@@ -79,6 +82,7 @@ export default function Category({category}) {
         setIsOpen(!isOpen);
     }
 
+
     const renderCategory = (category) => {
         const hasSubCategory = category.subCategories && category.subCategories.length > 0;
         return (
@@ -93,7 +97,7 @@ export default function Category({category}) {
                 {/* Sub Category */}
                 { hasSubCategory && isOpen && (
                     category.subCategories.map((subCategory) => (
-                        <Link to={subCategory.url} key={subCategory.ID}>
+                        <Link to={subCategory.url} key={subCategory.ID} onClick={closeSidebar}>
                             <div className={CategoryStyle.SubCategory}>
                                 <h2>{subCategory.name}</h2>
                             </div>

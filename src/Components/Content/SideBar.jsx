@@ -43,6 +43,36 @@ const SideBarStyle = {
 }
 
 /**
+ * @description: Close sidebar function
+ * @usage: Close the sidebar when the backdrop is clicked
+ * @returns: void
+ */
+const closeSidebar = () => {
+    // If the window is not mobile, do nothing
+    if (window.innerWidth > 768) {
+        return;
+    }
+    const sideBar = document.getElementById("SideBar");
+    sideBar.style.opacity = "0";
+    sideBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    sideBar.style.backdropFilter = "blur(0px)";
+    
+    // Restore body scroll
+    document.body.style.overflow = "unset";
+    
+    // Complete hide after transition
+    setTimeout(() => {
+        sideBar.style.display = "none";
+        sideBar.style.zIndex = "0";
+    }, 300);
+    
+    // Reset hamburger menu state
+    window.dispatchEvent(new CustomEvent('closeMobileSidebar'));
+};
+
+export { closeSidebar };
+
+/**
  * @description: SideBar Component for the CS-hub project
  * @usage: Import the SideBar component and use it in the App component
  *         It will go through the CategoryList and render the Category component
@@ -57,26 +87,6 @@ export default function SideBar() {
         if (e.target.id === 'SideBar') {
             closeSidebar();
         }
-    };
-    
-    // Close sidebar function
-    const closeSidebar = () => {
-        const sideBar = document.getElementById("SideBar");
-        sideBar.style.opacity = "0";
-        sideBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
-        sideBar.style.backdropFilter = "blur(0px)";
-        
-        // Restore body scroll
-        document.body.style.overflow = "unset";
-        
-        // Complete hide after transition
-        setTimeout(() => {
-            sideBar.style.display = "none";
-            sideBar.style.zIndex = "0";
-        }, 300);
-        
-        // Reset hamburger menu state
-        window.dispatchEvent(new CustomEvent('closeMobileSidebar'));
     };
 
     return (
