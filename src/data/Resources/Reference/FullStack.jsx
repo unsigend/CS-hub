@@ -8,6 +8,30 @@
 const FullStackReference = {
     Frontend: [
         {
+            name: "Programming Language",
+            id: "programming-language",
+            subContent: [
+                {
+                    name: "HTML/CSS/JavaScript",
+                    id: "html-css-javascript",
+                    url: "https://developer.mozilla.org/en-US/",
+                    content: "HTML/CSS/JavaScript MDN Documentation",
+                },
+                {
+                    name: "JavaScript",
+                    id: "javascript",
+                    url: "https://javascript.info/",
+                    content: "Modern JavaScript Tutorial",
+                },
+                {
+                    name: "TypeScript",
+                    id: "typescript",
+                    url: "https://www.typescriptlang.org/docs/",
+                    content: "TypeScript Documentation",
+                },
+            ]
+        },
+        {
             name: "Frontend Framework",
             id: "frontend-framework",
             subContent: [
@@ -31,7 +55,8 @@ const FullStackReference = {
                 }
             ]
 
-        }
+        },
+        
     ],
     Backend: [],
     Database: [],

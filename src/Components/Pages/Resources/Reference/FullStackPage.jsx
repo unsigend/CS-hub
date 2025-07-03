@@ -24,10 +24,20 @@ const Style = {
     space-y-0
     `,
     Box: `
-    flex flex-col
+    flex flex-col gap-4
     `,
     Container: `
     flex flex-col gap-5
+    `,
+    ReferenceItem: `
+    flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4
+    text-gray-700 leading-relaxed text-base sm:text-lg mb-3
+    `,
+    ReferenceName: `
+    min-w-0 sm:min-w-[200px] font-medium text-gray-600
+    `,
+    ReferenceLink: `
+    flex-1
     `
 }
 
@@ -44,8 +54,13 @@ function ConstructReference({Category, title}) {
                         <SubTitle title={item.name} level={3} />
                         {
                             item.subContent.map((subItem) => (
-                                <div className={Style.Paragraph}>
-                                    {subItem.name} : <Reference url={subItem.url} content={subItem.content} />
+                                <div key={subItem.id} className={Style.ReferenceItem}>
+                                    <div className={Style.ReferenceName}>
+                                        {subItem.name}
+                                    </div>
+                                    <div className={Style.ReferenceLink}>
+                                        <Reference url={subItem.url} content={subItem.content} />
+                                    </div>
                                 </div>
                             ))
                         }
