@@ -7,9 +7,6 @@
 // Import for the style
 import "@/style/style.css";
 
-// Import for the Title component
-import Title from "./Title";
-
 /**
  * @description: Style for the Note component
  * @returns {React.ReactNode} - The note component
@@ -23,6 +20,12 @@ const NoteStyle = {
     shadow-lg hover:shadow-xl
     transition-all duration-300
     mx-auto
+    `,
+    NoteTitle: `
+    text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6
+    relative inline-block
+    after:absolute after:bottom-0 after:left-0
+    after:w-8 sm:after:w-12 after:h-1 after:bg-black after:rounded-full
     `,
     NoteContent: `
     text-gray-700 leading-relaxed
@@ -44,10 +47,10 @@ const NoteStyle = {
 export default function Note({ title, content }) {
     return (
         <div className={NoteStyle.Note}>
-            <Title title={title} />
+            <h1 className={NoteStyle.NoteTitle}>{title}</h1>
             <div className={NoteStyle.NoteContent}>
                 {content}
             </div>
         </div>
     )
-}
+} 
