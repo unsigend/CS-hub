@@ -8,7 +8,7 @@
 import global from "@/data/general";
 
 // Import the pages
-
+import FullStackReferencePage from "@/Components/Pages/Resources/Reference/FullStackPage";
 
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub
@@ -186,6 +186,28 @@ const CategoryList = [
                 page: null,
                 url: `${ResourcesPath}/projects`,
             },
+            {
+                name: "Reference",
+                ID: "reference",
+                page: null,
+                url: `${ResourcesPath}/reference`,
+                subCategories: [
+                    {
+                        name: "Full Stack",
+                        ID: "full-stack",
+                        page: <FullStackReferencePage />,
+                        url: `${ResourcesPath}/reference/full-stack`,
+                        subCategories: null,
+                    },
+                    {
+                        name: "Low Level",
+                        ID: "low-level",
+                        page: null,
+                        url: `${ResourcesPath}/reference/low-level`,
+                        subCategories: null,
+                    },
+                ]
+            }
         ]
     },
 ]

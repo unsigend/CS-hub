@@ -88,7 +88,6 @@ export default function Category({category, depth = 0}) {
 
     // Calculate dynamic margin based on depth
     const dynamicMarginStyle = depth > 0 ? { marginLeft: `${depth * MARGIN_FACTOR * 0.5}rem` } : {};
-    
     // Add spacing between subcategories based on depth
     const spacingStyle = depth > 0 ? { marginBottom: '0.75rem' } : {};
 
