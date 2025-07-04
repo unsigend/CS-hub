@@ -8,7 +8,6 @@
 import Reference from "@/Components/UI/Reference";
 import { Title, SubTitle } from "@/Components/UI/Title";
 import Card from "@/Components/UI/Card";
-import Note from "@/Components/UI/Note";
 
 // Import for the data
 import FullStackReference from "@/data/Resources/Reference/FullStack";
@@ -23,11 +22,8 @@ const Style = {
     [&>blockquote]:mb-4 [&>pre]:mb-4
     space-y-0
     `,
-    Box: `
+    ItemBox: `
     flex flex-col gap-4
-    `,
-    Container: `
-    flex flex-col gap-5
     `,
     ReferenceItem: `
     flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4
@@ -38,32 +34,25 @@ const Style = {
     `,
     ReferenceLink: `
     flex-1
+    `,
+    Container: `
+    flex flex-col gap-4
     `
 }
 
-function ConstructReference({Category, title}) {
+function ConstructReference({Category}) {
     return (
-        <div className={Style.Box}>
-            <SubTitle title={title} level={2} />
-            <p className={Style.Paragraph}>
-                {Category.description}
-            </p>
+        <div>
+            <SubTitle title={Category.name} level={2} />
             {
-                Category.map((item) => (
-                    <div key={item.id}>
-                        <SubTitle title={item.name} level={3} />
-                        {
-                            item.subContent.map((subItem) => (
-                                <div key={subItem.id} className={Style.ReferenceItem}>
-                                    <div className={Style.ReferenceName}>
-                                        {subItem.name}
-                                    </div>
-                                    <div className={Style.ReferenceLink}>
-                                        <Reference url={subItem.url} content={subItem.content} />
-                                    </div>
-                                </div>
-                            ))
-                        }
+                Category.subContent.map((item) => (
+                    <div key={item.id} className={Style.ReferenceItem}>
+                        <div className={Style.ReferenceName}>
+                            {item.name}
+                        </div>
+                        <div className={Style.ReferenceLink}>
+                            <Reference url={item.url} content={item.content} />
+                        </div>
                     </div>
                 ))
             }
@@ -71,25 +60,33 @@ function ConstructReference({Category, title}) {
     )
 }
 
-export default function FullStackReferencePage() {
+function FullStackReferenceTitle() {
     return (
         <div>
-            <Card content={
-                <div className={Style.Container}>
-                    <div className={Style.Box}>
-                        <Title title="Full Stack Resources Reference" />
-                        <p className={Style.Paragraph}>
-                        Here are some quick reference for full stack development. Divide into three 
-                        parts: <strong>Frontend</strong>, <strong>Backend</strong>, and <strong>Database</strong>.
-                        Each of them has a curated list of resources about frameworks, libraries, and tools.
-                        </p>
-                    </div>
-
-                    <ConstructReference Category={FullStackReference.Frontend} title="Frontend" />
-                    <ConstructReference Category={FullStackReference.Backend} title="Backend" />
-                    <ConstructReference Category={FullStackReference.Database} title="Database" />
-                </div>
-            } />
+            <Title title="Full Stack Resources Reference" />
+            <p className={Style.Paragraph}>
+                Here are some quick reference for full stack development. Divided into different categories.
+                Each of them has a curated list of resources about frameworks, libraries, and tools.
+            </p>
+            <p className={Style.Paragraph}>
+                <strong>Note:</strong> This page is a collection of reference for full stack development.
+                Only meant for quick reference, not for comprehensive learning.
+            </p>
         </div>
+    )
+}
+
+export default function FullStackReferencePage() {
+    return (
+        <Card content={
+            <div className={Style.Container}>
+            <FullStackReferenceTitle />
+            {
+                FullStackReference.map((item) => (
+                    <ConstructReference Category={item} key={item.id} />
+                ))
+            }
+            </div>
+        } />
     )
 }
