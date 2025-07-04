@@ -109,7 +109,7 @@ const FullStackReference = [
             {
                 name: "Lucide Icons",
                 id: "lucide-icons-docs",
-                url: "https://lucide.dev/icons/lucide",
+                url: "https://lucide.dev/",
                 content: "Lucide Icons Documentation",
             },
             {

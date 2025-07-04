@@ -8,6 +8,7 @@
 import Reference from "@/Components/UI/Reference";
 import { Title, SubTitle } from "@/Components/UI/Title";
 import Card from "@/Components/UI/Card";
+import { LibraryBig } from "lucide-react";
 
 // Import for the data
 import FullStackReference from "@/data/Resources/Reference/FullStack";
@@ -63,7 +64,12 @@ function ConstructReference({Category}) {
 function FullStackReferenceTitle() {
     return (
         <div>
-            <Title title="Full Stack Resources Reference" />
+            <div className="flex flex-row items-center gap-2 mb-4 sm:mb-6">
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                    Full Stack Resources Reference
+                </h1>
+                <LibraryBig size={24}/>
+            </div>
             <p className={Style.Paragraph}>
                 Here are some quick reference for full stack development. Divided into different categories.
                 Each of them has a curated list of resources about frameworks, libraries, and tools.
