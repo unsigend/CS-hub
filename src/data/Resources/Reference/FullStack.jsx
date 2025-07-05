@@ -118,6 +118,12 @@ const FullStackReference = [
                 url: "https://heroicons.com/",
                 content: "Hero Icons Documentation",
             },
+            {
+                name: "React Icons",
+                id: "react-icons-docs",
+                url: "https://react-icons.github.io/react-icons/",
+                content: "React Icons Documentation",
+            },
         ]
     }
 ]

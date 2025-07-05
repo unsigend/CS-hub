@@ -66,7 +66,7 @@ function FullStackReferenceTitle() {
         <div>
             <div className="flex flex-row items-center gap-2 mb-4 sm:mb-6">
                 <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                    Full Stack Resources Reference
+                    Full Stack Reference
                 </h1>
                 <LibraryBig size={24}/>
             </div>
