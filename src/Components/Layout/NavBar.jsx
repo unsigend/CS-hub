@@ -29,8 +29,8 @@ import { useState, useEffect } from 'react';
 import "@/style/style.css";
 
 // Import for the components
-import Logo from "@/Components/UI/logo";
-import NavList from "@/Components/UI/NavList";
+import Logo from "@/components/ui/Logo";
+import NavList from "@/components/ui/NavList";
 
 /**
  * @description: Style for the NavBar component

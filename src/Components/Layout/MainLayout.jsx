@@ -22,10 +22,12 @@
  * SOFTWARE.
  */
 
-import NavBar from "@/Components/Layout/NavBar";
-import Container from "@/Components/Layout/Container";
-import Footer from "@/Components/Layout/Footer";
+// Import for the layout components
+import NavBar from "@/components/layout/NavBar";
+import Container from "@/components/layout/Container";
+import Footer from "@/components/layout/Footer";
 
+// Import for the react router dom
 import { Outlet } from "react-router-dom";
 
 export default function MainLayout() {

@@ -33,7 +33,7 @@ import "@/style/style.css";
 import { ArrowRight, ArrowDown } from "lucide-react";
 
 // Import for the closeSidebar function
-import { closeSidebar } from "./SideBar";
+import { closeSidebar } from "@/components/main/SideBar";
 
 /**
  * @description: Style for the Category component

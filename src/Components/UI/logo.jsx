@@ -26,7 +26,7 @@
 import "@/style/style.css";
 
 // Import for the components
-import HamburgerMenu from "@/Components/UI/HamburgerMenu";
+import HamburgerMenu from "@/components/ui/HamburgerMenu";
 
 // style for the Logo component
 /**

@@ -26,14 +26,14 @@
 import "@/style/style.css";
 
 // Import for the components
-import CodeBar from "@/Components/UI/CodeBar";
-import CategoryCard from "@/Components/UI/CategoryCard";
-import Note from "@/Components/UI/Note";
-import {LinkExternal, LinkInner} from "@/Components/UI/Link";
-import CategoryCardData from "@/data/CategoryCard";
+import CodeBar from "@/components/ui/CodeBar";
+import CategoryCard from "@/components/ui/CategoryCard";
+import Note from "@/components/ui/Note";
+import {LinkExternal, LinkInner} from "@/components/ui/Link";
+import CategoryCardData from "@/data/content/category/category-cards";
 
 // Import for the global data
-import global from "@/data/general";
+import global from "@/data/config/config";
 
 // style for the Home component
 const HomePageStyle = {

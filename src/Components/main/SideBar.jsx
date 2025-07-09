@@ -26,10 +26,10 @@
 import "@/style/style.css";
 
 // Import for the data
-import CategoryList from "@/data/Category";
+import CategoryList from "@/data/content/category/categories";
 
 // Import for the components
-import Category from "@/Components/Content/Category";
+import Category from "@/components/main/Category";
 
 /**
  * @description: Style for the SideBar component

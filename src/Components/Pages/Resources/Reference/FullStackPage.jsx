@@ -23,13 +23,13 @@
  */
 
 // Import for the Reference component
-import Reference from "@/Components/UI/Reference";
-import { Title, SubTitle } from "@/Components/UI/Title";
-import Card from "@/Components/UI/Card";
+import Reference from "@/components/ui/Reference";
+import { Title, SubTitle } from "@/components/ui/Title";
+import Card from "@/components/ui/Card";
 import { LibraryBig } from "lucide-react";
 
 // Import for the data
-import FullStackReference from "@/data/Resources/Reference/FullStack";
+import FullStackReference from "@/data/content/resources/reference/full-stack";
 
 const Style = {
     Paragraph: `

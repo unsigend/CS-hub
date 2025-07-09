@@ -23,10 +23,10 @@
  */
 
 // Import the global data
-import global from "@/data/general";
+import global from "@/data/config/config";
 
 // Import the pages
-import FullStackReferencePage from "@/Components/Pages/Resources/Reference/FullStackPage";
+import FullStackReferencePage from "@/components/pages/resources/reference/FullStackPage";
 
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub

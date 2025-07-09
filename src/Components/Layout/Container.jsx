@@ -26,13 +26,9 @@
 // Import for the style
 import "@/style/style.css";
 
-/**
- * Import for the components
- * - SideBar
- * - Hero
- */
-import SideBar from "@/Components/Content/SideBar";
-import Hero from "@/Components/Content/Hero";
+// Import for the main components
+import SideBar from "@/components/main/SideBar";
+import Hero from "@/components/main/Hero";
 
 /**
  * @description: Style for the Container component

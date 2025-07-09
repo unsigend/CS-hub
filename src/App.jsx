@@ -26,15 +26,15 @@
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 // Import the MainLayout component
-import MainLayout from "@/Components/Layout/MainLayout";
+import MainLayout from "@/components/layout/MainLayout";
 
 // Import the components for pages
-import HomePage from "@/Components/Pages/Main/HomePage";
-import UnderConstructionPage from "@/Components/Pages/Main/UnderConstructionPage";
+import HomePage from "@/components/pages/home/HomePage";
+import UnderConstructionPage from "@/components/pages/home/UnderConstructionPage";
 
 // import the global data
-import CategoryList from "@/data/Category";
-import global from "@/data/general";
+import CategoryList from "@/data/content/category/categories";
+import global from "@/data/config/config";
 
 // Recursively flatten all categories and subcategories into a flat array of routes
 function flattenRoutes(categories) {

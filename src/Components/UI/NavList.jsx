@@ -32,7 +32,7 @@ import {  EqualApproximately, Github, Home } from "lucide-react";
 import "@/style/style.css";
     
 // Import for the data
-import global from "@/data/general";
+import global from "@/data/config/config";
 
 /**
  * @description: Style for the NavList component

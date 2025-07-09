@@ -26,10 +26,10 @@
 import "@/style/style.css";
 
 // Import for the Link component
-import {LinkExternal, LinkInner} from "@/Components/UI/Link";
+import {LinkExternal, LinkInner} from "@/components/ui/Link";
 
 // Import for the Github URL
-import global from "@/data/general";
+import global from "@/data/config/config";
 
 /**
  * @description: Style for the Under Construction page component
