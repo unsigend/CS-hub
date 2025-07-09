@@ -143,6 +143,30 @@ const FullStackReference = [
                 content: "React Icons Documentation",
             },
         ]
+    },
+    {
+        name: "Backend Framework",
+        id: "backend-framework",
+        subContent: [
+            {
+                name: "Node.js",
+                id: "nodejs-docs",
+                url: "https://nodejs.org/docs/latest/api/",
+                content: "Node.js Documentation",
+            },
+            {
+                name: "Express.js",
+                id: "expressjs-docs",
+                url: "https://expressjs.com/en/5x/api.html",
+                content: "Express.js API Documentation",
+            },
+            {
+                name: "Django",
+                id: "django-docs",
+                url: "https://docs.djangoproject.com/en/5.2/",
+                content: "Django Documentation",
+            },
+        ]
     }
 ]
 
