@@ -25,9 +25,6 @@
 // Import for the useState and useEffect
 import { useState, useEffect } from "react";
 
-// Import for the style
-import "@/style/style.css";
-
 // Import for the icons
 import { Menu, X } from "lucide-react";
 

@@ -24,9 +24,6 @@
 // Import for the Link component
 import { Link } from "react-router-dom";
 
-// Import for the style
-import "@/style/style.css";
-
 // Style for the Link component
 const LinkStyle = {
     Link: `

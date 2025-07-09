@@ -26,9 +26,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-// Import for the style
-import "@/style/style.css";
-
 // Import for the icons from lucide-react
 import { ArrowRight, ArrowDown } from "lucide-react";
 

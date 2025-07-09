@@ -22,9 +22,6 @@
  * SOFTWARE.
  */
 
-// Import for the style
-import "@/style/style.css";
-
 // Style for the Reference component
 const ReferenceStyle = {
     Reference: `

@@ -28,9 +28,6 @@ import { Link } from "react-router-dom";
 // Import for the icons
 import {  EqualApproximately, Github, Home } from "lucide-react";
 
-// Import for the style
-import "@/style/style.css";
-    
 // Import for the data
 import global from "@/data/config/config";
 

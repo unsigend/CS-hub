@@ -22,9 +22,6 @@
  * SOFTWARE.
  */
 
-// Import for the style
-import "@/style/style.css";
-
 // Import for the components
 import CodeBar from "@/components/ui/CodeBar";
 import CategoryCard from "@/components/ui/CategoryCard";

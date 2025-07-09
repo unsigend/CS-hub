@@ -22,9 +22,6 @@
  * SOFTWARE.
  */
 
-// Import for the style
-import "@/style/style.css";
-
 // Import for the components
 import HamburgerMenu from "@/components/ui/HamburgerMenu";
 

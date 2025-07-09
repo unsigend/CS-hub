@@ -22,9 +22,6 @@
  * SOFTWARE.
  */
 
-// Import for the style
-import "@/style/style.css";
-
 // style for the CodeBar component
 const CodeBarStyle = {
     CodeBar: `

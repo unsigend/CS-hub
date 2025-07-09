@@ -25,9 +25,6 @@
 // Import for React hooks
 import { useState, useEffect } from 'react';
 
-// Import for the style
-import "@/style/style.css";
-
 // Import for the components
 import Logo from "@/components/ui/Logo";
 import NavList from "@/components/ui/NavList";

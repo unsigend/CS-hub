@@ -22,9 +22,6 @@
  * SOFTWARE.
  */
 
-// Import for the style
-import "@/style/style.css";
-
 // Import for the Link component
 import {LinkExternal, LinkInner} from "@/components/ui/Link";
 

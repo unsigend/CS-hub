@@ -22,9 +22,6 @@
  * SOFTWARE.
  */
 
-// Import for the style
-import "@/style/style.css";
-
 /**
  * @description: Style for the Note component
  * @returns {React.ReactNode} - The note component

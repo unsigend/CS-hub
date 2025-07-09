@@ -22,9 +22,6 @@
  * SOFTWARE.
  */
 
-// Import for the style
-import "@/style/style.css";
-
 // Import for React Router
 import { Outlet } from "react-router-dom";
 

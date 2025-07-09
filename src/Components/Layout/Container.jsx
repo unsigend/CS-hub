@@ -22,13 +22,10 @@
  * SOFTWARE.
  */
 
-
-// Import for the style
-import "@/style/style.css";
-
 // Import for the main components
 import SideBar from "@/components/main/SideBar";
 import Hero from "@/components/main/Hero";
+import TableOfContents from "@/components/main/TableOfContents";
 
 /**
  * @description: Style for the Container component
@@ -49,6 +46,7 @@ export default function Container() {
         <div className={ContainerStyle.Container}>
             <SideBar />
             <Hero />
+            <TableOfContents />
         </div>
     )
 }
