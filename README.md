@@ -1,30 +1,30 @@
 # CS Hub
 
-A comprehensive resource hub for Computer Science (CS) Resources and Road Maps, featuring curated learning paths and Road Maps. Also include some practical projects.
+A comprehensive resource platform for Computer Science education, providing curated learning paths, roadmaps, and educational resources for self-learners navigating their Computer Science journey.
 
-## 📚 What's Inside
+## Overview
 
-- **Full-Stack Development Roadmap** - Complete guide from frontend to backend
-- **Low-Level Systems Roadmap** - Deep dive into systems programming and architecture
-- **Curated CS Resources** - Essential tools, tutorials, and references
-- **Interactive Learning Paths** - Step-by-step guidance for different specializations
+CS Hub is designed to help students and professionals systematically approach Computer Science learning through structured roadmaps and carefully selected resources. The platform covers multiple specializations including full-stack development, low-level systems programming, and university-level coursework.
 
-## 🛠️ Built With
+## Technology Stack
 
-- **React** - Frontend framework
-- **Tailwind CSS** - Styling and responsive design
-- **Static Site** - Fast and lightweight
+- React - Component-based user interface
+- React Router - Client-side routing and navigation
+- Tailwind CSS - Utility-first styling framework
+- Single Page Application (SPA) - Fast, responsive user experience
+- Vite - Build tool and development server
 
-## 📖 Usage
+## Features
 
-Navigate through different sections to explore:
-- Road Maps tailored to your learning goals
-- Curated resources for each topic
-- Progress tracking for your learning journey
+- Structured learning roadmaps for different CS specializations
+- Curated resources including books, projects, and reference materials
+- University course collections from top institutions
+- Responsive design for desktop and mobile devices
 
-## 🤝 Contributing
+## Purpose
 
-Contributions are welcome! Feel free to:
-- Add new resources
-- Improve existing Road Maps
-- Fix bugs or enhance UI/UX
+This platform serves as a centralized hub for Computer Science learners seeking organized, high-quality educational content and clear learning progression paths.
+
+## Contributing
+
+Contributions are welcome through pull requests and issues on the project repository.
