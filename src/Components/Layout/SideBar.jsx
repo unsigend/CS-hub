@@ -29,7 +29,7 @@ import "@/style/style.css";
 import CategoryList from "@/data/content/category/categories";
 
 // Import for the components
-import Category from "@/components/main/Category";
+import Category from "@/components/ui/Category";
 
 /**
  * @description: Style for the SideBar component

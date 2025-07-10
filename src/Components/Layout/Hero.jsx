@@ -22,31 +22,29 @@
  * SOFTWARE.
  */
 
-// Import for the main components
-import SideBar from "@/components/main/SideBar";
-import Hero from "@/components/main/Hero";
+// Import for React Router
+import { Outlet } from "react-router-dom";
 
 /**
- * @description: Style for the Container component
- * @style: Container with left margin to account for fixed sidebar
- *         Hero takes full remaining space
+ * @description: Style for the Hero component
+ * @style: Full width and height main content with independent scrolling
+ *         Takes all available space next to fixed sidebar
  */
-const ContainerStyle = {
-    Container: `flex flex-row
-    justify-center items-center
+const HeroStyle = {
+    Hero: `flex flex-col mt-20
     w-[80%] mx-auto
-    mt-3
-    md:ml-50 
+    md:w-[60%]
     `,
 }
 
-export default function Container() {
+export default function Hero() {
     return (
-        <div className={ContainerStyle.Container}>
-            <SideBar />
-            <Hero />
+        <div className={HeroStyle.Hero}>
+            <Outlet />
         </div>
     )
 }
+
+
 
 

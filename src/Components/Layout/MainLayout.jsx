@@ -24,19 +24,20 @@
 
 // Import for the layout components
 import NavBar from "@/components/layout/NavBar";
-import Container from "@/components/layout/Container";
 import Footer from "@/components/layout/Footer";
-
-// Import for the react router dom
-import { Outlet } from "react-router-dom";
+import SideBar from "@/components/layout/SideBar";
+import Hero from "@/components/layout/Hero";
 
 export default function MainLayout() {
   return (
     <div>
+      {/* NavBar at the top of the page which is fixed */}
       <NavBar />
-      <Container>
-        <Outlet />
-      </Container>
+      {/* SideBar on the left of the page which is fixed */}
+      <SideBar />
+      {/* Hero at the center of the page which is scrollable */}
+      <Hero />
+      {/* Footer at the bottom of the page which is fixed */}
       <Footer />
     </div>
   )

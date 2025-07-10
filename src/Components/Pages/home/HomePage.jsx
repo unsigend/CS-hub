@@ -24,7 +24,7 @@
 
 // Import for the components
 import CodeBar from "@/components/ui/CodeBar";
-import CategoryCard from "@/components/ui/CategoryCard";
+import CategoryCard from "@/components/ui/MainCategoryCard";
 import Note from "@/components/ui/Note";
 import {LinkExternal, LinkInner} from "@/components/ui/Link";
 import CategoryCardData from "@/data/content/category/category-cards";

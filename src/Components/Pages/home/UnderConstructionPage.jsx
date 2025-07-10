@@ -35,7 +35,7 @@ import global from "@/data/config/config";
 const UnderConstructionStyle = {
     Container: `
     flex flex-col
-    px-4 py-12
+    px-4 py-12 mx-auto
     `,
     Card: `
     w-full max-w-xl
