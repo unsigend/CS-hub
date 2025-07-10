@@ -22,6 +22,10 @@
  * SOFTWARE.
  */
 
+/**
+ * @description: Logo component used as the logo of the CS-hub project
+ */
+
 // Import for the components
 import HamburgerMenu from "@/components/ui/HamburgerMenu";
 

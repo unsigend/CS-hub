@@ -21,6 +21,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
+/**
+ * @description: Link component for the CS-hub project
+ * LinkExternal: for external links
+ * LinkInner: for internal links
+ */
+
 // Import for the Link component
 import { Link } from "react-router-dom";
 

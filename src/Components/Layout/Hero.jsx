@@ -31,7 +31,8 @@ import { Outlet } from "react-router-dom";
  *         Takes all available space next to fixed sidebar
  */
 const HeroStyle = {
-    Hero: `flex flex-col mt-20
+    Hero: `flex flex-col 
+    mt-20 mb-10
     w-[80%] mx-auto
     md:w-[60%]
     `,

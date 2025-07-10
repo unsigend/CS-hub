@@ -194,13 +194,13 @@ const FullStackReference = [
                 name: "render",
                 id: "render-docs",
                 url: "https://render.com/",
-                content: "Render Service",
+                content: "Render Deployment Service",
             },
             {
                 name: "fly.io",
                 id: "flyio-docs",
                 url: "https://fly.io/",
-                content: "Fly.io Service",
+                content: "Fly.io Deployment Service",
             }
         ]
     }

@@ -23,6 +23,11 @@
  */
 
 /**
+ * @description: Note component used as a note for the CS-hub project
+ * with title and content
+ */
+
+/**
  * @description: Style for the Note component
  * @returns {React.ReactNode} - The note component
  */

@@ -22,6 +22,10 @@
  * SOFTWARE.
  */
 
+/**
+ * @description: HamburgerMenu component used as a button to open the sidebar
+ */
+
 // Import for the useState and useEffect
 import { useState, useEffect } from "react";
 

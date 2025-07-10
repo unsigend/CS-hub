@@ -21,3 +21,70 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
+// Import for the Reference component
+import Paragraph from "@/components/ui/Paragraph";
+import { ReferenceAligned } from "@/components/ui/Reference";
+import { Title, SubTitle } from "@/components/ui/Title";
+import Card from "@/components/ui/Card";
+
+// Import for the data
+import LowLevelReference from "@/data/content/resources/reference/low-level";
+
+// Style for the LowLevelPage component
+const Style = {
+    Container: `
+    flex flex-col gap-4
+    `
+}
+
+// Function to construct the reference for each category
+function ConstructReference({Category}) {
+    return (
+        <div>
+            <SubTitle title={Category.name} level={2} />
+            {
+                Category.subContent.map((item) => (
+                    <ReferenceAligned
+                        key={item.id}
+                        name={item.name}
+                        url={item.url}
+                        content={item.content}
+                    />
+                ))
+            }
+        </div>
+    )
+}
+
+// Function to construct the title for the page
+function LowLevelReferenceTitle() {
+    return (
+        <div>
+            <Title title="Low Level Reference" />
+            <Paragraph content={
+                "Here are some quick reference for low level development. " +
+                "Divided into different categories. Each of them has a curated list of resources about programming languages, tools, and other related topics."
+            } />
+            <Paragraph content={
+                "This page is a collection of reference for low level development. " +
+                "Only meant for quick reference, not for comprehensive learning."
+            } />
+        </div>
+    )
+}
+
+export default function LowLevelReferencePage() {
+    return (
+        <Card content={
+            <div className={Style.Container}>
+                <LowLevelReferenceTitle />
+                {
+                    LowLevelReference.map((item) => (
+                        <ConstructReference Category={item} key={item.id} />
+                    ))
+                }
+            </div>
+        } />
+    )
+}

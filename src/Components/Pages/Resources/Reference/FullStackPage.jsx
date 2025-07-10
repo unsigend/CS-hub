@@ -23,37 +23,15 @@
  */
 
 // Import for the Reference component
-import Reference from "@/components/ui/Reference";
+import Paragraph from "@/components/ui/Paragraph";
+import { ReferenceAligned } from "@/components/ui/Reference";
 import { Title, SubTitle } from "@/components/ui/Title";
 import Card from "@/components/ui/Card";
-import { LibraryBig } from "lucide-react";
 
 // Import for the data
 import FullStackReference from "@/data/content/resources/reference/full-stack";
 
 const Style = {
-    Paragraph: `
-    text-gray-700 leading-relaxed
-    text-base sm:text-lg mb-3
-    [&>p]:mb-4 [&>p:last-child]:mb-0
-    [&>ul]:mb-4 [&>ol]:mb-4
-    [&>h1]:mb-4 [&>h2]:mb-4 [&>h3]:mb-4
-    [&>blockquote]:mb-4 [&>pre]:mb-4
-    space-y-0
-    `,
-    ItemBox: `
-    flex flex-col gap-4
-    `,
-    ReferenceItem: `
-    flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4
-    text-gray-700 leading-relaxed text-base sm:text-lg mb-3
-    `,
-    ReferenceName: `
-    min-w-0 sm:min-w-[200px] font-medium text-gray-600
-    `,
-    ReferenceLink: `
-    flex-1
-    `,
     Container: `
     flex flex-col gap-4
     `
@@ -65,14 +43,12 @@ function ConstructReference({Category}) {
             <SubTitle title={Category.name} level={2} />
             {
                 Category.subContent.map((item) => (
-                    <div key={item.id} className={Style.ReferenceItem}>
-                        <div className={Style.ReferenceName}>
-                            {item.name}
-                        </div>
-                        <div className={Style.ReferenceLink}>
-                            <Reference url={item.url} content={item.content} />
-                        </div>
-                    </div>
+                    <ReferenceAligned
+                        key={item.id}
+                        name={item.name}
+                        url={item.url}
+                        content={item.content}
+                    />
                 ))
             }
         </div>
@@ -82,20 +58,15 @@ function ConstructReference({Category}) {
 function FullStackReferenceTitle() {
     return (
         <div>
-            <div className="flex flex-row items-center gap-2 mb-4 sm:mb-6">
-                <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                    Full Stack Reference
-                </h1>
-                <LibraryBig size={24}/>
-            </div>
-            <p className={Style.Paragraph}>
-                Here are some quick reference for full stack development. Divided into different categories.
-                Each of them has a curated list of resources about frameworks, libraries, and tools.
-            </p>
-            <p className={Style.Paragraph}>
-                <strong>Note:</strong> This page is a collection of reference for full stack development.
-                Only meant for quick reference, not for comprehensive learning.
-            </p>
+            <Title title="Full Stack Reference" />
+            <Paragraph content={
+                "Here are some quick reference for full stack development. Divided into different categories. " +
+                "Each of them has a curated list of resources about frameworks, libraries, and tools."
+            } />
+            <Paragraph content={
+                "This page is a collection of reference for full stack development. " +
+                "Only meant for quick reference, not for comprehensive learning."
+            } />
         </div>
     )
 }

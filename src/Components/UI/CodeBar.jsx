@@ -22,6 +22,10 @@
  * SOFTWARE.
  */
 
+/**
+ * @description: CodeBar component used as a container for the code bar
+ */
+
 // style for the CodeBar component
 const CodeBarStyle = {
     CodeBar: `

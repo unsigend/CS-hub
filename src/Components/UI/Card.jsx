@@ -22,6 +22,10 @@
  * SOFTWARE.
  */
 
+/**
+ * @description: Card component used as a container for the main content
+ */
+
 // Style for the Card component
 const CardStyle = {
     Card: `

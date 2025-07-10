@@ -22,6 +22,11 @@
  * SOFTWARE.
  */
 
+/**
+ * @description: Category component specifically for the sidebar
+ * @note: this component only works in sidebar
+ */
+
 // Import for the useState
 import { useState } from "react";
 import { Link } from "react-router-dom";

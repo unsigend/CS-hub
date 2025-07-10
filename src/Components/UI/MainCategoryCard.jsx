@@ -22,6 +22,10 @@
  * SOFTWARE.
  */
 
+/**
+ * @description: MainCategoryCard component used as a card for the main page
+ */
+
 // Style for the CategoryCard
 const CategoryCardStyle = {
     CategoryCard: `

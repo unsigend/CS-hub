@@ -22,6 +22,10 @@
  * SOFTWARE.
  */
 
+/**
+ * @description: NavList component used as a list of navigation items
+ */
+
 // Import for React Router
 import { Link } from "react-router-dom";
 

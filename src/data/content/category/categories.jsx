@@ -27,6 +27,7 @@ import global from "@/data/config/config";
 
 // Import the pages
 import FullStackReferencePage from "@/components/pages/resources/reference/FullStackPage";
+import LowLevelReferencePage from "@/components/pages/resources/reference/LowLevelPage";
 
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub
@@ -220,7 +221,7 @@ const CategoryList = [
                     {
                         name: "Low Level",
                         ID: "low-level",
-                        page: null,
+                        page: <LowLevelReferencePage />,
                         url: `${ResourcesPath}/reference/low-level`,
                         subCategories: null,
                     },
