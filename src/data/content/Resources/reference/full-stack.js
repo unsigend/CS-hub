@@ -167,6 +167,42 @@ const FullStackReference = [
                 content: "Django Documentation",
             },
         ]
+    },
+    {
+        name: "Database",
+        id: "database",
+        subContent: [
+            {
+                name: "MongoDB",
+                id: "mongodb-docs",
+                url: "https://www.mongodb.com/docs/manual/",
+                content: "MongoDB Documentation",
+            },
+            {
+                name: "PostgreSQL",
+                id: "postgresql-docs",
+                url: "https://www.postgresql.org/docs/current/",
+                content: "PostgreSQL Documentation",
+            },
+        ]
+    },
+    {
+        name: "Deployment",
+        id: "deployment",
+        subContent: [
+            {
+                name: "render",
+                id: "render-docs",
+                url: "https://render.com/",
+                content: "Render Service",
+            },
+            {
+                name: "fly.io",
+                id: "flyio-docs",
+                url: "https://fly.io/",
+                content: "Fly.io Service",
+            }
+        ]
     }
 ]
 

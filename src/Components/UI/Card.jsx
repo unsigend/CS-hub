@@ -26,7 +26,7 @@
 const CardStyle = {
     Card: `
     w-[95%] max-w-6xl
-    bg-gradient-to-br from-blue-50 to-white
+    bg-gradient-to-br from-gray-50 to-white
     rounded-xl sm:rounded-2xl border border-gray-200
     p-4 sm:p-6 md:p-8 lg:p-12
     shadow-lg hover:shadow-xl
