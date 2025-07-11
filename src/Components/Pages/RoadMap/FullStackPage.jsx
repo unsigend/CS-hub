@@ -25,8 +25,10 @@
 
 export default function FullStackPage() {
     return (
-        <div>
-            <h1>Full Stack Page</h1>
-        </div>
+        <>
+            <CourseCard
+                courseName="Frontend Development"
+            />
+        </>
     )
 }

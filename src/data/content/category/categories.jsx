@@ -29,6 +29,7 @@ import global from "@/data/config/config";
 import FullStackReferencePage from "@/components/pages/resources/reference/FullStackPage";
 import LowLevelReferencePage from "@/components/pages/resources/reference/LowLevelPage";
 import HelsinkiFSOPage from "@/components/pages/university-courses/HelsinkiFSOPage";
+import HarvardCS50Page from "@/components/pages/university-courses/HarvardCS50Page";
 
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub
@@ -179,7 +180,7 @@ const CategoryList = [
                     {
                         name: "Harvard CS 50",
                         ID: "harvard-cs-50",
-                        page: null,
+                        page: <HarvardCS50Page />,
                         url: `${UniversityCoursesPath}/introduction-to-computer-science/harvard-cs-50`,
                         subCategories: null,
                     }
