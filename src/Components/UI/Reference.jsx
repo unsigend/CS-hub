@@ -33,18 +33,18 @@ const ReferenceStyle = {
 // Style for the ReferenceAligned component
 const ReferenceAlignedStyle = {
     ReferenceItem: `
-    flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4
+    flex flex-row flex-wrap items-start gap-2 sm:gap-4
     text-gray-700 leading-relaxed text-base sm:text-lg mb-3
     `,
     ReferenceName: `
-    min-w-0 sm:min-w-[200px] font-medium text-gray-600
+    min-w-fit sm:min-w-[180px] md:min-w-[220px] font-medium text-gray-600 flex-shrink-0
     `,
     ReferenceLink: `
-    flex-1
+    flex-1 min-w-0
     `,
 }
 
-export default function Reference({url, content}) {
+export function Reference({url, content}) {
     return (
         <a href={url} target="_blank" rel="noopener noreferrer" 
         className={ReferenceStyle.Reference}>

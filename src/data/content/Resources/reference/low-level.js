@@ -28,19 +28,19 @@ const LowLevelReference = [
         id: "programming-language",
         subContent: [
             {
-                name: "C",
+                name: "C Language",
                 id: "c-programming-language",
                 url: "https://en.cppreference.com/w/c.html",
                 content: "C Standard Library Reference",
             },
             {
-                name: "C++",
+                name: "C++ Language",
                 id: "c++-programming-language",
                 url: "https://en.cppreference.com/w/cpp.html",
                 content: "C++ Standard Library Reference",
             },
             {
-                name: "Rust",
+                name: "Rust Language",
                 id: "rust-programming-language",
                 url: "https://doc.rust-lang.org/std/index.html",
                 content: "Rust Standard Library",
@@ -75,6 +75,54 @@ const LowLevelReference = [
                 id: "binutils",
                 url: "https://sourceware.org/binutils/docs/binutils/index.html",
                 content: "binutils Documentation",
+            },
+            {
+                name: "git",
+                id: "git",
+                url: "https://git-scm.com/docs",
+                content: "git Documentation",
+            },
+            {
+                name: "make",
+                id: "make",
+                url: "https://www.gnu.org/software/make/manual/make.html",
+                content: "make Documentation",
+            },
+            {
+                name: "qemu",
+                id: "qemu",
+                url: "https://www.qemu.org/docs/master/",
+                content: "qemu Documentation",
+            },
+            {
+                name: "bochs",
+                id: "bochs",
+                url: "https://bochs.sourceforge.io/doc/docbook/user/index.html",
+                content: "bochs Documentation",
+            },
+        ]
+    },
+    {
+        name: "Unix System API",
+        id: "unix-system-api",
+        subContent: [
+            {
+                name: "x86 system call",
+                id: "x86-system-call",
+                url: "https://x86.syscall.sh/",
+                content: "x86 System Call Table",
+            },
+            {
+                name: "x64 system call",
+                id: "x64-system-call",
+                url: "https://x64.syscall.sh/",
+                content: "x64 System Call Table",
+            },
+            {
+                name: "ARM system call",
+                id: "arm-system-call",
+                url: "https://arm64.syscall.sh/",
+                content: "ARM System Call Table",
             },
         ]
     }

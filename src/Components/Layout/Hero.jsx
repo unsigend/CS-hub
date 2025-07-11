@@ -33,8 +33,7 @@ import { Outlet } from "react-router-dom";
 const HeroStyle = {
     Hero: `flex flex-col 
     mt-20 mb-10
-    w-[80%] mx-auto
-    md:w-[60%]
+    w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] mx-auto
     `,
 }
 

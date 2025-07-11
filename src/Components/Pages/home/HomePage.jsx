@@ -26,7 +26,7 @@
 import CodeBar from "@/components/ui/CodeBar";
 import CategoryCard from "@/components/ui/MainCategoryCard";
 import Note from "@/components/ui/Note";
-import {LinkExternal, LinkInner} from "@/components/ui/Link";
+import {LinkExternal} from "@/components/ui/Link";
 import CategoryCardData from "@/data/content/category/category-cards";
 
 // Import for the global data
@@ -49,14 +49,16 @@ const HomePageStyle = {
     `,
     TitleContainer: `
     flex flex-col
-    justify-center items-start
+    justify-center items-center md:items-start
     flex-1 gap-3
     `,
     Title: `
     text-4xl font-bold
+    text-center md:text-left
     `,
     Description: `
     text-lg text-gray-500
+    text-center md:text-left
     `,
     IntroductionBar: `
     mx-auto w-[80%]

@@ -28,6 +28,7 @@ import global from "@/data/config/config";
 // Import the pages
 import FullStackReferencePage from "@/components/pages/resources/reference/FullStackPage";
 import LowLevelReferencePage from "@/components/pages/resources/reference/LowLevelPage";
+import HelsinkiFSOPage from "@/components/pages/university-courses/HelsinkiFSOPage";
 
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub
@@ -184,6 +185,21 @@ const CategoryList = [
                     }
                 ],
             },
+            {
+                name: "Full Stack Development",
+                ID: "full-stack-development",
+                page: null,
+                url: `${UniversityCoursesPath}/full-stack-development`,
+                subCategories: [
+                    {
+                        name: "Helsinki FSO",
+                        ID: "helsinki-fso",
+                        page: <HelsinkiFSOPage />,
+                        url: `${UniversityCoursesPath}/full-stack-development/helsinki-fso`,
+                        subCategories: null,
+                    }
+                ],
+            }
         ]
     },
     {
