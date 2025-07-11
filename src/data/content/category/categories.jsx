@@ -30,6 +30,7 @@ import FullStackReferencePage from "@/components/pages/resources/reference/FullS
 import LowLevelReferencePage from "@/components/pages/resources/reference/LowLevelPage";
 import HelsinkiFSOPage from "@/components/pages/university-courses/HelsinkiFSOPage";
 import HarvardCS50Page from "@/components/pages/university-courses/HarvardCS50Page";
+import FullStackPage from "@/components/pages/roadmap/FullStackPage";
 
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub
@@ -48,7 +49,7 @@ const CategoryList = [
             {
                 name: "Full Stack",
                 ID: "full-stack",
-                page: null,
+                page: <FullStackPage />,
                 url: `${RoadMapPath}/full-stack`,
                 subCategories: null,
             },
@@ -59,20 +60,6 @@ const CategoryList = [
                 url: `${RoadMapPath}/low-level`,
                 subCategories: null,
             },
-            {
-                name: "Artificial Intelligence",
-                ID: "artificial-intelligence",
-                page: null,
-                url: `${RoadMapPath}/artificial-intelligence`,
-                subCategories: null,
-            },
-            {
-                name: "Block Chain",
-                ID: "block-chain",
-                page: null,
-                url: `${RoadMapPath}/block-chain`,
-                subCategories: null,
-            }
         ]
     },
     {
