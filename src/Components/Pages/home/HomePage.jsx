@@ -40,14 +40,15 @@ const HomePageStyle = {
     flex flex-col
     items-center
     gap-5
-    mb-10
+    mb-10 w-full
     `,
     TitleBar: `
     flex flex-col
     justify-between gap-4
     mt-6
     md:flex-row md:gap-8 md:mt-0
-    md:w-[60%]
+    w-[90%] max-w-6xl mx-auto px-4
+    md:px-8 lg:px-12
     `,
     TitleContainer: `
     flex flex-col
@@ -69,12 +70,11 @@ const HomePageStyle = {
     gap-5
     `,
     CategoryCardBar: `
-    w-[80%] mb-10
-    flex flex-row
-    justify-center
-    flex-wrap
+    w-[100%] mb-10
+    grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2
+    justify-items-center
     gap-5
-    lg:w-[60%]
+    max-w-4xl mx-auto
     `,
 }
 /**
