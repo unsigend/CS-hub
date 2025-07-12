@@ -29,6 +29,7 @@ import Note from "@/components/ui/Note";
 import Paragraph from "@/components/ui/Paragraph";
 import {ReferenceAligned} from "@/components/ui/Reference";
 import {LinkInner} from "@/components/ui/Link";
+import UnorderedList from "@/components/ui/UnorderedList";
 
 // Import for the University Courses Path
 import {UniversityCoursesPath} from "@/data/content/category/categories";
@@ -78,11 +79,11 @@ export default function FullStackPage() {
                         This road map is structured in a way that is easy to follow and understand.
                         The structure is as follows:
                         </Paragraph>
-                        <ul className="list-disc list-inside mb-2">
+                        <UnorderedList>
                             <li>Frontend Development</li>
                             <li>Backend Development</li>
-                            <li>Database</li>
-                        </ul>
+                            <li>Database</li>    
+                        </UnorderedList>
                         <Paragraph>
                         If you want to focused on specific technique stack, 
                         you can just skip the other part. And focus on which part you want.
