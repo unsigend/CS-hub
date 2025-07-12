@@ -24,6 +24,8 @@
 
 // Import for the Link component
 import {LinkExternal, LinkInner} from "@/components/ui/Link";
+import {SubTitle, Title} from "@/components/ui/Title";
+import Paragraph from "@/components/ui/Paragraph";
 
 // Import for the Github URL
 import global from "@/data/config/config";
@@ -45,20 +47,9 @@ const UnderConstructionStyle = {
     p-10 sm:p-16 md:p-20
     text-center
     `,
-    Title: `
-    text-3xl sm:text-6xl font-light text-gray-900 mb-6
-    `,
-    Subtitle: `
-    text-xl sm:text-2xl text-gray-600 mb-10
-    font-normal
-    `,
     Description: `
     text-gray-500 leading-relaxed mb-12
     text-lg sm:text-xl
-    `,
-    ContributionText: `
-    text-gray-400 text-base sm:text-lg
-    leading-relaxed
     `,
 }
 
@@ -71,24 +62,20 @@ export default function UnderConstructionPage({pageName}) {
         <div className={UnderConstructionStyle.Container}>
             <div className={UnderConstructionStyle.Card}>
                 {/* Main Title */}
-                <h1 className={UnderConstructionStyle.Title}>
-                    {pageName} Page Not found
-                </h1>
+                <Title title={`${pageName} Page Not Found`} />
 
                 {/* Subtitle */}
-                <p className={UnderConstructionStyle.Subtitle}>
-                    This page is currently being developed
-                </p>
+                <SubTitle title="This page is currently being developed" />
 
                 {/* Description */}
-                <p className={UnderConstructionStyle.Description}>
+                <Paragraph>
                     Currently, working on something. Coming soon. Go back to <LinkInner to={global.BasePath}>Home</LinkInner>
-                </p>
+                </Paragraph>
 
                 {/* Contribution */}
-                <p className={UnderConstructionStyle.ContributionText}>
+                <Paragraph>
                     Contributions are welcome.  <LinkExternal href={global.GitHubLink}>Github</LinkExternal>
-                </p>
+                </Paragraph>
             </div>
         </div>
     )

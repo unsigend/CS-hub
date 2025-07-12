@@ -24,12 +24,12 @@
 
 // Import for the components
 import CodeBar from "@/components/ui/CodeBar";
-import CategoryCard from "@/components/ui/MainCategoryCard";
+import MainCategoryCard from "@/components/ui/MainCategoryCard";
 import Note from "@/components/ui/Note";
 import {LinkExternal} from "@/components/ui/Link";
 import CategoryCardData from "@/data/content/category/category-cards";
 import Paragraph from "@/components/ui/Paragraph";
-import {SubTitle} from "@/components/ui/Title";
+import {SubTitle, Title} from "@/components/ui/Title";
 
 // Import for the global data
 import global from "@/data/config/config";
@@ -85,7 +85,7 @@ function TitleBar(){
     return (
         <div className={HomePageStyle.TitleBar}>
             <div className={HomePageStyle.TitleContainer}>
-                <h1 className={HomePageStyle.Title}>Welcome to CS-hub</h1>
+                <Title title="Welcome to CS-hub" />
                 <p className={HomePageStyle.Description}>
                     This is a platform for you to learn Computer Science. Dedicated for self-learners better
                     navigate the learning path.
@@ -148,7 +148,7 @@ function CategoryCardBar(){
     return (
         <div className={HomePageStyle.CategoryCardBar}>
             {CategoryCardData.map((card) => (
-                <CategoryCard key={card.title} title={card.title} description={card.description}
+                <MainCategoryCard key={card.title} title={card.title} description={card.description}
                 icon={card.icon} />
             ))}
         </div>

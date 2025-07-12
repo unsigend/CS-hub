@@ -27,7 +27,7 @@
  */
 
 // Style for the CategoryCard
-const CategoryCardStyle = {
+const MainCategoryCardStyle = {
     CategoryCard: `
     bg-white rounded-lg shadow-lg
     hover:shadow-2xl
@@ -49,24 +49,24 @@ const CategoryCardStyle = {
     `,
 }
 
-export default function CategoryCard({title, description, icon}) {
+export default function MainCategoryCard({title, description, icon}) {
     return (
-        <div className={CategoryCardStyle.CategoryCard}>
+        <div className={MainCategoryCardStyle.CategoryCard}>
             
             {/* Icon */}
-            <div className={CategoryCardStyle.IconContainer}>
-                <div className={CategoryCardStyle.Icon}>
+            <div className={MainCategoryCardStyle.IconContainer}>
+                <div className={MainCategoryCardStyle.Icon}>
                     {icon}
                 </div>
             </div>
             
             {/* Title */}
-            <h2 className={CategoryCardStyle.Title}>
+            <h2 className={MainCategoryCardStyle.Title}>
                 {title}
             </h2>
             
             {/* Introduction paragraph */}
-            <p className={CategoryCardStyle.Description}>
+            <p className={MainCategoryCardStyle.Description}>
                 {description}
             </p>
         </div>
