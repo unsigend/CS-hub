@@ -35,8 +35,10 @@ const ParagraphStyle = {
     `,
 }
 
-export default function Paragraph({content}) {
+export default function Paragraph({children, ...props}) {
     return (
-        <p className={ParagraphStyle.Paragraph}>{content}</p>
+        <p className={ParagraphStyle.Paragraph} {...props}>{children}</p>
     )
 }
+
+export { ParagraphStyle };

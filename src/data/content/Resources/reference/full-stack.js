@@ -203,6 +203,18 @@ const FullStackReference = [
                 content: "Fly.io Deployment Service",
             }
         ]
+    },
+    {
+        name: "Authentication",
+        id: "authentication",
+        subContent: [
+            {
+                name: "JWT",
+                id: "jwt-docs",
+                url: "https://jwt.io/",
+                content: "JWT Documentation",
+            }
+        ]
     }
 ]
 

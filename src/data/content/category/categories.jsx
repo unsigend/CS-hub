@@ -39,6 +39,8 @@ const RoadMapPath = `${global.BasePath}/road-map`;
 const UniversityCoursesPath = `${global.BasePath}/university-courses`;
 const ResourcesPath = `${global.BasePath}/resources`;
 
+export { RoadMapPath, UniversityCoursesPath, ResourcesPath };
+
 const CategoryList = [
     {
         // Road Map
@@ -185,8 +187,16 @@ const CategoryList = [
                         page: <HelsinkiFSOPage />,
                         url: `${UniversityCoursesPath}/full-stack-development/helsinki-fso`,
                         subCategories: null,
+                    },
+                    {
+                        name: "Berkeley CS 198-99",
+                        ID: "berkeley-cs-198-99",
+                        page: null,
+                        url: `${UniversityCoursesPath}/full-stack-development/berkeley-cs-198-99`,
+                        subCategories: null,
                     }
                 ],
+
             }
         ]
     },
