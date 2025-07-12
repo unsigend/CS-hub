@@ -28,6 +28,8 @@ import CategoryCard from "@/components/ui/MainCategoryCard";
 import Note from "@/components/ui/Note";
 import {LinkExternal} from "@/components/ui/Link";
 import CategoryCardData from "@/data/content/category/category-cards";
+import Paragraph from "@/components/ui/Paragraph";
+import {SubTitle} from "@/components/ui/Title";
 
 // Import for the global data
 import global from "@/data/config/config";
@@ -99,44 +101,43 @@ function TitleBar(){
  * @returns: About component with about text
  */
 function About(){
-    const content = (
-        <>
-            <p>
+    return (
+        <Note title="About">
+            <Paragraph>
                 This site integrates resources, road maps, practical projects, top-university courses, and more.
                 All of these resources are free and open-source. Dedicated for self-learners, CS-lovers, and anyone who
                 wants to learn more about Computer Science.
-            </p>
-            <strong className="text-xl">How to use</strong>
-            <p>
+            </Paragraph>
+            <SubTitle title="How to use" level={3} />
+            <Paragraph>
                 Whether you're a complete beginner starting your programming journey or an experienced developer looking 
                 to expand your skill set, CS-hub provides carefully curated pathways tailored to different learning styles. 
                 This site bridges the gap between theoretical knowledge and practical application.
-            </p>
-            <p>
+            </Paragraph>
+            <Paragraph>
                 The beauty of self-directed learning lies in its flexibility and personalized pace. 
                 CS-hub empowers you to take control of your education, whether you prefer diving deep into academic coursework, 
                 following step-by-step road maps, or jumping straight into hands-on projects that challenge your problem-solving 
                 abilities.
-            </p>
+            </Paragraph>
 
-            <p>
+            <Paragraph>
                 Now ! Choose your dedicated road map or field of interest, and start your learning journey.
                 Can be top-university based courses if you like a more structured learning experience. Or just follow the 
                 provided road map if you like a concept or skill based learning journey. Or can be a practical project
                 based learning if you like to learn by doing and challenge yourself. 
-            </p>
+            </Paragraph>
 
-            <p>
-                <strong>Note:</strong> This site is a work in progress. Any suggestions and contributions are welcome. 
+            <Paragraph>
+                <SubTitle title="Note" level={3} />
+                This site is a work in progress. Any suggestions and contributions are welcome. 
                 Contribute and fork here:
                 <LinkExternal href={global.GitHubLink}>
                     GitHub
                 </LinkExternal>
-            </p>
-        </>
-    );
-
-    return <Note title="About" content={content} />;
+            </Paragraph>
+        </Note>
+    )
 }
 
 /**

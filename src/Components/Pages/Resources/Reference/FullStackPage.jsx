@@ -59,21 +59,21 @@ function FullStackReferenceTitle() {
     return (
         <div>
             <Title title="Full Stack Reference" />
-            <Paragraph content={
-                "Here are some quick reference for full stack development. Divided into different categories. " +
-                "Each of them has a curated list of resources about frameworks, libraries, and tools."
-            } />
-            <Paragraph content={
-                "This page is a collection of reference for full stack development. " +
-                "Only meant for quick reference, not for comprehensive learning."
-            } />
+            <Paragraph>
+                Here are some quick reference for full stack development. Divided into different categories. 
+                Each of them has a curated list of resources about frameworks, libraries, and tools.
+            </Paragraph>
+            <Paragraph>
+                This page is a collection of reference for full stack development. 
+                Only meant for quick reference, not for comprehensive learning.
+            </Paragraph>
         </div>
     )
 }
 
 export default function FullStackReferencePage() {
     return (
-        <Card content={
+        <Card>
             <div className={Style.Container}>
             <FullStackReferenceTitle />
             {
@@ -82,6 +82,6 @@ export default function FullStackReferencePage() {
                 ))
             }
             </div>
-        } />
+        </Card>
     )
 }

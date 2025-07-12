@@ -28,120 +28,107 @@ import {Title, SubTitle} from "@/components/ui/Title";
 import Note from "@/components/ui/Note";
 import Paragraph from "@/components/ui/Paragraph";
 import {ReferenceAligned} from "@/components/ui/Reference";
-import FullStackImage from "@/assets/images/fullstackopen.svg";
 import {LinkInner} from "@/components/ui/Link";
 
 // Import for the University Courses Path
 import {UniversityCoursesPath} from "@/data/content/category/categories";
 
+// Import for the Image
+import FullStackImage from "@/assets/images/fullstackopen.svg";
+
 
 export default function FullStackPage() {
     return (
         <div className="flex flex-col gap-10">
-            <Note
-                title="Full Stack Development Road Map"
-                content={
-                    <div className="flex flex-row gap-8">
-                        <div className="flex flex-col">
-                            <Paragraph>
-                            This page is a road map for full stack development. This is a skill and practice focused road map.
-                            If you want to learn more concept based way can use the university courses for full stack development.
-                            </Paragraph>
-                            <SubTitle title="Reference" level={3} />
-                            <ReferenceAligned
-                                name="Full Stack Road Map"
-                                content="Roadmap.sh Full Stack Road Map"
-                                url="https://roadmap.sh/full-stack"
-                            />
-                            <ReferenceAligned
-                                name="Backend Road Map"
-                                content="Roadmap.sh Backend Road Map"
-                                url="https://roadmap.sh/backend"
-                            />
-                            <ReferenceAligned
-                                name="Frontend Road Map"
-                                content="Roadmap.sh Frontend Road Map"
-                                url="https://roadmap.sh/frontend"
-                            />
+            <Note title="Full Stack Development Road Map">        
+                <div className="flex flex-row gap-8">
+                    <div className="flex flex-col">
+                        <Paragraph>
+                        This page is a road map for full stack development. This is a skill and practice focused road map.
+                        If you want to learn more concept based way can use the university courses for full stack development.
+                        </Paragraph>
+                        <SubTitle title="Reference" level={3} />
+                        <ReferenceAligned
+                            name="Full Stack Road Map"
+                            content="Roadmap.sh Full Stack Road Map"
+                            url="https://roadmap.sh/full-stack"
+                        />
+                        <ReferenceAligned
+                            name="Backend Road Map"
+                            content="Roadmap.sh Backend Road Map"
+                            url="https://roadmap.sh/backend"
+                        />
+                        <ReferenceAligned
+                            name="Frontend Road Map"
+                            content="Roadmap.sh Frontend Road Map"
+                            url="https://roadmap.sh/frontend"
+                        />
 
-                            <SubTitle title="Note" level={3} />
-                            <Paragraph>
-                            This road map has some personal bias and may not suitable for everyone. 
-                            Consider this as a road map reference. If you have any suggestion or feedback, please feel free to contact me.
-                            </Paragraph>
-                            <Paragraph>
-                            This page is a work in progress. I will update it as I learn more about full stack development.
-                            </Paragraph>
+                        <SubTitle title="Note" level={3} />
+                        <Paragraph>
+                        This road map has some personal bias and may not suitable for everyone. 
+                        Consider this as a road map reference. If you have any suggestion or feedback, please feel free to contact me.
+                        </Paragraph>
+                        <Paragraph>
+                        This page is a work in progress. I will update it as I learn more about full stack development.
+                        </Paragraph>
 
-                            <SubTitle title="Structure" level={3} />
-                            <Paragraph>
-                            This road map is structured in a way that is easy to follow and understand.
-                            The structure is as follows:
-                            </Paragraph>
-                            <ul className="list-disc list-inside mb-2">
-                                <li>Frontend Development</li>
-                                <li>Backend Development</li>
-                                <li>Database</li>
-                            </ul>
-                            <Paragraph>
-                            If you want to focused on specific technique stack, 
-                            you can just skip the other part. And focus on which part you want.
-                            </Paragraph>
-                        </div>
-                        <div className="flex justify-center items-center">
-                            <img src={FullStackImage} alt="Full Stack Development" className="w-full h-full" />
-                        </div>
+                        <SubTitle title="Structure" level={3} />
+                        <Paragraph>
+                        This road map is structured in a way that is easy to follow and understand.
+                        The structure is as follows:
+                        </Paragraph>
+                        <ul className="list-disc list-inside mb-2">
+                            <li>Frontend Development</li>
+                            <li>Backend Development</li>
+                            <li>Database</li>
+                        </ul>
+                        <Paragraph>
+                        If you want to focused on specific technique stack, 
+                        you can just skip the other part. And focus on which part you want.
+                        </Paragraph>
                     </div>
-                }
-            />
+                    <div className="flex justify-center items-center">
+                        <img src={FullStackImage} alt="Full Stack Development" className="w-full h-full" />
+                    </div>
+                </div>
+            </Note>
+            
             <div className="flex flex-col gap-5">
-                <Card
-                    content={
-                        <>
-                            <Title title="Frontend Development" />
-                            <Paragraph>
-                            Frontend road map part will started from basics of web development
-                            and shift to more advanced topics like Framework, Library, and etc.
-                            </Paragraph>
-                            <Paragraph>
-                            Don't need to follow exactly as the same order, you can skip some topics that you already know them.
-                            Or some of the frameworks are optional, you can skip them if you don't want to learn them.
-                            </Paragraph>
+                <Card>
+                    <Title title="Frontend Development" />
+                    <Paragraph>
+                    Frontend road map part will started from basics of web development
+                    and shift to more advanced topics like Framework, Library, and etc.
+                    </Paragraph>
+                    <Paragraph>
+                    Don't need to follow exactly as the same order, you can skip some topics that you already know them.
+                    Or some of the frameworks are optional, you can skip them if you don't want to learn them.
+                    </Paragraph>
 
-                            <SubTitle title="Programming Language" level={2} />
-                            <Paragraph>
-                            The first part of the frontend development is the programming language.
-                            Namely HTML, CSS and JavaScript. Below are the concept based road map. If you like a more streamline learning, 
-                            reference the<LinkInner to={`${UniversityCoursesPath}/full-stack-development/berkeley-cs-198-99`}>
-                            Berkeley CS 198-99 </LinkInner>
-                            for more information.
-                            </Paragraph>
+                    <SubTitle title="Programming Language" level={2} />
+                    <Paragraph>
+                    The first part of the frontend development is the programming language.
+                    Namely HTML, CSS and JavaScript. Below are the concept based road map. If you like a more streamline learning, 
+                    reference the<LinkInner to={`${UniversityCoursesPath}/full-stack-development/berkeley-cs-198-99`}>
+                    Berkeley CS 198-99 </LinkInner>
+                    for more information.
+                    </Paragraph>
 
-                            <SubTitle title="HTML" level={3} />
-                            <Paragraph>
-                            HTML is the standard markup language for creating web pages.
-                            It is used to create the structure of a web page. 
-                            </Paragraph>
-                            
-                        </>
-                    }
-                />
+                    <SubTitle title="HTML" level={3} />
+                    <Paragraph>
+                    HTML is the standard markup language for creating web pages.
+                    It is used to create the structure of a web page. 
+                    </Paragraph>     
+                </Card>
 
-                <Card
-                    content={
-                        <>
-                            <Title title="Backend Development" />
-                        </>
-                    }
-                />
+                <Card>
+                    <Title title="Backend Development" />
+                </Card>
 
-                <Card
-                    content={
-                        <>
-                            <Title title="Database" />
-                        </>
-                    }
-                />
+                <Card>
+                    <Title title="Database" />
+                </Card>
             </div>
         </div>
     )

@@ -61,15 +61,15 @@ const NoteStyle = {
 /**
  * @description: Note Component for the CS-hub project
  * @param {string} title - The title of the note
- * @param {React.ReactNode} content - The content of the note
+ * @param {React.ReactNode} children - The content of the note
  * @returns {React.ReactNode} - The note component
  */
-export default function Note({ title, content }) {
+export default function Note({ title, children, ...props }) {
     return (
-        <div className={NoteStyle.Note}>
+        <div className={NoteStyle.Note} {...props}>
             <h1 className={NoteStyle.NoteTitle}>{title}</h1>
             <div className={NoteStyle.NoteContent}>
-                {content}
+                {children}
             </div>
         </div>
     )

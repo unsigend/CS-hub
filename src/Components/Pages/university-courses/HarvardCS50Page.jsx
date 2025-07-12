@@ -39,13 +39,15 @@ export default function HarvardCS50Page() {
             courseUrl="https://cs50.harvard.edu/x/2024/"
             from="Harvard University"
             prerequisites="No prerequisites"
-            programmingLanguage="C, Python, SQL, JavaScript, HTML, CSS"
-            children={
-                <>
-                    <Paragraph content="Harvard CS 50x is an introductory course to computer science. From C programming language to basic data structure,
-                        to Python programming language. In the end introduce to the basic of SQL and web development." />
-                    <Paragraph content="This course is a series course: Harvard CS 50x, Harvard CS 50P about Python, Harvard CS 50AI about AI. And 
-                    all of them provided a auto-grading system in github. After explore the CS 50x you can continue to explore the topics you like." />
+            programmingLanguage="C, Python, SQL, JavaScript, HTML, CSS" >
+                <Paragraph>
+                    Harvard CS 50x is an introductory course to computer science. From C programming language to basic data structure,
+                    to Python programming language. In the end introduce to the basic of SQL and web development.
+                </Paragraph>
+                <Paragraph>
+                    This course is a series course: Harvard CS 50x, Harvard CS 50P about Python, Harvard CS 50AI about AI. And 
+                    all of them provided a auto-grading system in github. After explore the CS 50x you can continue to explore the topics you like.
+                </Paragraph>
                     <SubTitle title="Harvard CS 50 Series" level={3} />
                     <ReferenceAligned
                         name="Harvard CS 50x"
@@ -62,8 +64,7 @@ export default function HarvardCS50Page() {
                         content="Harvard CS 50AI Link"
                         url="https://cs50.harvard.edu/ai/"
                     />
-                </>
-            }
-        />
+                
+        </CourseCard>
     )
 }

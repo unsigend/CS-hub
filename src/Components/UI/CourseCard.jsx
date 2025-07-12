@@ -127,6 +127,10 @@ export default function CourseCard({
         </div>
     );
 
-    return <Card content={courseContent} />;
+    return (
+        <Card>
+            {courseContent}
+        </Card>
+    );
 }
 

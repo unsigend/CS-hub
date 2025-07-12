@@ -62,21 +62,21 @@ function LowLevelReferenceTitle() {
     return (
         <div>
             <Title title="Low Level Reference" />
-            <Paragraph content={
-                "Here are some quick reference for low level development. " +
-                "Divided into different categories. Each of them has a curated list of resources about programming languages, tools, and other related topics."
-            } />
-            <Paragraph content={
-                "This page is a collection of reference for low level development. " +
-                "Only meant for quick reference, not for comprehensive learning."
-            } />
+            <Paragraph>
+                Here are some quick reference for low level development. 
+                Divided into different categories. Each of them has a curated list of resources about programming languages, tools, and other related topics.
+            </Paragraph>
+            <Paragraph>
+                This page is a collection of reference for low level development. 
+                Only meant for quick reference, not for comprehensive learning.
+            </Paragraph>
         </div>
     )
 }
 
 export default function LowLevelReferencePage() {
     return (
-        <Card content={
+        <Card>
             <div className={Style.Container}>
                 <LowLevelReferenceTitle />
                 {
@@ -85,6 +85,6 @@ export default function LowLevelReferencePage() {
                     ))
                 }
             </div>
-        } />
+        </Card>
     )
 }
