@@ -64,7 +64,8 @@ function LowLevelReferenceTitle() {
             <Title title="Low Level Reference" />
             <Paragraph>
                 Here are some quick reference for low level development. 
-                Divided into different categories. Each of them has a curated list of resources about programming languages, tools, and other related topics.
+                Divided into different categories. Each of them has a curated list of resources about programming 
+                languages, tools, and other related topics.
             </Paragraph>
             <Paragraph>
                 This page is a collection of reference for low level development. 

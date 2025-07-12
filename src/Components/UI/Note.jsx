@@ -50,11 +50,7 @@ const NoteStyle = {
     NoteContent: `
     text-gray-700 leading-relaxed
     text-base sm:text-lg
-    [&>p]:mb-4 [&>p:last-child]:mb-0
-    [&>ul]:mb-4 [&>ol]:mb-4
-    [&>h1]:mb-4 [&>h2]:mb-4 [&>h3]:mb-4
-    [&>blockquote]:mb-4 [&>pre]:mb-4
-    space-y-0
+    flex flex-col gap-4
     `,
 }
 

@@ -35,6 +35,7 @@ const CardStyle = {
     p-4 sm:p-6 md:p-8 lg:p-12
     shadow-lg hover:shadow-xl
     transition-all duration-300
+    flex flex-col gap-4
     mx-auto
     `,
 }

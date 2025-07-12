@@ -95,38 +95,84 @@ export default function FullStackPage() {
                 </div>
             </Note>
             
+            {/* Frontend Development Road Map */}
             <div className="flex flex-col gap-5">
                 <Card>
-                    <Title title="Frontend Development" />
-                    <Paragraph>
-                    Frontend road map part will started from basics of web development
-                    and shift to more advanced topics like Framework, Library, and etc.
-                    </Paragraph>
-                    <Paragraph>
-                    Don't need to follow exactly as the same order, you can skip some topics that you already know them.
-                    Or some of the frameworks are optional, you can skip them if you don't want to learn them.
-                    </Paragraph>
+                    <div>
+                        <Title title="Frontend Development" />
+                        <Paragraph>
+                        Frontend road map part will started from basics of web development
+                        and shift to more advanced topics like Framework, Library, and etc.
+                        </Paragraph>
+                        <Paragraph>
+                        Don't need to follow exactly as the same order, you can skip some topics that you already know them.
+                        Or some of the frameworks are optional, you can skip them if you don't want to learn them.
+                        </Paragraph>
+                    </div>
 
-                    <SubTitle title="Programming Language" level={2} />
-                    <Paragraph>
-                    The first part of the frontend development is the programming language.
-                    Namely HTML, CSS and JavaScript. Below are the concept based road map. If you like a more streamline learning, 
-                    reference the<LinkInner to={`${UniversityCoursesPath}/full-stack-development/berkeley-cs-198-99`}>
-                    Berkeley CS 198-99 </LinkInner>
-                    for more information.
-                    </Paragraph>
+                    <div>
+                        <SubTitle title="Programming Language" level={2} />
+                        <Paragraph>
+                        The first part of the frontend development is the programming language.
+                        Namely HTML, CSS and JavaScript. Below are the concept based road map. If you like a more streamline learning, 
+                        reference the<LinkInner to={`${UniversityCoursesPath}/full-stack-development/berkeley-cs-198-99`}>
+                        Berkeley CS 198-99 </LinkInner>
+                        for more information.
+                        </Paragraph>
 
-                    <SubTitle title="HTML" level={3} />
-                    <Paragraph>
-                    HTML is the standard markup language for creating web pages.
-                    It is used to create the structure of a web page. 
-                    </Paragraph>     
+                        <Paragraph>
+                        <strong>Note: </strong>The programming language also needed for the backend development. 
+                        Make sure you are familiar with the programming language before you start the backend development.
+                        </Paragraph>
+                    </div>
+
+                    <div>
+                        <SubTitle title="Essential Programming Language" level={3} />
+                        <Paragraph>
+                        The essential programming language for frontend development is HTML, CSS and JavaScript.
+                        </Paragraph>
+
+                        <SubTitle title="HTML" level={4} />
+                        <Paragraph>
+                        HTML is the standard markup language for creating web pages.
+                        It is used to create the structure of a web page. It is the basic of web development.
+
+                        </Paragraph>     
+
+                        <SubTitle title="CSS" level={4} />
+                        <Paragraph>
+                        CSS is used to style the HTML structure. It is used to make the web page more beautiful and user friendly.
+                        </Paragraph>
+
+                        <SubTitle title="JavaScript" level={4} />
+                        <Paragraph>
+                        JavaScript is used to make the web page more interactive. It is used to make the web page more dynamic and responsive.
+                        </Paragraph>
+                    </div>
+
+                    <div>
+                        <SubTitle title="Optional Programming Language" level={3} />
+                        <Paragraph>
+                            There are some optional programming language for frontend development. Which can be skipped
+                            fist and learn them later. Or learn them depend on your need and interest.
+                        </Paragraph>
+
+                        <SubTitle title="TypeScript" level={4} />
+                        <Paragraph>
+                        TypeScript is used to make the web development more efficient and easier. It has a strong type system
+                        and can be used to make the web development more reliable and secure.
+                        </Paragraph>
+                    </div>
+
                 </Card>
 
+                {/* Backend Development Road Map */}
                 <Card>
                     <Title title="Backend Development" />
+
                 </Card>
 
+                {/* Database Road Map */}
                 <Card>
                     <Title title="Database" />
                 </Card>
