@@ -71,6 +71,18 @@ const FullStackReference = [
                 content: "React Router Documentation",
             },
             {
+                name: "Redux",
+                id: "redux-docs",
+                url: "https://redux.js.org/introduction/getting-started",
+                content: "Redux Documentation",
+            },
+            {
+                name: "Redux Toolkit",
+                id: "redux-toolkit-docs",
+                url: "https://redux-toolkit.js.org/introduction/getting-started",
+                content: "Redux Toolkit Documentation",
+            },
+            {
                 name: "Next.js",
                 id: "nextjs-docs",
                 url: "https://nextjs.org/docs",
