@@ -5,10 +5,11 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/CS-hub',
   plugins: [react(), tailwindcss()],
   resolve: {
-    alias: {
-      '@': path.resolve(process.cwd(), 'src'),
-    },
+      alias: {
+        '@': path.resolve(process.cwd(), 'src'),
+      },
   },
 })
