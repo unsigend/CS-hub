@@ -1,18 +1,18 @@
 /**
  * MIT License
- * 
+ *
  * Copyright (c) 2025 Qiu Yixiang
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -33,7 +33,7 @@ import { Link } from "react-router-dom";
 
 // Style for the Link component
 const LinkStyle = {
-    Link: `
+  Link: `
     ml-2 text-black font-semibold
     hover:text-gray-700 transition-colors duration-200
     relative
@@ -42,7 +42,7 @@ const LinkStyle = {
     after:transition-all after:duration-300
     hover:after:w-full
     `,
-}
+};
 
 /**
  * @description: Link Component for the CS-hub project
@@ -50,19 +50,24 @@ const LinkStyle = {
  * @param {React.ReactNode} children - The children of the link
  * @returns {React.ReactNode} - The link component
  */
-export function LinkExternal({ href, children}:
-     {href: string, children: React.ReactNode}) {
-    return (
-        <a 
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={LinkStyle.Link}
-        >
-            {children}
-        </a>
-    )
-} 
+export function LinkExternal({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={LinkStyle.Link}
+    >
+      {children}
+    </a>
+  );
+}
 
 /**
  * @description: Inner Link Component for the CS-hub project
@@ -70,12 +75,16 @@ export function LinkExternal({ href, children}:
  * @param {React.ReactNode} children - The children of the link
  * @returns {React.ReactNode} - The inner link component
  */
-export function LinkInner({to, children}:
-     {to: string, children: React.ReactNode}) {
-    return (
-        <Link to={to} className={LinkStyle.Link} target="_self">
-            {children}
-        </Link>
-    )
+export function LinkInner({
+  to,
+  children,
+}: {
+  to: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link to={to} className={LinkStyle.Link} target="_self">
+      {children}
+    </Link>
+  );
 }
-

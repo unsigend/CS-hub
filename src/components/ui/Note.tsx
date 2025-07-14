@@ -1,18 +1,18 @@
 /**
  * MIT License
- * 
+ *
  * Copyright (c) 2025 Qiu Yixiang
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -32,7 +32,7 @@
  * @returns {React.ReactNode} - The note component
  */
 const NoteStyle = {
-    Note: `
+  Note: `
     w-[90%] sm:w-[85%] md:w-[80%] max-w-4xl
     bg-gradient-to-br from-gray-50 to-white
     rounded-xl sm:rounded-2xl border border-gray-200
@@ -41,18 +41,18 @@ const NoteStyle = {
     transition-all duration-300
     mx-auto
     `,
-    NoteTitle: `
+  NoteTitle: `
     text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6
     relative inline-block
     after:absolute after:bottom-0 after:left-0
     after:w-8 sm:after:w-12 after:h-1 after:bg-black after:rounded-full
     `,
-    NoteContent: `
+  NoteContent: `
     text-gray-700 leading-relaxed
     text-base sm:text-lg
     flex flex-col gap-4
     `,
-}
+};
 
 /**
  * @description: Note Component for the CS-hub project
@@ -60,14 +60,17 @@ const NoteStyle = {
  * @param {React.ReactNode} children - The content of the note
  * @returns {React.ReactNode} - The note component
  */
-export default function Note({ title, children }:
-     {title: string, children: React.ReactNode}) {
-    return (
-        <div className={NoteStyle.Note}>
-            <h1 className={NoteStyle.NoteTitle}>{title}</h1>
-            <div className={NoteStyle.NoteContent}>
-                {children}
-            </div>
-        </div>
-    )
-} 
+export default function Note({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={NoteStyle.Note}>
+      <h1 className={NoteStyle.NoteTitle}>{title}</h1>
+      <div className={NoteStyle.NoteContent}>{children}</div>
+    </div>
+  );
+}

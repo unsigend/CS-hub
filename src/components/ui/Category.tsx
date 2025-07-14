@@ -1,18 +1,18 @@
 /**
  * MIT License
- * 
+ *
  * Copyright (c) 2025 Qiu Yixiang
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -44,7 +44,7 @@ import { closeSidebar } from "@/components/layout/SideBar";
  *         Each category is a clickable card with hover effects
  */
 const CategoryStyle = {
-    Category: `
+  Category: `
     flex flex-row
     justify-between items-center
     text-base w-full
@@ -58,7 +58,7 @@ const CategoryStyle = {
     active:scale-[0.98] active:shadow-sm
     backdrop-blur-sm
     `,
-    SubCategory: `
+  SubCategory: `
     flex flex-row
     justify-between items-center
     text-base w-full
@@ -72,7 +72,7 @@ const CategoryStyle = {
     active:scale-[0.99]
     text-gray-700 hover:text-black
     `,
-    Arrow: `
+  Arrow: `
     ml-4 text-gray-400 text-lg font-medium
     transition-all duration-300 ease-out
     cursor-pointer
@@ -81,11 +81,11 @@ const CategoryStyle = {
     transform-gpu select-none
     flex-shrink-0
     `,
-    CategoryContainer: `
+  CategoryContainer: `
     flex flex-col
     w-full
     `,
-}
+};
 
 // Margin factor for the subcategories - reduced for better width utilization
 const MARGIN_FACTOR = 1.5;
@@ -96,50 +96,78 @@ const MARGIN_FACTOR = 1.5;
  * @note: Category will be rendered as a card with text and an arrow
  * @returns: Category Component
  */
-export default function Category({category, depth = 0}:
-     {category: any, depth: number}) {
-    const [isOpen, setIsOpen] = useState(false);
+export default function Category({
+  category,
+  depth = 0,
+}: {
+  category: any;
+  depth: number;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
 
-    const ClickCategory = () => {
-        setIsOpen(!isOpen);
-    }
+  const ClickCategory = () => {
+    setIsOpen(!isOpen);
+  };
 
-    // check if the category has subcategories
-    const hasSubCategory = category.subCategories && category.subCategories.length > 0;
+  // check if the category has subcategories
+  const hasSubCategory =
+    category.subCategories && category.subCategories.length > 0;
 
-    // Calculate dynamic margin based on depth
-    const dynamicMarginStyle = depth > 0 ? { marginLeft: `${depth * MARGIN_FACTOR * 0.5}rem` } : {};
-    // Add spacing between subcategories based on depth
-    const spacingStyle = depth > 0 ? { marginBottom: '0.75rem' } : {};
+  // Calculate dynamic margin based on depth
+  const dynamicMarginStyle =
+    depth > 0 ? { marginLeft: `${depth * MARGIN_FACTOR * 0.5}rem` } : {};
+  // Add spacing between subcategories based on depth
+  const spacingStyle = depth > 0 ? { marginBottom: "0.75rem" } : {};
 
-    // if the category has subcategories, render the category with subcategories
-    if (hasSubCategory){
-        return (
-            <div className={CategoryStyle.CategoryContainer} style={spacingStyle} key={category.ID + "-category"}>
-                <div className={CategoryStyle.Category} style={dynamicMarginStyle} key={category.ID} onClick={ClickCategory}>
-                    <h2>{category.name}</h2>
-                    {!isOpen ? <ArrowRight size={20} className={CategoryStyle.Arrow}/> 
-                             : <ArrowDown size={20} className={CategoryStyle.Arrow}/>}
-                </div>
-                {isOpen && (
-                    <div style={{ marginTop: '0.5rem' }}>
-                        {category.subCategories.map((subcategory: any) => 
-                        <Category key={subcategory.ID} category={subcategory} depth={depth + 1} />)}
-                    </div>
-                )}
-            </div>
-        )
-    }
-
-    // if the category doesn't have subcategories, render the category directly with subcategories style
-    // no arrow
+  // if the category has subcategories, render the category with subcategories
+  if (hasSubCategory) {
     return (
-        <div className={CategoryStyle.CategoryContainer} style={spacingStyle} key={category.ID + "-category"}>
-            <Link to={category.url} key={category.ID} onClick={closeSidebar}>
-                <div className={CategoryStyle.SubCategory} style={dynamicMarginStyle}>
-                    <h2>{category.name}</h2>
-                </div>
-            </Link>
+      <div
+        className={CategoryStyle.CategoryContainer}
+        style={spacingStyle}
+        key={category.ID + "-category"}
+      >
+        <div
+          className={CategoryStyle.Category}
+          style={dynamicMarginStyle}
+          key={category.ID}
+          onClick={ClickCategory}
+        >
+          <h2>{category.name}</h2>
+          {!isOpen ? (
+            <ArrowRight size={20} className={CategoryStyle.Arrow} />
+          ) : (
+            <ArrowDown size={20} className={CategoryStyle.Arrow} />
+          )}
         </div>
-    )
+        {isOpen && (
+          <div style={{ marginTop: "0.5rem" }}>
+            {category.subCategories.map((subcategory: any) => (
+              <Category
+                key={subcategory.ID}
+                category={subcategory}
+                depth={depth + 1}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // if the category doesn't have subcategories, render the category directly with subcategories style
+  // no arrow
+  return (
+    <div
+      className={CategoryStyle.CategoryContainer}
+      style={spacingStyle}
+      key={category.ID + "-category"}
+    >
+      <Link to={category.url} key={category.ID} onClick={closeSidebar}>
+        <div className={CategoryStyle.SubCategory} style={dynamicMarginStyle}>
+          <h2>{category.name}</h2>
+        </div>
+      </Link>
+    </div>
+  );
 }

@@ -1,18 +1,18 @@
 /**
  * MIT License
- * 
+ *
  * Copyright (c) 2025 Qiu Yixiang
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -34,7 +34,7 @@ import Category from "@/components/ui/Category";
  *         Beautiful overlay on mobile with backdrop and slide-in animation
  */
 const SideBarStyle = {
-    SideBar: `
+  SideBar: `
     hidden
     justify-start items-start
     fixed top-30 left-10
@@ -47,8 +47,8 @@ const SideBarStyle = {
     md:max-h-[calc(100vh-8rem)]
     md:overflow-y-auto
     `,
-    // Mobile sidebar content container
-    SideBarMobileContent: `
+  // Mobile sidebar content container
+  SideBarMobileContent: `
     bg-white shadow-2xl
     w-80 max-w-[85vw] h-full
     flex flex-col gap-4
@@ -58,7 +58,7 @@ const SideBarStyle = {
     translate-x-0
     border-r-4 border-gray-100
     `,
-}
+};
 
 /**
  * @description: Close sidebar function
@@ -66,31 +66,31 @@ const SideBarStyle = {
  * @returns: void
  */
 const closeSidebar = () => {
-    // If the window is not mobile, do nothing
-    if (window.innerWidth > 768) {
-        return;
-    }
+  // If the window is not mobile, do nothing
+  if (window.innerWidth > 768) {
+    return;
+  }
 
-    const sideBar = document.getElementById("SideBar");
+  const sideBar = document.getElementById("SideBar");
+  if (sideBar) {
+    sideBar.style.opacity = "0";
+    sideBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    sideBar.style.backdropFilter = "blur(0px)";
+  }
+
+  // Restore body scroll
+  document.body.style.overflow = "unset";
+
+  // Complete hide after transition
+  setTimeout(() => {
     if (sideBar) {
-        sideBar.style.opacity = "0";
-        sideBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
-        sideBar.style.backdropFilter = "blur(0px)";
+      sideBar.style.display = "none";
+      sideBar.style.zIndex = "0";
     }
-    
-    // Restore body scroll
-    document.body.style.overflow = "unset";
-    
-    // Complete hide after transition
-    setTimeout(() => {
-        if (sideBar) {
-            sideBar.style.display = "none";
-            sideBar.style.zIndex = "0";
-        }
-    }, 300);
-    
-    // Reset hamburger menu state
-    window.dispatchEvent(new CustomEvent('closeMobileSidebar'));
+  }, 300);
+
+  // Reset hamburger menu state
+  window.dispatchEvent(new CustomEvent("closeMobileSidebar"));
 };
 export { closeSidebar };
 
@@ -102,35 +102,38 @@ export { closeSidebar };
  * @returns: SideBar Component
  */
 export default function SideBar() {
-    
-    // Handle backdrop click to close sidebar
-    const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        // Only close if clicking the backdrop (empty space), not the sidebar content
-        if ((e.target as HTMLDivElement).id === 'SideBar') {
-            closeSidebar();
-        }
-    };
+  // Handle backdrop click to close sidebar
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Only close if clicking the backdrop (empty space), not the sidebar content
+    if ((e.target as HTMLDivElement).id === "SideBar") {
+      closeSidebar();
+    }
+  };
 
-    return (
-        <div className={SideBarStyle.SideBar} id="SideBar" onClick={handleBackdropClick}>
-            {/* Desktop sidebar content - hidden on mobile */}
-            <div className="hidden md:flex md:flex-col gap-3 w-[calc(100%-2.5rem)]">
-                {CategoryList.map((category) => (
-                    <Category key={category.ID} category={category}/>
-                ))}
-            </div>
-            
-            {/* Mobile sidebar content - slide in from left */}
-            <div className={`${SideBarStyle.SideBarMobileContent} md:hidden`}>
-                <div className="mb-4">
-                    <h2 className="text-xl font-bold text-gray-800 mb-2">Categories</h2>
-                    <div className="w-12 h-1 bg-black rounded-full"></div>
-                </div>
-                
-                {CategoryList.map((category) => (
-                    <Category key={`mobile-${category.ID}`} category={category}/>
-                ))}
-            </div>
+  return (
+    <div
+      className={SideBarStyle.SideBar}
+      id="SideBar"
+      onClick={handleBackdropClick}
+    >
+      {/* Desktop sidebar content - hidden on mobile */}
+      <div className="hidden md:flex md:flex-col gap-3 w-[calc(100%-2.5rem)]">
+        {CategoryList.map((category) => (
+          <Category key={category.ID} category={category} />
+        ))}
+      </div>
+
+      {/* Mobile sidebar content - slide in from left */}
+      <div className={`${SideBarStyle.SideBarMobileContent} md:hidden`}>
+        <div className="mb-4">
+          <h2 className="text-xl font-bold text-gray-800 mb-2">Categories</h2>
+          <div className="w-12 h-1 bg-black rounded-full"></div>
         </div>
-    )
+
+        {CategoryList.map((category) => (
+          <Category key={`mobile-${category.ID}`} category={category} />
+        ))}
+      </div>
+    </div>
+  );
 }

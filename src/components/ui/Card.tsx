@@ -1,18 +1,18 @@
 /**
  * MIT License
- * 
+ *
  * Copyright (c) 2025 Qiu Yixiang
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -28,7 +28,7 @@
 
 // Style for the Card component
 const CardStyle = {
-    Card: `
+  Card: `
     w-[95%] max-w-6xl
     bg-gradient-to-br from-gray-50 to-white
     rounded-xl sm:rounded-2xl border border-gray-200
@@ -38,12 +38,8 @@ const CardStyle = {
     flex flex-col gap-4
     mx-auto
     `,
-}
+};
 
-export default function Card({children}: {children: React.ReactNode}) {
-    return (
-        <div className={CardStyle.Card}>
-            {children}
-        </div>
-    )
+export default function Card({ children }: { children: React.ReactNode }) {
+  return <div className={CardStyle.Card}>{children}</div>;
 }

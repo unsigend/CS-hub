@@ -1,18 +1,18 @@
 /**
  * MIT License
- * 
+ *
  * Copyright (c) 2025 Qiu Yixiang
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -40,23 +40,28 @@ import global from "@/data/config/config";
 function flattenRoutes(categories: any[]): React.ReactNode[] {
   const routes: React.ReactNode[] = [];
   function processCategory(category: any) {
-    const hasSubCategory = category.subCategories && category.subCategories.length > 0;
-    
+    const hasSubCategory =
+      category.subCategories && category.subCategories.length > 0;
+
     if (hasSubCategory) {
       // Process subcategories recursively
-      category.subCategories.forEach((subcategory: any) => processCategory(subcategory));
+      category.subCategories.forEach((subcategory: any) =>
+        processCategory(subcategory)
+      );
     } else {
       // Add leaf categories (no subcategories) as routes
       routes.push(
-        <Route 
-          path={category.url} 
-          element={category.page || <UnderConstructionPage pageName={category.name} />} 
-          key={category.ID} 
+        <Route
+          path={category.url}
+          element={
+            category.page || <UnderConstructionPage pageName={category.name} />
+          }
+          key={category.ID}
         />
       );
     }
   }
-  
+
   categories.forEach(processCategory);
   return routes;
 }
@@ -73,5 +78,5 @@ export default function App() {
         </Route>
       </Routes>
     </Router>
-  )
+  );
 }
