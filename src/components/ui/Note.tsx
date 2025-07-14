@@ -60,10 +60,10 @@ const NoteStyle = {
  * @param {React.ReactNode} children - The content of the note
  * @returns {React.ReactNode} - The note component
  */
-export default function Note({ title, children, ...props }:
-     {title: string, children: React.ReactNode, props: any}) {
+export default function Note({ title, children }:
+     {title: string, children: React.ReactNode}) {
     return (
-        <div className={NoteStyle.Note} {...props}>
+        <div className={NoteStyle.Note}>
             <h1 className={NoteStyle.NoteTitle}>{title}</h1>
             <div className={NoteStyle.NoteContent}>
                 {children}

@@ -40,10 +40,9 @@ const CardStyle = {
     `,
 }
 
-export default function Card({children, ...props}:
-     {children: React.ReactNode, props: any}) {
+export default function Card({children}: {children: React.ReactNode}) {
     return (
-        <div className={CardStyle.Card} {...props}>
+        <div className={CardStyle.Card}>
             {children}
         </div>
     )

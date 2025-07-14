@@ -78,7 +78,6 @@ export default function CourseCard({
     prerequisites,
     programmingLanguage,
     children,
-    ...props
 }: {
     courseName: string,
     courseUrl: string,
@@ -86,7 +85,6 @@ export default function CourseCard({
     prerequisites: string,
     programmingLanguage: string,
     children: React.ReactNode,
-    props: any
 }) {
     const courseContent = (
         <div className={CourseCardStyle.Container}>
@@ -137,7 +135,7 @@ export default function CourseCard({
     );
 
     return (
-        <Card {...props}>
+        <Card>
             {courseContent}
         </Card>
     );
