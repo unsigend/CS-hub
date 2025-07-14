@@ -22,16 +22,20 @@
  * SOFTWARE.
  */
 
-// Import the React and ReactDOM libraries
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import '@/style.css'
+// Import for the layout components
+import NavBar from "@/components/layout/NavBar";
+import SideBar from "@/components/layout/SideBar";
+import Hero from "@/components/layout/Hero";
 
-import App from '@/App'
-
-// Render the App component
-createRoot(document.getElementById('root') as HTMLElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
+export default function MainLayout() {
+  return (
+    <div>
+      {/* NavBar at the top of the page which is fixed */}
+      <NavBar />
+      {/* SideBar on the left of the page which is fixed */}
+      <SideBar />
+      {/* Hero at the center of the page which is scrollable */}
+      <Hero />
+    </div>
+  )
+}

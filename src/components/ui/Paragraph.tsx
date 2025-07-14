@@ -22,16 +22,24 @@
  * SOFTWARE.
  */
 
-// Import the React and ReactDOM libraries
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import '@/style.css'
+// Style for the Paragraph component
+const ParagraphStyle = {
+    Paragraph: `
+    text-gray-700 leading-relaxed
+    text-base sm:text-lg mb-4
+    [&>p]:mb-4 [&>p:last-child]:mb-0
+    [&>ul]:mb-4 [&>ol]:mb-4
+    [&>h1]:mb-4 [&>h2]:mb-4 [&>h3]:mb-4
+    [&>blockquote]:mb-4 [&>pre]:mb-4
+    space-y-0
+    `,
+}
 
-import App from '@/App'
+export default function Paragraph({children, ...props}:
+     {children: React.ReactNode, props: any}) {
+    return (
+        <p className={ParagraphStyle.Paragraph} {...props}>{children}</p>
+    )
+}
 
-// Render the App component
-createRoot(document.getElementById('root') as HTMLElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
+export { ParagraphStyle };

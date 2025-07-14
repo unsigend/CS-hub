@@ -1,10 +1,10 @@
 # CS Hub
 
-A comprehensive resource platform for Computer Science education, providing curated learning paths, roadmaps, and educational resources for self-learners navigating their Computer Science journey.
+A comprehensive resource platform for Computer Science education, providing curated learning paths, road maps, and educational resources for self-learners navigating their Computer Science journey.
 
 ## Overview
 
-CS Hub is designed to help students and professionals systematically approach Computer Science learning through structured roadmaps and carefully selected resources. The platform covers multiple specializations including full-stack development, low-level systems programming, and university-level coursework.
+CS Hub is designed to help students and professionals systematically approach Computer Science learning through structured road maps and carefully selected resources. The platform covers multiple specializations including full-stack development, low-level systems programming, and university-level coursework.
 
 ## Technology Stack
 
@@ -16,7 +16,7 @@ CS Hub is designed to help students and professionals systematically approach Co
 
 ## Features
 
-- Structured learning roadmaps for different CS specializations
+- Structured learning road maps for different CS specializations
 - Curated resources including books, projects, and reference materials
 - University course collections from top institutions
 - Responsive design for desktop and mobile devices

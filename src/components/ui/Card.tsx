@@ -22,16 +22,29 @@
  * SOFTWARE.
  */
 
-// Import the React and ReactDOM libraries
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import '@/style.css'
+/**
+ * @description: Card component used as a container for the main content
+ */
 
-import App from '@/App'
+// Style for the Card component
+const CardStyle = {
+    Card: `
+    w-[95%] max-w-6xl
+    bg-gradient-to-br from-gray-50 to-white
+    rounded-xl sm:rounded-2xl border border-gray-200
+    p-4 sm:p-6 md:p-8 lg:p-12
+    shadow-lg hover:shadow-xl
+    transition-all duration-300
+    flex flex-col gap-4
+    mx-auto
+    `,
+}
 
-// Render the App component
-createRoot(document.getElementById('root') as HTMLElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
+export default function Card({children, ...props}:
+     {children: React.ReactNode, props: any}) {
+    return (
+        <div className={CardStyle.Card} {...props}>
+            {children}
+        </div>
+    )
+}

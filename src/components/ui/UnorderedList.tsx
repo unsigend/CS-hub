@@ -22,16 +22,18 @@
  * SOFTWARE.
  */
 
-// Import the React and ReactDOM libraries
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import '@/style.css'
+/**
+ * @description: UnorderedList component for the CS-hub project
+ * @returns {React.ReactNode} - The unordered list component
+ */
 
-import App from '@/App'
+const UnorderedListStyle = {
+    UnorderedList: `
+    list-disc list-inside mb-2 ml-4
+    `,
+}
 
-// Render the App component
-createRoot(document.getElementById('root') as HTMLElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
+export default function UnorderedList({children}:
+     {children: React.ReactNode}) {
+    return <ul className={UnorderedListStyle.UnorderedList}>{children}</ul>;
+}

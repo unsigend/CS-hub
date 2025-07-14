@@ -22,16 +22,11 @@
  * SOFTWARE.
  */
 
-// Import the React and ReactDOM libraries
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import '@/style.css'
+ @import "tailwindcss";
 
-import App from '@/App'
-
-// Render the App component
-createRoot(document.getElementById('root') as HTMLElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
+ body{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+ }
