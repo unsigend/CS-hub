@@ -58,10 +58,10 @@ const UnderConstructionPage = ({ pageName }: { pageName: string }) => {
     <div className={UnderConstructionStyle.Container}>
       <div className={UnderConstructionStyle.Card}>
         {/* Main Title */}
-        <Title title={`${pageName} Page Not Found`} />
+        <Title>{`${pageName} Page Not Found`}</Title>
 
         {/* Subtitle */}
-        <SubTitle title="This page is currently being developed" level={3} />
+        <SubTitle level={3}>This page is currently being developed</SubTitle>
 
         {/* Description */}
         <Paragraph>

@@ -49,24 +49,27 @@ const FullStackPage = (): React.ReactNode => {
               concept based way can use the university courses for full stack
               development.
             </Paragraph>
-            <SubTitle title="Reference" level={3} />
+            <SubTitle level={3}>Reference</SubTitle>
             <ReferenceAligned
               name="Full Stack Road Map"
-              content="Roadmap.sh Full Stack Road Map"
               url="https://roadmap.sh/full-stack"
-            />
+            >
+              Roadmap.sh Full Stack Road Map
+            </ReferenceAligned>
             <ReferenceAligned
               name="Backend Road Map"
-              content="Roadmap.sh Backend Road Map"
               url="https://roadmap.sh/backend"
-            />
+            >
+              Roadmap.sh Backend Road Map
+            </ReferenceAligned>
             <ReferenceAligned
               name="Frontend Road Map"
-              content="Roadmap.sh Frontend Road Map"
               url="https://roadmap.sh/frontend"
-            />
+            >
+              Roadmap.sh Frontend Road Map
+            </ReferenceAligned>
 
-            <SubTitle title="Note" level={3} />
+            <SubTitle level={3}>Note</SubTitle>
             <Paragraph>
               This road map has some personal bias and may not suitable for
               everyone. Consider this as a road map reference. If you have any
@@ -77,7 +80,7 @@ const FullStackPage = (): React.ReactNode => {
               about full stack development.
             </Paragraph>
 
-            <SubTitle title="Structure" level={3} />
+            <SubTitle level={3}>Structure</SubTitle>
             <Paragraph>
               This road map is structured in a way that is easy to follow and
               understand. The structure is as follows:
@@ -106,7 +109,7 @@ const FullStackPage = (): React.ReactNode => {
       <div className="flex flex-col gap-5">
         <Card>
           <div>
-            <Title title="Frontend Development" />
+            <Title>Frontend Development</Title>
             <Paragraph>
               Frontend road map part will started from basics of web development
               and shift to more advanced topics like Framework, Library, and
@@ -120,7 +123,7 @@ const FullStackPage = (): React.ReactNode => {
           </div>
 
           <div>
-            <SubTitle title="Programming Language" level={2} />
+            <SubTitle level={2}>Programming Language</SubTitle>
             <Paragraph>
               The first part of the frontend development is the programming
               language. Namely HTML, CSS and JavaScript. Below are the concept
@@ -142,26 +145,26 @@ const FullStackPage = (): React.ReactNode => {
           </div>
 
           <div>
-            <SubTitle title="Essential Programming Language" level={3} />
+            <SubTitle level={3}>Essential Programming Language</SubTitle>
             <Paragraph>
               The essential programming language for frontend development is
               HTML, CSS and JavaScript.
             </Paragraph>
 
-            <SubTitle title="HTML" level={4} />
+            <SubTitle level={4}>HTML</SubTitle>
             <Paragraph>
               HTML is the standard markup language for creating web pages. It is
               used to create the structure of a web page. It is the basic of web
               development.
             </Paragraph>
 
-            <SubTitle title="CSS" level={4} />
+            <SubTitle level={4}>CSS</SubTitle>
             <Paragraph>
               CSS is used to style the HTML structure. It is used to make the
               web page more beautiful and user friendly.
             </Paragraph>
 
-            <SubTitle title="JavaScript" level={4} />
+            <SubTitle level={4}>JavaScript</SubTitle>
             <Paragraph>
               JavaScript is used to make the web page more interactive. It is
               used to make the web page more dynamic and responsive.
@@ -169,14 +172,14 @@ const FullStackPage = (): React.ReactNode => {
           </div>
 
           <div>
-            <SubTitle title="Optional Programming Language" level={3} />
+            <SubTitle level={3}>Optional Programming Language</SubTitle>
             <Paragraph>
               There are some optional programming language for frontend
               development. Which can be skipped fist and learn them later. Or
               learn them depend on your need and interest.
             </Paragraph>
 
-            <SubTitle title="TypeScript" level={4} />
+            <SubTitle level={4}>TypeScript</SubTitle>
             <Paragraph>
               TypeScript is used to make the web development more efficient and
               easier. It has a strong type system and can be used to make the
@@ -187,12 +190,12 @@ const FullStackPage = (): React.ReactNode => {
 
         {/* Backend Development Road Map */}
         <Card>
-          <Title title="Backend Development" />
+          <Title>Backend Development</Title>
         </Card>
 
         {/* Database Road Map */}
         <Card>
-          <Title title="Database" />
+          <Title>Database</Title>
         </Card>
       </div>
     </div>

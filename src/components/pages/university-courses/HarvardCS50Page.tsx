@@ -52,22 +52,25 @@ const HarvardCS50Page = (): React.ReactNode => {
         auto-grading system in github. After explore the CS 50x you can continue
         to explore the topics you like.
       </Paragraph>
-      <SubTitle title="Harvard CS 50 Series" level={3} />
+      <SubTitle level={3}>Harvard CS 50 Series</SubTitle>
       <ReferenceAligned
         name="Harvard CS 50x"
-        content="Harvard CS 50x 2025 Link"
         url="https://cs50.harvard.edu/x/2025/"
-      />
+      >
+        Harvard CS 50x 2025 Link
+      </ReferenceAligned>
       <ReferenceAligned
         name="Harvard CS 50P"
-        content="Harvard CS 50P Link"
         url="https://cs50.harvard.edu/python/"
-      />
+      >
+        Harvard CS 50P Link
+      </ReferenceAligned>
       <ReferenceAligned
         name="Harvard CS 50AI"
-        content="Harvard CS 50AI Link"
         url="https://cs50.harvard.edu/ai/"
-      />
+      >
+        Harvard CS 50AI Link
+      </ReferenceAligned>
     </CourseCard>
   );
 };

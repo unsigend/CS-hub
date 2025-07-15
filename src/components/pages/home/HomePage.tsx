@@ -82,7 +82,7 @@ const TitleBar = (): React.ReactNode => {
   return (
     <div className={HomePageStyle.TitleBar}>
       <div className={HomePageStyle.TitleContainer}>
-        <Title title="Welcome to CS-hub" />
+        <Title>Welcome to CS-hub</Title>
         <p className={HomePageStyle.Description}>
           This is a platform for you to learn Computer Science. Dedicated for
           self-learners better navigate the learning path.
@@ -96,43 +96,47 @@ const TitleBar = (): React.ReactNode => {
 const About = (): React.ReactNode => {
   return (
     <Note title="About">
-      <Paragraph>
-        This site integrates resources, road maps, practical projects,
-        top-university courses, and more. All of these resources are free and
-        open-source. Dedicated for self-learners, CS-lovers, and anyone who
-        wants to learn more about Computer Science.
-      </Paragraph>
-      <SubTitle title="How to use" level={3} />
-      <Paragraph>
-        Whether you're a complete beginner starting your programming journey or
-        an experienced developer looking to expand your skill set, CS-hub
-        provides carefully curated pathways tailored to different learning
-        styles. This site bridges the gap between theoretical knowledge and
-        practical application.
-      </Paragraph>
-      <Paragraph>
-        The beauty of self-directed learning lies in its flexibility and
-        personalized pace. CS-hub empowers you to take control of your
-        education, whether you prefer diving deep into academic coursework,
-        following step-by-step road maps, or jumping straight into hands-on
-        projects that challenge your problem-solving abilities.
-      </Paragraph>
+      <div>
+        <Paragraph>
+          This site integrates resources, road maps, practical projects,
+          top-university courses, and more. All of these resources are free and
+          open-source. Dedicated for self-learners, CS-lovers, and anyone who
+          wants to learn more about Computer Science.
+        </Paragraph>
+        <SubTitle level={3}>How to use</SubTitle>
+        <Paragraph>
+          Whether you're a complete beginner starting your programming journey
+          or an experienced developer looking to expand your skill set, CS-hub
+          provides carefully curated pathways tailored to different learning
+          styles. This site bridges the gap between theoretical knowledge and
+          practical application.
+        </Paragraph>
+        <Paragraph>
+          The beauty of self-directed learning lies in its flexibility and
+          personalized pace. CS-hub empowers you to take control of your
+          education, whether you prefer diving deep into academic coursework,
+          following step-by-step road maps, or jumping straight into hands-on
+          projects that challenge your problem-solving abilities.
+        </Paragraph>
 
-      <Paragraph>
-        Now ! Choose your dedicated road map or field of interest, and start
-        your learning journey. Can be top-university based courses if you like a
-        more structured learning experience. Or just follow the provided road
-        map if you like a concept or skill based learning journey. Or can be a
-        practical project based learning if you like to learn by doing and
-        challenge yourself.
-      </Paragraph>
+        <Paragraph>
+          Now ! Choose your dedicated road map or field of interest, and start
+          your learning journey. Can be top-university based courses if you like
+          a more structured learning experience. Or just follow the provided
+          road map if you like a concept or skill based learning journey. Or can
+          be a practical project based learning if you like to learn by doing
+          and challenge yourself.
+        </Paragraph>
+      </div>
 
-      <SubTitle title="Note" level={3} />
-      <Paragraph>
-        This site is a work in progress. Any suggestions and contributions are
-        welcome. Contribute and fork here:
-        <LinkExternal href={global.GitHubLink}>GitHub</LinkExternal>
-      </Paragraph>
+      <div>
+        <SubTitle level={3}>Note</SubTitle>
+        <Paragraph>
+          This site is a work in progress. Any suggestions and contributions are
+          welcome. Contribute and fork here:
+          <LinkExternal href={global.GitHubLink}>GitHub</LinkExternal>
+        </Paragraph>
+      </div>
     </Note>
   );
 };

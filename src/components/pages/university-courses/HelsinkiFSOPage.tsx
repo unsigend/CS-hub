@@ -59,7 +59,7 @@ const HelsinkiFSOPage = (): React.ReactNode => {
             height={100}
           />
         </div>
-        <SubTitle title="About the course" level={3} />
+        <SubTitle level={3}>About the course</SubTitle>
         <Paragraph>
           Full Stack Open from the University of Helsinki is a course that
           teaches you how to build web applications using modern technologies
@@ -74,17 +74,19 @@ const HelsinkiFSOPage = (): React.ReactNode => {
           React Native, and CI/CD.
         </Paragraph>
 
-        <SubTitle title="Resources" level={3} />
+        <SubTitle level={3}>Resources</SubTitle>
         <ReferenceAligned
           name="Course Link"
           url="https://fullstackopen.com/en/"
-          content="Full Stack Open"
-        />
+        >
+          Full Stack Open
+        </ReferenceAligned>
         <ReferenceAligned
           name="Submission System"
           url="https://studies.cs.helsinki.fi/stats/courses/fullstackopen"
-          content="Submission"
-        />
+        >
+          Submission
+        </ReferenceAligned>
       </div>
     </CourseCard>
   );

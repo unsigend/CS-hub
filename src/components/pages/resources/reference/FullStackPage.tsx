@@ -40,14 +40,11 @@ const Style = {
 const ConstructReference = ({ Category }: { Category: any }) => {
   return (
     <div>
-      <SubTitle title={Category.name} level={2} />
+      <SubTitle level={2}>{Category.name}</SubTitle>
       {Category.subContent.map((item: any) => (
-        <ReferenceAligned
-          key={item.id}
-          name={item.name}
-          url={item.url}
-          content={item.content}
-        />
+        <ReferenceAligned key={item.id} name={item.name} url={item.url}>
+          {item.content}
+        </ReferenceAligned>
       ))}
     </div>
   );
@@ -56,7 +53,7 @@ const ConstructReference = ({ Category }: { Category: any }) => {
 const FullStackReferenceTitle = (): React.ReactNode => {
   return (
     <div>
-      <Title title="Full Stack Reference" />
+      <Title>Full Stack Reference</Title>
       <Paragraph>
         Here are some quick reference for full stack development. Divided into
         different categories. Each of them has a curated list of resources about

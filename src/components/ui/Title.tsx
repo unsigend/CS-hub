@@ -44,15 +44,15 @@ const TitleStyle = {
     `,
 };
 
-const Title = ({ title }: { title: string }) => {
-  return <h1 className={TitleStyle.Title}>{title}</h1>;
+const Title = ({ children }: { children: React.ReactNode }) => {
+  return <h1 className={TitleStyle.Title}>{children}</h1>;
 };
 
 const SubTitle = ({
-  title,
+  children,
   level = 2,
 }: {
-  title: string;
+  children: React.ReactNode;
   level: number;
 }): React.ReactNode => {
   // Map level to style and tag
@@ -78,17 +78,17 @@ const SubTitle = ({
 
   switch (level) {
     case 1:
-      return <h1 className={style}>{title}</h1>;
+      return <h1 className={style}>{children}</h1>;
     case 2:
-      return <h2 className={style}>{title}</h2>;
+      return <h2 className={style}>{children}</h2>;
     case 3:
-      return <h3 className={style}>{title}</h3>;
+      return <h3 className={style}>{children}</h3>;
     case 4:
-      return <h4 className={style}>{title}</h4>;
+      return <h4 className={style}>{children}</h4>;
     case 5:
-      return <h5 className={style}>{title}</h5>;
+      return <h5 className={style}>{children}</h5>;
     default:
-      return <h2 className={style}>{title}</h2>;
+      return <h2 className={style}>{children}</h2>;
   }
 };
 

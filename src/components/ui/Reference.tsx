@@ -44,7 +44,13 @@ const ReferenceAlignedStyle = {
     `,
 };
 
-const Reference = ({ url, content }: { url: string; content: string }) => {
+const Reference = ({
+  url,
+  children,
+}: {
+  url: string;
+  children: React.ReactNode;
+}) => {
   return (
     <a
       href={url}
@@ -52,7 +58,7 @@ const Reference = ({ url, content }: { url: string; content: string }) => {
       rel="noopener noreferrer"
       className={ReferenceStyle.Reference}
     >
-      {content}
+      {children}
     </a>
   );
 };
@@ -60,17 +66,17 @@ const Reference = ({ url, content }: { url: string; content: string }) => {
 const ReferenceAligned = ({
   name,
   url,
-  content,
+  children,
 }: {
   name: string;
   url: string;
-  content: string;
+  children: React.ReactNode;
 }): React.ReactNode => {
   return (
     <div className={ReferenceAlignedStyle.ReferenceItem}>
       <div className={ReferenceAlignedStyle.ReferenceName}>{name}</div>
       <div className={ReferenceAlignedStyle.ReferenceLink}>
-        <Reference url={url} content={content} />
+        <Reference url={url}>{children}</Reference>
       </div>
     </div>
   );
