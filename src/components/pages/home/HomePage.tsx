@@ -77,11 +77,8 @@ const HomePageStyle = {
     max-w-4xl mx-auto
     `,
 };
-/**
- * @description: Title Bar Component for the Home Page
- * @returns: Title Bar component with title, description and code bar
- */
-function TitleBar() {
+
+const TitleBar = (): React.ReactNode => {
   return (
     <div className={HomePageStyle.TitleBar}>
       <div className={HomePageStyle.TitleContainer}>
@@ -94,13 +91,9 @@ function TitleBar() {
       <CodeBar />
     </div>
   );
-}
+};
 
-/**
- * @description: About Component for the Home Page
- * @returns: About component with about text
- */
-function About() {
+const About = (): React.ReactNode => {
   return (
     <Note title="About">
       <Paragraph>
@@ -134,21 +127,17 @@ function About() {
         challenge yourself.
       </Paragraph>
 
+      <SubTitle title="Note" level={3} />
       <Paragraph>
-        <SubTitle title="Note" level={3} />
         This site is a work in progress. Any suggestions and contributions are
         welcome. Contribute and fork here:
         <LinkExternal href={global.GitHubLink}>GitHub</LinkExternal>
       </Paragraph>
     </Note>
   );
-}
+};
 
-/**
- * @description: Category Card Bar Component for the Home Page
- * @returns: Category Card Bar component with category cards
- */
-function CategoryCardBar() {
+const CategoryCardBar = (): React.ReactNode => {
   return (
     <div className={HomePageStyle.CategoryCardBar}>
       {CategoryCardData.map((card) => (
@@ -161,9 +150,9 @@ function CategoryCardBar() {
       ))}
     </div>
   );
-}
+};
 
-export default function HomePage() {
+const HomePage = (): React.ReactNode => {
   return (
     <div className={HomePageStyle.HomePage}>
       <TitleBar />
@@ -171,4 +160,6 @@ export default function HomePage() {
       <About />
     </div>
   );
-}
+};
+
+export default HomePage;

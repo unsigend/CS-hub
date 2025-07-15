@@ -61,16 +61,6 @@ const CourseCardStyle = {
     `,
 };
 
-/**
- * @description: CourseCard component
- * @param {string} courseName - The name of the course
- * @param {string} courseUrl - The URL of the course (optional)
- * @param {string} from - The source/institution of the course
- * @param {string} prerequisites - The prerequisites for the course
- * @param {string} programmingLanguage - The programming language(s) used
- * @param {React.ReactNode} children - Additional content to display
- * @returns {React.ReactNode} - The CourseCard component
- */
 const CourseCard = ({
   courseName,
   courseUrl,

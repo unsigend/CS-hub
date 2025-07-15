@@ -22,10 +22,12 @@
  * SOFTWARE.
  */
 
-export default function LowLevelPage() {
+const LowLevelPage = (): React.ReactNode => {
   return (
     <div>
       <h1>Low Level Page</h1>
     </div>
   );
-}
+};
+
+export default LowLevelPage;

@@ -34,7 +34,7 @@ import { ReferenceAligned } from "@/components/ui/Reference";
 import fullstackopen from "@/assets/images/fullstackopen.svg";
 
 // Style for the HelsinkiFSOPage component
-export default function HelsinkiFSOPage() {
+const HelsinkiFSOPage = (): React.ReactNode => {
   return (
     <CourseCard
       courseName="Helsinki Full Stack Open"
@@ -88,4 +88,6 @@ export default function HelsinkiFSOPage() {
       </div>
     </CourseCard>
   );
-}
+};
+
+export default HelsinkiFSOPage;

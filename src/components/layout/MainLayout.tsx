@@ -27,7 +27,7 @@ import NavBar from "@/components/layout/NavBar";
 import SideBar from "@/components/layout/SideBar";
 import Hero from "@/components/layout/Hero";
 
-export default function MainLayout() {
+const MainLayout = (): React.ReactNode => {
   return (
     <div>
       {/* NavBar at the top of the page which is fixed */}
@@ -38,4 +38,6 @@ export default function MainLayout() {
       <Hero />
     </div>
   );
-}
+};
+
+export default MainLayout;

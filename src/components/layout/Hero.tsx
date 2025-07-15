@@ -25,11 +25,6 @@
 // Import for React Router
 import { Outlet } from "react-router-dom";
 
-/**
- * @description: Style for the Hero component
- * @style: Full width and height main content with independent scrolling
- *         Takes all available space next to fixed sidebar
- */
 const HeroStyle = {
   Hero: `flex flex-col 
     mt-20 mb-10
@@ -37,10 +32,12 @@ const HeroStyle = {
     `,
 };
 
-export default function Hero() {
+const Hero = (): React.ReactNode => {
   return (
     <div className={HeroStyle.Hero}>
       <Outlet />
     </div>
   );
-}
+};
+
+export default Hero;

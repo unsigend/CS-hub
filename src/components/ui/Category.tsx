@@ -90,12 +90,6 @@ const CategoryStyle = {
 // Margin factor for the subcategories - reduced for better width utilization
 const MARGIN_FACTOR = 1.5;
 
-/**
- * @description: Category Component for the CS-hub project
- * @usage: Category will render the category and its subcategories recursively
- * @note: Category will be rendered as a card with text and an arrow
- * @returns: Category Component
- */
 const Category = ({
   category,
   depth = 0,

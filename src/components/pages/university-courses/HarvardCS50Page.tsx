@@ -32,7 +32,7 @@ import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
 import { ReferenceAligned } from "@/components/ui/Reference";
 
-export default function HarvardCS50Page() {
+const HarvardCS50Page = (): React.ReactNode => {
   return (
     <CourseCard
       courseName="Harvard CS 50 Introduction to Computer Science"
@@ -70,4 +70,6 @@ export default function HarvardCS50Page() {
       />
     </CourseCard>
   );
-}
+};
+
+export default HarvardCS50Page;

@@ -37,7 +37,7 @@ import { UniversityCoursesPath } from "@/data/content/category/categories";
 // Import for the Image
 import FullStackImage from "@/assets/images/fullstackopen.svg";
 
-export default function FullStackPage() {
+const FullStackPage = (): React.ReactNode => {
   return (
     <div className="flex flex-col gap-10">
       <Note title="Full Stack Development Road Map">
@@ -197,4 +197,6 @@ export default function FullStackPage() {
       </div>
     </div>
   );
-}
+};
+
+export default FullStackPage;

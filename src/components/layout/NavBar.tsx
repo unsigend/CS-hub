@@ -49,7 +49,7 @@ const NavBarStyle = {
  * if the user scrolls down, the NavBar will hide,
  * if the user scrolls up, the NavBar will show
  */
-export default function NavBar() {
+const NavBar = (): React.ReactNode => {
   // State for the scroll behavior
   const [lastScrollY, setLastScrollY] = useState<number>(0);
   const [isVisible, setIsVisible] = useState<boolean>(true);
@@ -83,4 +83,6 @@ export default function NavBar() {
       </div>
     </nav>
   );
-}
+};
+
+export default NavBar;

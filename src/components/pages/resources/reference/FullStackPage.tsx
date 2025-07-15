@@ -37,7 +37,7 @@ const Style = {
     `,
 };
 
-function ConstructReference({ Category }: { Category: any }) {
+const ConstructReference = ({ Category }: { Category: any }) => {
   return (
     <div>
       <SubTitle title={Category.name} level={2} />
@@ -51,9 +51,9 @@ function ConstructReference({ Category }: { Category: any }) {
       ))}
     </div>
   );
-}
+};
 
-function FullStackReferenceTitle() {
+const FullStackReferenceTitle = (): React.ReactNode => {
   return (
     <div>
       <Title title="Full Stack Reference" />
@@ -68,9 +68,9 @@ function FullStackReferenceTitle() {
       </Paragraph>
     </div>
   );
-}
+};
 
-export default function FullStackReferencePage() {
+const FullStackReferencePage = (): React.ReactNode => {
   return (
     <Card>
       <div className={Style.Container}>
@@ -81,4 +81,6 @@ export default function FullStackReferencePage() {
       </div>
     </Card>
   );
-}
+};
+
+export default FullStackReferencePage;

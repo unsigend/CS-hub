@@ -60,11 +60,6 @@ const SideBarStyle = {
     `,
 };
 
-/**
- * @description: Close sidebar function
- * @usage: Close the sidebar when the backdrop is clicked
- * @returns: void
- */
 const closeSidebar = () => {
   // If the window is not mobile, do nothing
   if (window.innerWidth > 768) {
@@ -92,7 +87,6 @@ const closeSidebar = () => {
   // Reset hamburger menu state
   window.dispatchEvent(new CustomEvent("closeMobileSidebar"));
 };
-export { closeSidebar };
 
 /**
  * @description: SideBar Component for the CS-hub project
@@ -101,7 +95,7 @@ export { closeSidebar };
  *         for each category.
  * @returns: SideBar Component
  */
-export default function SideBar() {
+const SideBar = (): React.ReactNode => {
   // Handle backdrop click to close sidebar
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     // Only close if clicking the backdrop (empty space), not the sidebar content
@@ -119,7 +113,7 @@ export default function SideBar() {
       {/* Desktop sidebar content - hidden on mobile */}
       <div className="hidden md:flex md:flex-col gap-3 w-[calc(100%-2.5rem)]">
         {CategoryList.map((category) => (
-          <Category key={category.ID} category={category} />
+          <Category key={category.ID} category={category} depth={0} />
         ))}
       </div>
 
@@ -131,9 +125,16 @@ export default function SideBar() {
         </div>
 
         {CategoryList.map((category) => (
-          <Category key={`mobile-${category.ID}`} category={category} />
+          <Category
+            key={`mobile-${category.ID}`}
+            category={category}
+            depth={0}
+          />
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default SideBar;
+export { closeSidebar };
