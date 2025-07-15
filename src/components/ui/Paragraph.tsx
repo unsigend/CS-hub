@@ -35,8 +35,12 @@ const ParagraphStyle = {
     `,
 };
 
-export default function Paragraph({ children }: { children: React.ReactNode }) {
+const Paragraph = ({
+  children,
+}: {
+  children: React.ReactNode;
+}): React.ReactNode => {
   return <p className={ParagraphStyle.Paragraph}>{children}</p>;
-}
+};
 
-export { ParagraphStyle };
+export default Paragraph;

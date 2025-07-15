@@ -70,7 +70,7 @@ const NavListStyle = {
     `,
 };
 
-export default function NavList() {
+const NavList = () => {
   return (
     <ul className={NavListStyle.NavList}>
       <li>
@@ -98,4 +98,6 @@ export default function NavList() {
       </li>
     </ul>
   );
-}
+};
+
+export default NavList;

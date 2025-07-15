@@ -71,7 +71,7 @@ const CourseCardStyle = {
  * @param {React.ReactNode} children - Additional content to display
  * @returns {React.ReactNode} - The CourseCard component
  */
-export default function CourseCard({
+const CourseCard = ({
   courseName,
   courseUrl,
   from,
@@ -85,7 +85,7 @@ export default function CourseCard({
   prerequisites: string;
   programmingLanguage: string;
   children: React.ReactNode;
-}) {
+}) => {
   const courseContent = (
     <div className={CourseCardStyle.Container}>
       {/* Course Header */}
@@ -131,4 +131,6 @@ export default function CourseCard({
   );
 
   return <Card>{courseContent}</Card>;
-}
+};
+
+export default CourseCard;

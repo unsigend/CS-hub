@@ -54,23 +54,19 @@ const NoteStyle = {
     `,
 };
 
-/**
- * @description: Note Component for the CS-hub project
- * @param {string} title - The title of the note
- * @param {React.ReactNode} children - The content of the note
- * @returns {React.ReactNode} - The note component
- */
-export default function Note({
+const Note = ({
   title,
   children,
 }: {
   title: string;
   children: React.ReactNode;
-}) {
+}): React.ReactNode => {
   return (
     <div className={NoteStyle.Note}>
       <h1 className={NoteStyle.NoteTitle}>{title}</h1>
       <div className={NoteStyle.NoteContent}>{children}</div>
     </div>
   );
-}
+};
+
+export default Note;

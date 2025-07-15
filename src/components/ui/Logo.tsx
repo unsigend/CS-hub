@@ -66,7 +66,7 @@ const LogoStyle = {
     `,
 };
 
-export default function Logo() {
+const Logo = () => {
   return (
     <div className={LogoStyle.LogoContainer}>
       <HamburgerMenu />
@@ -76,4 +76,6 @@ export default function Logo() {
       </div>
     </div>
   );
-}
+};
+
+export default Logo;

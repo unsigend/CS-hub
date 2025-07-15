@@ -44,17 +44,17 @@ const TitleStyle = {
     `,
 };
 
-export function Title({ title }: { title: string }) {
+const Title = ({ title }: { title: string }) => {
   return <h1 className={TitleStyle.Title}>{title}</h1>;
-}
+};
 
-export function SubTitle({
+const SubTitle = ({
   title,
   level = 2,
 }: {
   title: string;
   level: number;
-}) {
+}): React.ReactNode => {
   // Map level to style and tag
   const getSubTitleStyle = (level: number) => {
     switch (level) {
@@ -90,4 +90,6 @@ export function SubTitle({
     default:
       return <h2 className={style}>{title}</h2>;
   }
-}
+};
+
+export { Title, SubTitle };

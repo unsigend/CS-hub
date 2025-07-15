@@ -96,13 +96,13 @@ const MARGIN_FACTOR = 1.5;
  * @note: Category will be rendered as a card with text and an arrow
  * @returns: Category Component
  */
-export default function Category({
+const Category = ({
   category,
   depth = 0,
 }: {
   category: any;
   depth: number;
-}) {
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const ClickCategory = () => {
@@ -155,8 +155,8 @@ export default function Category({
     );
   }
 
-  // if the category doesn't have subcategories, render the category directly with subcategories style
-  // no arrow
+  // if the category doesn't have subcategories, render the category directly
+  // with subcategories style, no arrow, no subcategories
   return (
     <div
       className={CategoryStyle.CategoryContainer}
@@ -170,4 +170,6 @@ export default function Category({
       </Link>
     </div>
   );
-}
+};
+
+export default Category;

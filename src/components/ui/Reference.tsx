@@ -44,7 +44,7 @@ const ReferenceAlignedStyle = {
     `,
 };
 
-export function Reference({ url, content }: { url: string; content: string }) {
+const Reference = ({ url, content }: { url: string; content: string }) => {
   return (
     <a
       href={url}
@@ -55,9 +55,9 @@ export function Reference({ url, content }: { url: string; content: string }) {
       {content}
     </a>
   );
-}
+};
 
-export function ReferenceAligned({
+const ReferenceAligned = ({
   name,
   url,
   content,
@@ -65,7 +65,7 @@ export function ReferenceAligned({
   name: string;
   url: string;
   content: string;
-}) {
+}): React.ReactNode => {
   return (
     <div className={ReferenceAlignedStyle.ReferenceItem}>
       <div className={ReferenceAlignedStyle.ReferenceName}>{name}</div>
@@ -74,4 +74,6 @@ export function ReferenceAligned({
       </div>
     </div>
   );
-}
+};
+
+export { Reference, ReferenceAligned };

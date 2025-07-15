@@ -45,7 +45,7 @@ const HamburgerMenuStyle = {
     `,
 };
 
-export default function HamburgerMenu() {
+const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Listen for close events from sidebar
@@ -119,4 +119,6 @@ export default function HamburgerMenu() {
       {isOpen ? <X size={24} /> : <Menu size={24} />}
     </div>
   );
-}
+};
+
+export default HamburgerMenu;

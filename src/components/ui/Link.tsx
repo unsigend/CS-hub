@@ -44,19 +44,13 @@ const LinkStyle = {
     `,
 };
 
-/**
- * @description: Link Component for the CS-hub project
- * @param {string} href - The href of the link
- * @param {React.ReactNode} children - The children of the link
- * @returns {React.ReactNode} - The link component
- */
-export function LinkExternal({
+const LinkExternal = ({
   href,
   children,
 }: {
   href: string;
   children: React.ReactNode;
-}) {
+}): React.ReactNode => {
   return (
     <a
       href={href}
@@ -67,24 +61,20 @@ export function LinkExternal({
       {children}
     </a>
   );
-}
+};
 
-/**
- * @description: Inner Link Component for the CS-hub project
- * @param {string} to - The to of the link
- * @param {React.ReactNode} children - The children of the link
- * @returns {React.ReactNode} - The inner link component
- */
-export function LinkInner({
+const LinkInner = ({
   to,
   children,
 }: {
   to: string;
   children: React.ReactNode;
-}) {
+}) => {
   return (
     <Link to={to} className={LinkStyle.Link} target="_self">
       {children}
     </Link>
   );
-}
+};
+
+export { LinkExternal, LinkInner };

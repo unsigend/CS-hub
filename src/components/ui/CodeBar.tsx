@@ -44,7 +44,7 @@ const CodeBarStyle = {
     `,
 };
 
-export default function CodeBar() {
+const CodeBar = () => {
   return (
     <div className={CodeBarStyle.CodeBar}>
       <div className={CodeBarStyle.CodeBarContainer}>
@@ -92,4 +92,6 @@ export default function CodeBar() {
       </div>
     </div>
   );
-}
+};
+
+export default CodeBar;

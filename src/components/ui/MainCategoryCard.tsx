@@ -49,7 +49,7 @@ const MainCategoryCardStyle = {
     `,
 };
 
-export default function MainCategoryCard({
+const MainCategoryCard = ({
   title,
   description,
   icon,
@@ -57,7 +57,7 @@ export default function MainCategoryCard({
   title: string;
   description: string;
   icon: React.ReactNode;
-}) {
+}): React.ReactNode => {
   return (
     <div className={MainCategoryCardStyle.CategoryCard}>
       {/* Icon */}
@@ -72,4 +72,6 @@ export default function MainCategoryCard({
       <p className={MainCategoryCardStyle.Description}>{description}</p>
     </div>
   );
-}
+};
+
+export default MainCategoryCard;

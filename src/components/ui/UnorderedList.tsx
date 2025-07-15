@@ -22,21 +22,18 @@
  * SOFTWARE.
  */
 
-/**
- * @description: UnorderedList component for the CS-hub project
- * @returns {React.ReactNode} - The unordered list component
- */
-
 const UnorderedListStyle = {
   UnorderedList: `
     list-disc list-inside mb-2 ml-4
     `,
 };
 
-export default function UnorderedList({
+const UnorderedList = ({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}): React.ReactNode => {
   return <ul className={UnorderedListStyle.UnorderedList}>{children}</ul>;
-}
+};
+
+export default UnorderedList;
