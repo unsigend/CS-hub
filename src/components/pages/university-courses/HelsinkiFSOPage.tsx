@@ -65,9 +65,14 @@ const HelsinkiFSOPage = (): React.ReactNode => {
           The course is divided into 13 parts, each part is a specific topics
           that you will learn. The structure of the course from front-end
           framework like React, back-end framework like Node.js Express.js and
-          database like MongoDB, GraphQL, and testing framework. There are also
-          some optional parts that you can choose to learn about TypeScript,
-          React Native, and CI/CD.
+          database like MongoDB, GraphQL, testing framework and authentication
+          like JWT. There are also some optional parts that you can choose to
+          learn about TypeScript, React Native, and CI/CD.
+        </Paragraph>
+
+        <Paragraph>
+          This course also provide a certificate of completion and credits for
+          university.
         </Paragraph>
 
         <SubTitle level={3}>Resources</SubTitle>
