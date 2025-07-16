@@ -31,6 +31,7 @@ import LowLevelReferencePage from "@/components/pages/resources/reference/LowLev
 import HelsinkiFSOPage from "@/components/pages/university-courses/HelsinkiFSOPage";
 import HarvardCS50Page from "@/components/pages/university-courses/HarvardCS50Page";
 import FullStackPage from "@/components/pages/roadmap/FullStackPage";
+import BerkeleyCS19899Page from "@/components/pages/university-courses/BerkeleyCS198-99Page";
 
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub
@@ -191,7 +192,7 @@ const CategoryList = [
           {
             name: "Berkeley CS 198-99",
             ID: "berkeley-cs-198-99",
-            page: null,
+            page: <BerkeleyCS19899Page />,
             url: `${UniversityCoursesPath}/full-stack-development/berkeley-cs-198-99`,
             subCategories: null,
           },
