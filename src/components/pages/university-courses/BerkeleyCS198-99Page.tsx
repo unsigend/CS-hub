@@ -28,7 +28,7 @@ import Paragraph from "@/components/ui/Paragraph";
 import { ReferenceAligned } from "@/components/ui/Reference";
 import { SubTitle } from "@/components/ui/Title";
 
-// Import the image
+// Import for the image
 import BerkeleyCS198_99 from "@/assets/images/BerkeleyCS198-99.png";
 
 const BerkeleyCS19899Page = (): React.ReactNode => {
