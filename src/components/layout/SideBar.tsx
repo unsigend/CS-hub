@@ -88,13 +88,6 @@ const closeSidebar = () => {
   window.dispatchEvent(new CustomEvent("closeMobileSidebar"));
 };
 
-/**
- * @description: SideBar Component for the CS-hub project
- * @usage: Import the SideBar component and use it in the App component
- *         It will go through the CategoryList and render the Category component
- *         for each category.
- * @returns: SideBar Component
- */
 const SideBar = (): React.ReactNode => {
   // Handle backdrop click to close sidebar
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {

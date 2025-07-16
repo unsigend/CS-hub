@@ -96,13 +96,14 @@ const TitleBar = (): React.ReactNode => {
 const About = (): React.ReactNode => {
   return (
     <Note title="About">
+      <Paragraph>
+        This site integrates resources, road maps, practical projects,
+        top-university courses, and more. All of these resources are free and
+        open-source. Dedicated for self-learners, CS-lovers, and anyone who
+        wants to learn more about Computer Science.
+      </Paragraph>
+
       <div>
-        <Paragraph>
-          This site integrates resources, road maps, practical projects,
-          top-university courses, and more. All of these resources are free and
-          open-source. Dedicated for self-learners, CS-lovers, and anyone who
-          wants to learn more about Computer Science.
-        </Paragraph>
         <SubTitle level={3}>How to use</SubTitle>
         <Paragraph>
           Whether you're a complete beginner starting your programming journey
@@ -118,7 +119,6 @@ const About = (): React.ReactNode => {
           following step-by-step road maps, or jumping straight into hands-on
           projects that challenge your problem-solving abilities.
         </Paragraph>
-
         <Paragraph>
           Now ! Choose your dedicated road map or field of interest, and start
           your learning journey. Can be top-university based courses if you like

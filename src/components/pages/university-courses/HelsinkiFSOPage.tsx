@@ -22,10 +22,6 @@
  * SOFTWARE.
  */
 
-/**
- * @description: Helsinki FSO Page
- */
-
 // Import for the CourseCard component
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";

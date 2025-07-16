@@ -22,10 +22,6 @@
  * SOFTWARE.
  */
 
-/**
- * Harvard CS50 Page
- */
-
 // Import for the CourseCard component
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
@@ -36,7 +32,7 @@ const HarvardCS50Page = (): React.ReactNode => {
   return (
     <CourseCard
       courseName="Harvard CS 50 Introduction to Computer Science"
-      courseUrl="https://cs50.harvard.edu/x/2024/"
+      courseUrl="https://cs50.harvard.edu/x/"
       from="Harvard University"
       prerequisites="No prerequisites"
       programmingLanguage="C, Python, SQL, JavaScript, HTML, CSS"
