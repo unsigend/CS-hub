@@ -34,7 +34,7 @@ import BerkeleyCS198_99 from "@/assets/images/BerkeleyCS198-99.png";
 const BerkeleyCS19899Page = (): React.ReactNode => {
   return (
     <CourseCard
-      courseName="Berkeley CS 198-99 Full Stack DeCal"
+      courseName="Berkeley CS 198-99:  Full Stack DeCal"
       courseUrl="https://fullstackdecal.com/"
       from="Berkeley University"
       prerequisites="No prerequisites"

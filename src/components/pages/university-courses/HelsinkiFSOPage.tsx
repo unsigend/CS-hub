@@ -33,7 +33,7 @@ import fullstackopen from "@/assets/images/fullstackopen.svg";
 const HelsinkiFSOPage = (): React.ReactNode => {
   return (
     <CourseCard
-      courseName="Helsinki Full Stack Open"
+      courseName="Helsinki: Full Stack Open"
       courseUrl="https://fullstackopen.com/en/"
       from="Helsinki University"
       prerequisites="Basic knowledge of programming"

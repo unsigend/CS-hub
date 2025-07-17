@@ -22,11 +22,10 @@
  * SOFTWARE.
  */
 
-// Import for the CourseCard component
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
-import { ReferenceAligned, Reference } from "@/components/ui/Reference";
+import { ReferenceAligned } from "@/components/ui/Reference";
 import UnorderedList from "@/components/ui/UnorderedList";
 import { LinkInner } from "@/components/ui/Link";
 import { UniversityCoursesPath } from "@/data/content/category/categories";
@@ -38,7 +37,7 @@ const HarvardCS61Page = (): React.ReactNode => {
       courseUrl="https://cs61.seas.harvard.edu/site/2024/#gsc.tab=0"
       from="Harvard University"
       prerequisites="CS 50, CS 51"
-      programmingLanguage="C, C++, x86 Assembly"
+      programmingLanguage="C, C++, x86-64 Assembly"
     >
       <div>
         <SubTitle level={3}>About the Course</SubTitle>
