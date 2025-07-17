@@ -220,13 +220,19 @@ const FullStackReference = [
     id: "deployment",
     subContent: [
       {
-        name: "render",
+        name: "Vercel",
+        id: "vercel-docs",
+        url: "https://vercel.com/",
+        content: "Vercel Deployment Service",
+      },
+      {
+        name: "Render",
         id: "render-docs",
         url: "https://render.com/",
         content: "Render Deployment Service",
       },
       {
-        name: "fly.io",
+        name: "Fly.io",
         id: "flyio-docs",
         url: "https://fly.io/",
         content: "Fly.io Deployment Service",
