@@ -32,6 +32,7 @@ import HelsinkiFSOPage from "@/components/pages/university-courses/HelsinkiFSOPa
 import HarvardCS50Page from "@/components/pages/university-courses/HarvardCS50Page";
 import FullStackPage from "@/components/pages/roadmap/FullStackPage";
 import BerkeleyCS19899Page from "@/components/pages/university-courses/BerkeleyCS198-99Page";
+import HarvardCS61Page from "@/components/pages/university-courses/HarvardCS61Page";
 
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub
@@ -80,7 +81,7 @@ const CategoryList = [
           {
             name: "Harvard CS 61",
             ID: "harvard-cs-61",
-            page: null,
+            page: <HarvardCS61Page />,
             url: `${UniversityCoursesPath}/computer-system/harvard-cs-61`,
             subCategories: null,
           },

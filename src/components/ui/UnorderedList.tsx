@@ -24,7 +24,15 @@
 
 const UnorderedListStyle = {
   UnorderedList: `
-    list-disc list-inside mb-2 ml-4
+    list-none space-y-1 mb-4 sm:mb-6 ml-0
+    [&>li]:relative [&>li]:pl-6 [&>li]:text-gray-700 
+    [&>li]:text-base [&>li]:sm:text-lg [&>li]:leading-relaxed
+    [&>li]:transition-colors [&>li]:duration-200
+    [&>li:hover]:text-gray-900
+    [&>li]:before:content-['•'] [&>li]:before:text-black 
+    [&>li]:before:font-bold [&>li]:before:absolute 
+    [&>li]:before:left-0 [&>li]:before:top-0
+    [&>li]:before:text-lg [&>li]:before:leading-relaxed
     `,
 };
 
