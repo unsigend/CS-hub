@@ -96,6 +96,24 @@ const FullStackReference = [
     ],
   },
   {
+    name: "Static Site Generator",
+    id: "static-site-generator",
+    subContent: [
+      {
+        name: "Astro",
+        id: "astro-docs",
+        url: "https://docs.astro.build/en/getting-started/",
+        content: "Astro Documentation",
+      },
+      {
+        name: "Gatsby",
+        id: "gatsby-docs",
+        url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
+        content: "Gatsby Documentation",
+      },
+    ],
+  },
+  {
     name: "UI and Component Library",
     id: "ui-and-component-library",
     subContent: [
