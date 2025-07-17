@@ -24,8 +24,6 @@
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
-import { ReferenceAligned } from "@/components/ui/Reference";
-import UnorderedList from "@/components/ui/UnorderedList";
 import { LinkInner } from "@/components/ui/Link";
 import CSAPP_IMAGE from "@/assets/images/CSAPP.jpg";
 import { UniversityCoursesPath } from "@/data/content/category/categories";

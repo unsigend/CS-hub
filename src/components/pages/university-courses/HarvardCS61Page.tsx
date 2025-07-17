@@ -67,9 +67,7 @@ const HarvardCS61Page = (): React.ReactNode => {
 
         <Paragraph>
           This course has similar content with
-          <LinkInner
-            to={`${UniversityCoursesPath}/cmu-15-213-computer-systems`}
-          >
+          <LinkInner to={`${UniversityCoursesPath}/computer-system/cmu-15-213`}>
             CMU 15-213
           </LinkInner>{" "}
           can be learned before as a prerequisite. Or learn together with.
