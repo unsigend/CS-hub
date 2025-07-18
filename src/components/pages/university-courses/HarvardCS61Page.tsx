@@ -22,12 +22,15 @@
  * SOFTWARE.
  */
 
+// Import for the components
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
 import { ReferenceAligned } from "@/components/ui/Reference";
 import UnorderedList from "@/components/ui/UnorderedList";
 import { LinkInner } from "@/components/ui/Link";
+
+// Import for the data
 import { UniversityCoursesPath } from "@/data/content/category/categories";
 
 const HarvardCS61Page = (): React.ReactNode => {

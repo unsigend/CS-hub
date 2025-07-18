@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-// Import for the CourseCard component
+// Import for the components
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";

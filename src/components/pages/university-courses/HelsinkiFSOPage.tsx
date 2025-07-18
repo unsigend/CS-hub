@@ -22,12 +22,14 @@
  * SOFTWARE.
  */
 
-// Import for the CourseCard component
+// Import for the components
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
 import { ReferenceAligned } from "@/components/ui/Reference";
-import fullstackopen from "@/assets/images/fullstackopen.svg";
+
+// Import for images
+import FSO_IMAGE from "/images/fullstackopen.svg";
 
 // Style for the HelsinkiFSOPage component
 const HelsinkiFSOPage = (): React.ReactNode => {
@@ -48,12 +50,7 @@ const HelsinkiFSOPage = (): React.ReactNode => {
             marginBottom: "10px",
           }}
         >
-          <img
-            src={fullstackopen}
-            alt="Full Stack Open"
-            width={100}
-            height={100}
-          />
+          <img src={FSO_IMAGE} alt="Full Stack Open" width={100} height={100} />
         </div>
         <SubTitle level={3}>About the course</SubTitle>
         <Paragraph>

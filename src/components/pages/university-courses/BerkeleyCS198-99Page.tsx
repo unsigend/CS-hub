@@ -22,14 +22,14 @@
  * SOFTWARE.
  */
 
-// Import for the CourseCard component
+// Import for the components
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { ReferenceAligned } from "@/components/ui/Reference";
 import { SubTitle } from "@/components/ui/Title";
 
-// Import for the image
-import BerkeleyCS198_99 from "@/assets/images/BerkeleyCS198-99.png";
+// Import for images
+import BERKELEY_CS198_99_IMAGE from "/images/BerkeleyCS198-99.png";
 
 const BerkeleyCS19899Page = (): React.ReactNode => {
   return (
@@ -62,7 +62,7 @@ const BerkeleyCS19899Page = (): React.ReactNode => {
         {/* image */}
         <div className="flex-shrink-0">
           <img
-            src={BerkeleyCS198_99}
+            src={BERKELEY_CS198_99_IMAGE}
             alt="Berkeley CS 198-99"
             width={100}
             height={100}

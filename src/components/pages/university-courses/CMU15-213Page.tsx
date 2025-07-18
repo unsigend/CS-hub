@@ -21,12 +21,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+// Import for the components
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
 import { LinkInner } from "@/components/ui/Link";
-import CSAPP_IMAGE from "@/assets/images/CSAPP.jpg";
+
+// Import for the data
 import { UniversityCoursesPath } from "@/data/content/category/categories";
+
+// Import for images
+import CSAPP_IMAGE from "/images/CSAPP.jpg";
 
 const CMU15213Page = (): React.ReactNode => {
   return (

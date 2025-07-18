@@ -34,8 +34,8 @@ import UnorderedList from "@/components/ui/UnorderedList";
 // Import for the University Courses Path
 import { UniversityCoursesPath } from "@/data/content/category/categories";
 
-// Import for the Image
-import FullStackImage from "@/assets/images/fullstackopen.svg";
+// Import for images
+import FULLSTACKOPEN_IMAGE from "/images/fullstackopen.svg";
 
 const FullStackPage = (): React.ReactNode => {
   return (
@@ -97,7 +97,7 @@ const FullStackPage = (): React.ReactNode => {
           </div>
           <div className="flex justify-center items-center">
             <img
-              src={FullStackImage}
+              src={FULLSTACKOPEN_IMAGE}
               alt="Full Stack Development"
               className="w-full h-full"
             />
