@@ -117,7 +117,7 @@ const Category = ({
   const spacingStyle = depth > 0 ? { marginBottom: "0.75rem" } : {};
 
   // if the category has subcategories, render the category with subcategories
-  if (hasSubCategory) {
+  if (hasSubCategory && !category.hidden_sub_categories) {
     return (
       <div
         className={CategoryStyle.CategoryContainer}

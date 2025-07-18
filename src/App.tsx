@@ -43,19 +43,24 @@ function flattenRoutes(categories: any[]): React.ReactNode[] {
     const hasSubCategory =
       category.subCategories && category.subCategories.length > 0;
 
+    // Add route if category has a page (regardless of subcategories)
+    if (category.page) {
+      routes.push(
+        <Route path={category.url} element={category.page} key={category.ID} />
+      );
+    }
+
     if (hasSubCategory) {
       // Process subcategories recursively
       category.subCategories.forEach((subcategory: any) =>
         processCategory(subcategory)
       );
-    } else {
-      // Add leaf categories (no subcategories) as routes
+    } else if (!category.page) {
+      // Add leaf categories without pages as under construction
       routes.push(
         <Route
           path={category.url}
-          element={
-            category.page || <UnderConstructionPage pageName={category.name} />
-          }
+          element={<UnderConstructionPage pageName={category.name} />}
           key={category.ID}
         />
       );

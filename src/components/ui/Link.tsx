@@ -33,7 +33,7 @@
 
 // Import for the Link component
 import { Link } from "react-router-dom";
-import { Gamepad, LibraryBig, Video } from "lucide-react";
+import { Book, Gamepad, Video } from "lucide-react";
 
 // Base style for all links
 const BaseLinkStyle = {
@@ -159,7 +159,7 @@ const LinkReading = ({
   return (
     <div>
       <LinkExternal href={href} className={BaseLinkStyle.withIcon}>
-        <LibraryBig />
+        <Book />
         {children}
       </LinkExternal>
     </div>

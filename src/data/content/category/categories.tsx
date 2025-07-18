@@ -26,23 +26,46 @@
 import global from "@/data/config/config";
 
 // Import the pages
+
+// reference pages
 import FullStackReferencePage from "@/components/pages/resources/reference/FullStackPage";
 import LowLevelReferencePage from "@/components/pages/resources/reference/LowLevelPage";
+
+// university courses pages
 import HelsinkiFSOPage from "@/components/pages/university-courses/HelsinkiFSOPage";
 import HarvardCS50Page from "@/components/pages/university-courses/HarvardCS50Page";
-import FullStackPage from "@/components/pages/roadmap/FullStackPage";
 import BerkeleyCS19899Page from "@/components/pages/university-courses/BerkeleyCS198-99Page";
 import HarvardCS61Page from "@/components/pages/university-courses/HarvardCS61Page";
 import CMU15213Page from "@/components/pages/university-courses/CMU15-213Page";
 
+// road map pages
+import FullStackPage from "@/components/pages/roadmap/full-stack/FullStackPage";
+import FrontendPage from "@/components/pages/roadmap/full-stack/FrontendPage";
+import BackendPage from "@/components/pages/roadmap/full-stack/BackendPage";
+import DataBasePage from "@/components/pages/roadmap/full-stack/DataBasePage";
+
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub
 // Make sure the consistency of the path is maintained
+
+// path for road map
 const RoadMapPath = `${global.BasePath}/road-map`;
+const FullStackPath = `${RoadMapPath}/full-stack`;
+const LowLevelPath = `${RoadMapPath}/low-level`;
+
+// path for university courses
 const UniversityCoursesPath = `${global.BasePath}/university-courses`;
+
+// path for resources
 const ResourcesPath = `${global.BasePath}/resources`;
 
-export { RoadMapPath, UniversityCoursesPath, ResourcesPath };
+export {
+  RoadMapPath,
+  UniversityCoursesPath,
+  ResourcesPath,
+  FullStackPath,
+  LowLevelPath,
+};
 
 const CategoryList = [
   {
@@ -55,14 +78,37 @@ const CategoryList = [
         name: "Full Stack",
         ID: "full-stack",
         page: <FullStackPage />,
-        url: `${RoadMapPath}/full-stack`,
-        subCategories: null,
+        url: FullStackPath,
+        hidden_sub_categories: true,
+        subCategories: [
+          {
+            name: "Frontend",
+            ID: "frontend",
+            page: <FrontendPage />,
+            url: `${FullStackPath}/frontend`,
+            subCategories: null,
+          },
+          {
+            name: "Backend",
+            ID: "backend",
+            page: <BackendPage />,
+            url: `${FullStackPath}/backend`,
+            subCategories: null,
+          },
+          {
+            name: "Database",
+            ID: "database",
+            page: <DataBasePage />,
+            url: `${FullStackPath}/database`,
+            subCategories: null,
+          },
+        ],
       },
       {
         name: "Low Level",
         ID: "low-level",
         page: null,
-        url: `${RoadMapPath}/low-level`,
+        url: LowLevelPath,
         subCategories: null,
       },
     ],
