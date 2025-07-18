@@ -129,12 +129,10 @@ const RoadMapCardBox = (): React.ReactNode => {
 };
 const FullStackPage = (): React.ReactNode => {
   return (
-    <div className="flex flex-col gap-10">
-      <Card>
-        <FullStackContent />
-        <RoadMapCardBox />
-      </Card>
-    </div>
+    <Card>
+      <FullStackContent />
+      <RoadMapCardBox />
+    </Card>
   );
 };
 

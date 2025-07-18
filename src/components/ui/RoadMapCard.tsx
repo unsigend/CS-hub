@@ -51,7 +51,7 @@ const RoadMapCardStyle = {
     border border-gray-200 group-hover:border-gray-500
     `,
   Title: `
-    text-lg font-bold text-gray-900 
+    text-lg font-bold text-gray-900 mr-4
     group-hover:text-black transition-colors duration-300
     truncate
     `,

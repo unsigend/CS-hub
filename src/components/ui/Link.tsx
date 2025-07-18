@@ -48,6 +48,7 @@ const BaseLinkStyle = {
     `,
   withIcon: `
     inline-flex items-center gap-1
+    after:!w-0 hover:after:!w-0 after:!h-0
     `,
 };
 

@@ -26,7 +26,6 @@
  * @description: CourseCard component used as a card for the course
  */
 
-import { LinkExternal } from "@/components/ui/Link";
 import Card from "@/components/ui/Card";
 
 // Style for the CourseCard component
@@ -40,7 +39,16 @@ const CourseCardStyle = {
     border-b border-gray-200 pb-3 sm:pb-4
     `,
   CourseTitle: `
-    text-2xl font-bold text-gray-900 mb-2
+    text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6
+    `,
+  CourseTitleLink: `
+    text-2xl sm:text-3xl font-bold text-black mb-4 sm:mb-6
+    hover:text-gray-700 transition-colors duration-200
+    relative
+    after:absolute after:bottom-0 after:left-0
+    after:w-0 after:h-0.5 after:bg-black
+    after:transition-all after:duration-300
+    hover:after:w-full
     `,
   InfoSection: `
     flex flex-col gap-2 sm:gap-3 md:gap-4
@@ -80,13 +88,18 @@ const CourseCard = ({
     <div className={CourseCardStyle.Container}>
       {/* Course Header */}
       <div className={CourseCardStyle.Header}>
-        <h3 className={CourseCardStyle.CourseTitle}>
-          {courseUrl ? (
-            <LinkExternal href={courseUrl}>{courseName}</LinkExternal>
-          ) : (
-            courseName
-          )}
-        </h3>
+        {courseUrl ? (
+          <a
+            href={courseUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={CourseCardStyle.CourseTitleLink}
+          >
+            {courseName}
+          </a>
+        ) : (
+          <h3 className={CourseCardStyle.CourseTitle}>{courseName}</h3>
+        )}
       </div>
 
       {/* Course Information */}

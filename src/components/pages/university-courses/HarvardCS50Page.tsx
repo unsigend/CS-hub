@@ -31,7 +31,7 @@ import { LinkAligned } from "@/components/ui/Link";
 const HarvardCS50Page = (): React.ReactNode => {
   return (
     <CourseCard
-      courseName="Harvard CS 50 Introduction to Computer Science"
+      courseName="Harvard CS 50: Introduction to Computer Science"
       courseUrl="https://cs50.harvard.edu/x/"
       from="Harvard University"
       prerequisites="No prerequisites"
