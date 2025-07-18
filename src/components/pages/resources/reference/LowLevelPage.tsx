@@ -24,7 +24,7 @@
 
 // Import for the Reference component
 import Paragraph from "@/components/ui/Paragraph";
-import { ReferenceAligned } from "@/components/ui/Reference";
+import { LinkAligned } from "@/components/ui/Link";
 import { Title, SubTitle } from "@/components/ui/Title";
 import Card from "@/components/ui/Card";
 
@@ -44,9 +44,9 @@ const ConstructReference = ({ Category }: { Category: any }) => {
     <div>
       <SubTitle level={2}>{Category.name}</SubTitle>
       {Category.subContent.map((item: any) => (
-        <ReferenceAligned key={item.id} name={item.name} url={item.url}>
+        <LinkAligned key={item.id} name={item.name} href={item.url}>
           {item.content}
-        </ReferenceAligned>
+        </LinkAligned>
       ))}
     </div>
   );

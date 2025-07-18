@@ -26,7 +26,7 @@
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
-import { ReferenceAligned } from "@/components/ui/Reference";
+import { LinkAligned } from "@/components/ui/Link";
 import UnorderedList from "@/components/ui/UnorderedList";
 import { LinkInner } from "@/components/ui/Link";
 
@@ -78,15 +78,15 @@ const HarvardCS61Page = (): React.ReactNode => {
       </div>
 
       <SubTitle level={3}>Resources</SubTitle>
-      <ReferenceAligned
+      <LinkAligned
         name="Harvard CS 61"
-        url="https://cs61.seas.harvard.edu/site/2024/#gsc.tab=0"
+        href="https://cs61.seas.harvard.edu/site/2024/#gsc.tab=0"
       >
         Harvard CS 61
-      </ReferenceAligned>
-      <ReferenceAligned name="Textbook" url="https://csapp.cs.cmu.edu/">
+      </LinkAligned>
+      <LinkAligned name="Textbook" href="https://csapp.cs.cmu.edu/">
         CSAPP 2nd Edition
-      </ReferenceAligned>
+      </LinkAligned>
     </CourseCard>
   );
 };

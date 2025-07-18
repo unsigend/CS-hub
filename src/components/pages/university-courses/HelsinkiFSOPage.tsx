@@ -26,7 +26,7 @@
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
-import { ReferenceAligned } from "@/components/ui/Reference";
+import { LinkAligned } from "@/components/ui/Link";
 
 // Import for images
 import FSO_IMAGE from "/images/fullstackopen.svg";
@@ -73,18 +73,15 @@ const HelsinkiFSOPage = (): React.ReactNode => {
         </Paragraph>
 
         <SubTitle level={3}>Resources</SubTitle>
-        <ReferenceAligned
-          name="Course Link"
-          url="https://fullstackopen.com/en/"
-        >
+        <LinkAligned name="Course Link" href="https://fullstackopen.com/en/">
           Full Stack Open
-        </ReferenceAligned>
-        <ReferenceAligned
+        </LinkAligned>
+        <LinkAligned
           name="Submission System"
-          url="https://studies.cs.helsinki.fi/stats/courses/fullstackopen"
+          href="https://studies.cs.helsinki.fi/stats/courses/fullstackopen"
         >
           Submission
-        </ReferenceAligned>
+        </LinkAligned>
       </div>
     </CourseCard>
   );

@@ -25,7 +25,7 @@
 // Import for the components
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
-import { ReferenceAligned } from "@/components/ui/Reference";
+import { LinkAligned } from "@/components/ui/Link";
 import { SubTitle } from "@/components/ui/Title";
 
 // Import for images
@@ -71,18 +71,15 @@ const BerkeleyCS19899Page = (): React.ReactNode => {
       </div>
 
       <SubTitle level={3}>Resources</SubTitle>
-      <ReferenceAligned
-        name="Full Stack DeCal"
-        url="https://fullstackdecal.com/"
-      >
+      <LinkAligned name="Full Stack DeCal" href="https://fullstackdecal.com/">
         2025
-      </ReferenceAligned>
-      <ReferenceAligned
+      </LinkAligned>
+      <LinkAligned
         name="Full Stack DeCal Notes"
-        url="https://fullstackdecal.com/docs/Overview"
+        href="https://fullstackdecal.com/docs/Overview"
       >
         2025 notes
-      </ReferenceAligned>
+      </LinkAligned>
     </CourseCard>
   );
 };

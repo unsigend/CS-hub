@@ -26,7 +26,7 @@
 import CourseCard from "@/components/ui/CourseCard";
 import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
-import { ReferenceAligned } from "@/components/ui/Reference";
+import { LinkAligned } from "@/components/ui/Link";
 
 const HarvardCS50Page = (): React.ReactNode => {
   return (
@@ -49,24 +49,21 @@ const HarvardCS50Page = (): React.ReactNode => {
         to explore the topics you like.
       </Paragraph>
       <SubTitle level={3}>Harvard CS 50 Series</SubTitle>
-      <ReferenceAligned
+      <LinkAligned
         name="Harvard CS 50x"
-        url="https://cs50.harvard.edu/x/2025/"
+        href="https://cs50.harvard.edu/x/2025/"
       >
         Harvard CS 50x 2025 Link
-      </ReferenceAligned>
-      <ReferenceAligned
+      </LinkAligned>
+      <LinkAligned
         name="Harvard CS 50P"
-        url="https://cs50.harvard.edu/python/"
+        href="https://cs50.harvard.edu/python/"
       >
         Harvard CS 50P Link
-      </ReferenceAligned>
-      <ReferenceAligned
-        name="Harvard CS 50AI"
-        url="https://cs50.harvard.edu/ai/"
-      >
+      </LinkAligned>
+      <LinkAligned name="Harvard CS 50AI" href="https://cs50.harvard.edu/ai/">
         Harvard CS 50AI Link
-      </ReferenceAligned>
+      </LinkAligned>
     </CourseCard>
   );
 };

@@ -27,7 +27,7 @@ import Card from "@/components/ui/Card";
 import { Title, SubTitle } from "@/components/ui/Title";
 import Note from "@/components/ui/Note";
 import Paragraph from "@/components/ui/Paragraph";
-import { ReferenceAligned } from "@/components/ui/Reference";
+import { LinkAligned, LinkVideo } from "@/components/ui/Link";
 import { LinkInner } from "@/components/ui/Link";
 import UnorderedList from "@/components/ui/UnorderedList";
 
@@ -50,24 +50,24 @@ const FullStackPage = (): React.ReactNode => {
               development.
             </Paragraph>
             <SubTitle level={3}>Reference</SubTitle>
-            <ReferenceAligned
+            <LinkAligned
               name="Full Stack Road Map"
-              url="https://roadmap.sh/full-stack"
+              href="https://roadmap.sh/full-stack"
             >
               Roadmap.sh Full Stack Road Map
-            </ReferenceAligned>
-            <ReferenceAligned
+            </LinkAligned>
+            <LinkAligned
               name="Backend Road Map"
-              url="https://roadmap.sh/backend"
+              href="https://roadmap.sh/backend"
             >
               Roadmap.sh Backend Road Map
-            </ReferenceAligned>
-            <ReferenceAligned
+            </LinkAligned>
+            <LinkAligned
               name="Frontend Road Map"
-              url="https://roadmap.sh/frontend"
+              href="https://roadmap.sh/frontend"
             >
               Roadmap.sh Frontend Road Map
-            </ReferenceAligned>
+            </LinkAligned>
 
             <SubTitle level={3}>Note</SubTitle>
             <Paragraph>
@@ -157,6 +157,9 @@ const FullStackPage = (): React.ReactNode => {
               used to create the structure of a web page. It is the basic of web
               development.
             </Paragraph>
+            <LinkVideo href="https://www.youtube.com/watch?v=pQN-pnXPaVg">
+              HTML Crash Course For Absolute Beginners
+            </LinkVideo>
 
             <SubTitle level={4}>CSS</SubTitle>
             <Paragraph>
