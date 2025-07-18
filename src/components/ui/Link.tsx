@@ -33,7 +33,7 @@
 
 // Import for the Link component
 import { Link } from "react-router-dom";
-import { Book, Video } from "lucide-react";
+import { Gamepad, LibraryBig, Video } from "lucide-react";
 
 // Base style for all links
 const BaseLinkStyle = {
@@ -55,7 +55,7 @@ const BaseLinkStyle = {
 const LayoutStyle = {
   alignedContainer: `
     flex flex-row items-start gap-2 sm:gap-4
-    text-gray-700 leading-relaxed text-base sm:text-lg md:text-xl mb-3
+    text-gray-700 leading-relaxed text-base sm:text-lg md:text-xl mb-2
     `,
   alignedLabel: `
     min-w-[140px] sm:min-w-[160px] md:min-w-[200px] w-[140px] sm:w-[160px] md:w-[200px]
@@ -139,10 +139,12 @@ const LinkVideo = ({
   children: React.ReactNode;
 }): React.ReactNode => {
   return (
-    <LinkExternal href={href} className={BaseLinkStyle.withIcon}>
-      <Video />
-      {children}
-    </LinkExternal>
+    <div>
+      <LinkExternal href={href} className={BaseLinkStyle.withIcon}>
+        <Video />
+        {children}
+      </LinkExternal>
+    </div>
   );
 };
 
@@ -155,11 +157,35 @@ const LinkReading = ({
   children: React.ReactNode;
 }): React.ReactNode => {
   return (
+    <div>
+      <LinkExternal href={href} className={BaseLinkStyle.withIcon}>
+        <LibraryBig />
+        {children}
+      </LinkExternal>
+    </div>
+  );
+};
+
+// Game link component
+const LinkGame = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}): React.ReactNode => {
+  return (
     <LinkExternal href={href} className={BaseLinkStyle.withIcon}>
-      <Book />
+      <Gamepad />
       {children}
     </LinkExternal>
   );
 };
-
-export { LinkExternal, LinkInner, LinkAligned, LinkVideo, LinkReading };
+export {
+  LinkExternal,
+  LinkInner,
+  LinkAligned,
+  LinkVideo,
+  LinkReading,
+  LinkGame,
+};
