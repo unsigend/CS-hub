@@ -22,11 +22,17 @@
  * SOFTWARE.
  */
 
+// Import for the react
+import { useContext } from "react";
+
 // Import for the data
 import CategoryList from "@/data/content/category/categories";
 
 // Import for the components
 import Category from "@/components/ui/Category";
+
+// Import for the context
+import { SideBarContext } from "@/context/SideBarContext";
 
 /**
  * @description: Style for the SideBar component
@@ -60,40 +66,15 @@ const SideBarStyle = {
     `,
 };
 
-const closeSidebar = () => {
-  // If the window is not mobile, do nothing
-  if (window.innerWidth > 768) {
-    return;
-  }
-
-  const sideBar = document.getElementById("SideBar");
-  if (sideBar) {
-    sideBar.style.opacity = "0";
-    sideBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
-    sideBar.style.backdropFilter = "blur(0px)";
-  }
-
-  // Restore body scroll
-  document.body.style.overflow = "unset";
-
-  // Complete hide after transition
-  setTimeout(() => {
-    if (sideBar) {
-      sideBar.style.display = "none";
-      sideBar.style.zIndex = "0";
-    }
-  }, 300);
-
-  // Reset hamburger menu state
-  window.dispatchEvent(new CustomEvent("closeMobileSidebar"));
-};
-
 const SideBar = (): React.ReactNode => {
+  // Get the closeSideBar function from the context
+  const { closeSideBar } = useContext(SideBarContext);
+
   // Handle backdrop click to close sidebar
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     // Only close if clicking the backdrop (empty space), not the sidebar content
     if ((e.target as HTMLDivElement).id === "SideBar") {
-      closeSidebar();
+      closeSideBar();
     }
   };
 
@@ -130,4 +111,3 @@ const SideBar = (): React.ReactNode => {
 };
 
 export default SideBar;
-export { closeSidebar };

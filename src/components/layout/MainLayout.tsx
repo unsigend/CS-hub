@@ -27,16 +27,21 @@ import NavBar from "@/components/layout/NavBar";
 import SideBar from "@/components/layout/SideBar";
 import Hero from "@/components/layout/Hero";
 
+// Import for the context
+import { SideBarProvider } from "@/context/SideBarContext";
+
 const MainLayout = (): React.ReactNode => {
   return (
-    <div>
-      {/* NavBar at the top of the page which is fixed */}
-      <NavBar />
-      {/* SideBar on the left of the page which is fixed */}
-      <SideBar />
-      {/* Hero at the center of the page which is scrollable */}
-      <Hero />
-    </div>
+    <SideBarProvider>
+      <div>
+        {/* NavBar at the top of the page which is fixed */}
+        <NavBar />
+        {/* SideBar on the left of the page which is fixed */}
+        <SideBar />
+        {/* Hero at the center of the page which is scrollable */}
+        <Hero />
+      </div>
+    </SideBarProvider>
   );
 };
 

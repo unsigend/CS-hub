@@ -27,15 +27,15 @@
  * @note: this component only works in sidebar
  */
 
-// Import for the useState
-import { useState } from "react";
+// Import for the react
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 // Import for the icons from lucide-react
 import { ArrowRight, ArrowDown } from "lucide-react";
 
-// Import for the closeSidebar function
-import { closeSidebar } from "@/components/layout/SideBar";
+// Import for the context
+import { SideBarContext } from "@/context/SideBarContext";
 
 /**
  * @description: Style for the Category component
@@ -99,6 +99,9 @@ const Category = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Get the closeSideBar function from the context
+  const { closeSideBar } = useContext(SideBarContext);
+
   const ClickCategory = () => {
     setIsOpen(!isOpen);
   };
@@ -157,7 +160,7 @@ const Category = ({
       style={spacingStyle}
       key={category.ID + "-category"}
     >
-      <Link to={category.url} key={category.ID} onClick={closeSidebar}>
+      <Link to={category.url} key={category.ID} onClick={closeSideBar}>
         <div className={CategoryStyle.SubCategory} style={dynamicMarginStyle}>
           <h2>{category.name}</h2>
         </div>
