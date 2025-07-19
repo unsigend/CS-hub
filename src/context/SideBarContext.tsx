@@ -36,14 +36,11 @@ const SideBarContext = createContext({
 const SideBarProvider = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Helper function to get sidebar element
-  const getSideBarElement = () => document.getElementById("SideBar");
-
   // Open the sidebar
   const openSideBar = () => {
     if (window.innerWidth <= 768) {
       setIsOpen(true);
-      const sideBar = getSideBarElement();
+      const sideBar = document.getElementById("SideBar");
 
       if (sideBar) {
         // Show overlay with smooth transitions
@@ -75,7 +72,7 @@ const SideBarProvider = ({ children }: { children: React.ReactNode }) => {
   const closeSideBar = () => {
     if (window.innerWidth <= 768) {
       setIsOpen(false);
-      const sideBar = getSideBarElement();
+      const sideBar = document.getElementById("SideBar");
 
       if (sideBar) {
         Object.assign(sideBar.style, {

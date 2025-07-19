@@ -93,6 +93,12 @@ const FullStackReference = [
         url: "https://vuejs.org/guide/introduction.html",
         content: "Vue.js Documentation",
       },
+      {
+        name: "TanStack",
+        id: "tanstack-docs",
+        url: "https://tanstack.com/",
+        content: "TanStack Documentation",
+      },
     ],
   },
   {
