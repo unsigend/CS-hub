@@ -23,16 +23,14 @@
  */
 
 /**
- * @description: HamburgerMenu component used as a button to open the sidebar
+ * @description: HamburgerMenu component used as a button to toggle the sidebar
  */
 
-// Import for the useState and useEffect
-import { useState, useEffect } from "react";
-
-// Import for the icons
+import { useContext } from "react";
 import { Menu, X } from "lucide-react";
+import { SideBarContext } from "@/context/SideBarContext";
 
-// style for the HamburgerMenu component
+// Style for the HamburgerMenu component
 const HamburgerMenuStyle = {
   HamburgerMenu: `
     flex items-center justify-center
@@ -46,76 +44,10 @@ const HamburgerMenuStyle = {
 };
 
 const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Listen for close events from sidebar
-  useEffect(() => {
-    const handleCloseSidebar = () => {
-      setIsOpen(false);
-    };
-
-    window.addEventListener("closeMobileSidebar", handleCloseSidebar);
-    return () =>
-      window.removeEventListener("closeMobileSidebar", handleCloseSidebar);
-  }, []);
-
-  // this function will be called only when the hamburger menu is clicked
-  function toggleMenu() {
-    const newState = !isOpen;
-    setIsOpen(newState);
-    const sideBar = document.getElementById("SideBar");
-
-    // If the sidebar is open, show it
-    if (newState) {
-      if (sideBar) {
-        // Show overlay with smooth transitions
-        sideBar.style.display = "flex";
-        sideBar.style.position = "fixed";
-        sideBar.style.top = "0";
-        sideBar.style.left = "0";
-        sideBar.style.width = "100vw";
-        sideBar.style.height = "100vh";
-        sideBar.style.zIndex = "1000";
-        sideBar.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
-        sideBar.style.backdropFilter = "blur(4px)";
-        sideBar.style.transition = "all 0.3s ease-in-out";
-      }
-
-      // Prevent body scroll
-      document.body.style.overflow = "hidden";
-
-      // Animate in
-      setTimeout(() => {
-        if (sideBar) {
-          sideBar.style.opacity = "1";
-        }
-      }, 10);
-    }
-    // If the sidebar is closed, hide it
-    else {
-      if (sideBar) {
-        // Hide overlay with smooth transitions
-        sideBar.style.opacity = "0";
-        sideBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
-        sideBar.style.backdropFilter = "blur(0px)";
-      }
-
-      // Restore body scroll
-      document.body.style.overflow = "unset";
-
-      // Complete hide after transition
-      setTimeout(() => {
-        if (sideBar) {
-          sideBar.style.display = "none";
-          sideBar.style.position = "fixed";
-          sideBar.style.zIndex = "0";
-        }
-      }, 300);
-    }
-  }
+  const { isOpen, toggleSideBar } = useContext(SideBarContext);
 
   return (
-    <div className={HamburgerMenuStyle.HamburgerMenu} onClick={toggleMenu}>
+    <div className={HamburgerMenuStyle.HamburgerMenu} onClick={toggleSideBar}>
       {isOpen ? <X size={24} /> : <Menu size={24} />}
     </div>
   );
