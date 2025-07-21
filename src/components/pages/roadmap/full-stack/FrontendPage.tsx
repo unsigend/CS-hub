@@ -37,10 +37,12 @@ import UnorderedList from "@/components/ui/UnorderedList";
 import { UniversityCoursesPath } from "@/data/content/category/categories";
 import { GithubIcon, LibraryBig } from "lucide-react";
 
+const CategoryLevel: number = 3;
+
 const _HTMLPart = (): React.ReactNode => {
   return (
     <div>
-      <SubTitle level={3}>HTML</SubTitle>
+      <SubTitle level={CategoryLevel}>HTML</SubTitle>
       <Paragraph>
         HTML is the standard markup language for creating web pages. It is used
         to create the structure of a web page. It is the basic of web
@@ -72,7 +74,7 @@ const _HTMLPart = (): React.ReactNode => {
 const _CSSPart = (): React.ReactNode => {
   return (
     <div>
-      <SubTitle level={3}>CSS</SubTitle>
+      <SubTitle level={CategoryLevel}>CSS</SubTitle>
       <Paragraph>
         CSS is used to style the HTML structure. It is used to make the web page
         more beautiful and user friendly. Learn the basics of CSS first like
@@ -171,7 +173,7 @@ const _CSSPart = (): React.ReactNode => {
 const _JavaScriptPart = (): React.ReactNode => {
   return (
     <div>
-      <SubTitle level={3}>JavaScript</SubTitle>
+      <SubTitle level={CategoryLevel}>JavaScript</SubTitle>
       <Paragraph>
         JavaScript is used to make web pages interactive, dynamic, and
         responsive to user actions. It is the most important concept and skill
@@ -233,7 +235,7 @@ const _JavaScriptPart = (): React.ReactNode => {
 const _TypeScriptPart = (): React.ReactNode => {
   return (
     <div>
-      <SubTitle level={3}>TypeScript</SubTitle>
+      <SubTitle level={CategoryLevel}>TypeScript</SubTitle>
       <Paragraph>
         TypeScript is used to make the web development more efficient and
         easier. It has a strong type system and can be used to make the web
@@ -241,7 +243,7 @@ const _TypeScriptPart = (): React.ReactNode => {
       </Paragraph>
       <UnorderedList>
         <li>
-          <LinkVideo href="https://www.youtube.com/watch?v=BwuLxPH8IDs">
+          <LinkVideo href="https://www.youtube.com/watch?v=BwuLxPH8IDs&t=0s">
             TypeScript Crash Course
           </LinkVideo>
         </li>
@@ -255,48 +257,136 @@ const _TypeScriptPart = (): React.ReactNode => {
   );
 };
 
-// Programming Language
-const EssentialLanguagesSection = (): React.ReactNode => {
-  const _Intro = (): React.ReactNode => {
-    return (
-      <div>
-        <SubTitle level={2}>Essential Programming Language</SubTitle>
-        <Paragraph>
-          The essential programming language for frontend development is HTML,
-          CSS and JavaScript.
-        </Paragraph>
-      </div>
-    );
-  };
-
+const _ReactPart = (): React.ReactNode => {
   return (
-    <div className="flex flex-col gap-3">
-      <_Intro />
-
-      <_HTMLPart />
-      <_CSSPart />
-      <_JavaScriptPart />
+    <div>
+      <SubTitle level={CategoryLevel}>React</SubTitle>
+      <Paragraph>
+        React is a JavaScript library for building user interfaces and creating
+        interactive web applications. It is currently the most popular framework
+        for frontend development.
+      </Paragraph>
+      <Paragraph>
+        First, you should learn the basic concepts of React such as JSX,
+        Components, Props, useState, useEffect, Hooks, and other fundamentals.
+        This stage can be completed through crash courses.
+      </Paragraph>
+      <UnorderedList>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=LDB4uaJ87e0&t=0s">
+            React Crash Course
+          </LinkVideo>
+        </li>
+        <li>
+          <LinkReading href="https://react.dev/learn/tutorial-tic-tac-toe">
+            React Tutorial: Tic Tac Toe
+          </LinkReading>
+        </li>
+      </UnorderedList>
+      <Paragraph>
+        Then you should learn advanced React concepts like Optimization, Context
+        Management, Life Cycle, and etc. This stage requires more comprehensive
+        courses and deeper study.
+      </Paragraph>
+      <Paragraph>
+        For the second stage, the only way I recommend is to learn the React
+        advanced feature through the official documentation with some practice
+        videos. Mainly focus on the useContext, useMemo, useRef, and do some
+        react projects.
+      </Paragraph>
+      <UnorderedList>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=NDEt0KdDbhk&list=PLillGF-RfqbaxgxkKgKk1XlJAVCX31xRI">
+            React Context API
+          </LinkVideo>
+        </li>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=FiGmAI5e91M&list=PLillGF-RfqbY3c2r0htQyVbDJJoBFE6Rb&index=2&t=0s">
+            React with Tailwind CSS
+          </LinkVideo>
+        </li>
+        <li>
+          <LinkReading href="https://react.dev/reference/react">
+            React Official Documentation
+          </LinkReading>
+        </li>
+      </UnorderedList>
     </div>
   );
 };
 
-const OptionalLanguagesSection = (): React.ReactNode => {
-  const _Intro = (): React.ReactNode => {
-    return (
-      <div>
-        <SubTitle level={2}>Optional Programming Language</SubTitle>
-        <Paragraph>
-          There are some optional programming language for frontend development.
-          Which can be skipped fist and learn them later. Or learn them depend
-          on your need and interest.
-        </Paragraph>
-      </div>
-    );
-  };
+const _ReactRouterPart = (): React.ReactNode => {
   return (
-    <div className="flex flex-col gap-3">
-      <_Intro />
-      <_TypeScriptPart />
+    <div>
+      <SubTitle level={CategoryLevel}>React Router</SubTitle>
+      <Paragraph>
+        React Router is a library for routing in React. It is used to create the
+        navigation of the web application. The React Router learning path is
+        clear, from declarative routing to framework-level routing.
+      </Paragraph>
+      <UnorderedList>
+        <li>
+          <LinkReading href="https://reactrouter.com/start/declarative/installation">
+            React Router Declarative Mode Routing
+          </LinkReading>
+        </li>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=943D7U74_sQ">
+            React Router Tutorial
+          </LinkVideo>
+        </li>
+        <li>
+          <LinkReading href="https://reactrouter.com/start/framework/installation">
+            React Router Framework Mode Routing
+          </LinkReading>
+        </li>
+      </UnorderedList>
+      <Paragraph>
+        React Router Framework Mode Routing is the most popular way to use React
+        Router. It provide a more flexible way to use React Router and build
+        both Single Page Application (SPA) and Server Side Rendering (SSR)
+        applications.
+      </Paragraph>
+    </div>
+  );
+};
+
+const _ReduxPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={CategoryLevel}>Redux</SubTitle>
+      <Paragraph>
+        Redux is a state management library for React. It is used to manage the
+        state of the web application. Which is essential for the large scale
+        project state management.
+      </Paragraph>
+    </div>
+  );
+};
+
+const _NextJSPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={CategoryLevel}>Next.js</SubTitle>
+      <Paragraph>
+        Next.js is a framework for building server-side rendered (SSR) and
+        static site generated (SSG) React applications. It is a popular
+        framework for building web applications.
+      </Paragraph>
+    </div>
+  );
+};
+
+const _AstroPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={CategoryLevel}>Astro (Optional)</SubTitle>
+      <Paragraph>
+        Astro is a static site builder that is used to create the static site.
+        This framework is completely optional and only learn this if you have a
+        need to build a static site. But it is recommended to learn this if you
+        want to build a personal Blog.
+      </Paragraph>
     </div>
   );
 };
@@ -329,8 +419,10 @@ const ProgrammingLanguageSection = (): React.ReactNode => {
   return (
     <Card>
       <_Intro />
-      <EssentialLanguagesSection />
-      <OptionalLanguagesSection />
+      <_HTMLPart />
+      <_CSSPart />
+      <_JavaScriptPart />
+      <_TypeScriptPart />
     </Card>
   );
 };
@@ -357,11 +449,42 @@ const IntroSection = (): React.ReactNode => {
   );
 };
 // Framework
+const FrameworkSection = (): React.ReactNode => {
+  const _Intro = (): React.ReactNode => {
+    return (
+      <div>
+        <Title>Framework</Title>
+        <Paragraph>
+          The frontend framework is the most important part of the frontend
+          development. It is used to create the UI of the web application. It is
+          the most popular framework for frontend development.
+        </Paragraph>
+        <Paragraph>
+          The most popular framework now for frontend development is{" "}
+          <strong>React</strong> and <strong>Vue.js</strong>. This road map will
+          focus on the <strong>React</strong> framework. And mainly focus on the{" "}
+          <strong>React</strong> ecosystem (React Version 19).
+        </Paragraph>
+      </div>
+    );
+  };
+  return (
+    <Card>
+      <_Intro />
+      <_ReactPart />
+      <_ReactRouterPart />
+      <_ReduxPart />
+      <_NextJSPart />
+      <_AstroPart />
+    </Card>
+  );
+};
 const FrontendPage = (): React.ReactNode => {
   return (
     <div className="flex flex-col gap-8">
       <IntroSection />
       <ProgrammingLanguageSection />
+      <FrameworkSection />
     </div>
   );
 };
