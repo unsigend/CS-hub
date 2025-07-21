@@ -25,18 +25,22 @@
 import Card from "@/components/ui/Card";
 import { Title, SubTitle } from "@/components/ui/Title";
 import Paragraph from "@/components/ui/Paragraph";
-import { LinkInner } from "@/components/ui/Link";
-import { LinkReading } from "@/components/ui/Link";
-import { LinkVideo } from "@/components/ui/Link";
-import { LinkGame } from "@/components/ui/Link";
-import { LinkExternal } from "@/components/ui/Link";
+import {
+  LinkInner,
+  LinkReading,
+  LinkVideo,
+  LinkGame,
+  LinkExternal,
+  LinkIconCustom,
+} from "@/components/ui/Link";
 import UnorderedList from "@/components/ui/UnorderedList";
 import { UniversityCoursesPath } from "@/data/content/category/categories";
+import { GithubIcon, LibraryBig } from "lucide-react";
 
 const _HTMLPart = (): React.ReactNode => {
   return (
     <div>
-      <SubTitle level={4}>HTML</SubTitle>
+      <SubTitle level={3}>HTML</SubTitle>
       <Paragraph>
         HTML is the standard markup language for creating web pages. It is used
         to create the structure of a web page. It is the basic of web
@@ -68,7 +72,7 @@ const _HTMLPart = (): React.ReactNode => {
 const _CSSPart = (): React.ReactNode => {
   return (
     <div>
-      <SubTitle level={4}>CSS</SubTitle>
+      <SubTitle level={3}>CSS</SubTitle>
       <Paragraph>
         CSS is used to style the HTML structure. It is used to make the web page
         more beautiful and user friendly. Learn the basics of CSS first like
@@ -164,40 +168,21 @@ const _CSSPart = (): React.ReactNode => {
   );
 };
 
-const IntroSection = (): React.ReactNode => {
-  return (
-    <div>
-      <Title>Frontend Development</Title>
-      <Paragraph>
-        The frontend roadmap starts with the basics of web development and
-        shifts to more advanced topics like frameworks, libraries, and other
-        tools.
-      </Paragraph>
-      <Paragraph>
-        You don't need to follow exactly the same order - you can skip topics
-        that you already know. Some frameworks are optional, so you can skip
-        them if you don't want to learn them or if they don't align with your
-        goals.
-      </Paragraph>
-    </div>
-  );
-};
-
 const _JavaScriptPart = (): React.ReactNode => {
   return (
     <div>
-      <SubTitle level={4}>JavaScript</SubTitle>
+      <SubTitle level={3}>JavaScript</SubTitle>
       <Paragraph>
-        JavaScript is used to make the web page more interactive. It is used to
-        make the web page more dynamic and responsive. It is the most important
-        concept and skills if you focus on JS and TS full stack development.
+        JavaScript is used to make web pages interactive, dynamic, and
+        responsive to user actions. It is the most important concept and skill
+        if you focus on JavaScript and TypeScript full stack development.
       </Paragraph>
 
       <Paragraph>
-        Which means only crash course is not enough, you need to learn deeper
-        and wider. The way to learn JavaScript I recommend is to quickly get
-        familiar with the basic concept and syntax. Then practice with the
-        exercise and project.
+        This means a crash course alone is not enough - you need to learn both
+        deeper and broader. The way I recommend learning JavaScript is to
+        quickly get familiar with the basic concepts and syntax, then reinforce
+        your knowledge through exercises and hands-on projects.
       </Paragraph>
 
       <UnorderedList>
@@ -218,18 +203,109 @@ const _JavaScriptPart = (): React.ReactNode => {
         <LinkExternal href="https://javascript.info/">
           Modern JavaScript Tutorial{" "}
         </LinkExternal>{" "}
-        part 1 for the topics you are not familiar with, then focused on part 2
-        DOM, event, and async programming.
+        part 1 for the topics you are not familiar with, then focus on part 2
+        which covers DOM manipulation, events, and asynchronous programming.
       </Paragraph>
+
+      <SubTitle level={4}>Go Deeper into JavaScript</SubTitle>
+      <Paragraph>
+        Once you've grasped the fundamentals, it's time to dive deeper into
+        JavaScript's more advanced concepts and patterns.
+      </Paragraph>
+      <UnorderedList>
+        <li>
+          <LinkIconCustom href="https://github.com/getify/You-Dont-Know-JS">
+            <GithubIcon />
+            Github: You Don't Know JS
+          </LinkIconCustom>
+        </li>
+        <li>
+          <LinkIconCustom href="https://eloquentjavascript.net/">
+            <LibraryBig />
+            Eloquent JavaScript
+          </LinkIconCustom>
+        </li>
+      </UnorderedList>
     </div>
   );
 };
 
-const EssentialLanguagesSection = (): React.ReactNode => {
+const _TypeScriptPart = (): React.ReactNode => {
   return (
-    <div className="flex flex-col gap-5">
+    <div>
+      <SubTitle level={3}>TypeScript</SubTitle>
+      <Paragraph>
+        TypeScript is used to make the web development more efficient and
+        easier. It has a strong type system and can be used to make the web
+        development more reliable and secure.
+      </Paragraph>
+      <UnorderedList>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=BwuLxPH8IDs">
+            TypeScript Crash Course
+          </LinkVideo>
+        </li>
+        <li>
+          <LinkReading href="https://www.typescriptlang.org/docs/handbook/intro.html">
+            TypeScript Handbook
+          </LinkReading>
+        </li>
+      </UnorderedList>
+    </div>
+  );
+};
+
+// Programming Language
+const EssentialLanguagesSection = (): React.ReactNode => {
+  const _Intro = (): React.ReactNode => {
+    return (
       <div>
-        <SubTitle level={2}>Programming Language</SubTitle>
+        <SubTitle level={2}>Essential Programming Language</SubTitle>
+        <Paragraph>
+          The essential programming language for frontend development is HTML,
+          CSS and JavaScript.
+        </Paragraph>
+      </div>
+    );
+  };
+
+  return (
+    <div className="flex flex-col gap-3">
+      <_Intro />
+
+      <_HTMLPart />
+      <_CSSPart />
+      <_JavaScriptPart />
+    </div>
+  );
+};
+
+const OptionalLanguagesSection = (): React.ReactNode => {
+  const _Intro = (): React.ReactNode => {
+    return (
+      <div>
+        <SubTitle level={2}>Optional Programming Language</SubTitle>
+        <Paragraph>
+          There are some optional programming language for frontend development.
+          Which can be skipped fist and learn them later. Or learn them depend
+          on your need and interest.
+        </Paragraph>
+      </div>
+    );
+  };
+  return (
+    <div className="flex flex-col gap-3">
+      <_Intro />
+      <_TypeScriptPart />
+    </div>
+  );
+};
+
+const ProgrammingLanguageSection = (): React.ReactNode => {
+  const _Intro = (): React.ReactNode => {
+    return (
+      <div>
+        <Title>Programming Language</Title>
         <Paragraph>
           The first part of the frontend development is the programming
           language. Namely HTML, CSS and JavaScript. Below are the concept based
@@ -248,48 +324,45 @@ const EssentialLanguagesSection = (): React.ReactNode => {
           language before you start the backend development.
         </Paragraph>
       </div>
-      <div>
-        <SubTitle level={3}>Essential Programming Language</SubTitle>
-        <Paragraph>
-          The essential programming language for frontend development is HTML,
-          CSS and JavaScript.
-        </Paragraph>
-      </div>
-
-      <_HTMLPart />
-      <_CSSPart />
-      <_JavaScriptPart />
-    </div>
-  );
-};
-
-const OptionalLanguagesSection = (): React.ReactNode => {
-  return (
-    <div>
-      <SubTitle level={3}>Optional Programming Language</SubTitle>
-      <Paragraph>
-        There are some optional programming language for frontend development.
-        Which can be skipped fist and learn them later. Or learn them depend on
-        your need and interest.
-      </Paragraph>
-
-      <SubTitle level={4}>TypeScript</SubTitle>
-      <Paragraph>
-        TypeScript is used to make the web development more efficient and
-        easier. It has a strong type system and can be used to make the web
-        development more reliable and secure.
-      </Paragraph>
-    </div>
-  );
-};
-
-const FrontendPage = (): React.ReactNode => {
+    );
+  };
   return (
     <Card>
-      <IntroSection />
+      <_Intro />
       <EssentialLanguagesSection />
       <OptionalLanguagesSection />
     </Card>
+  );
+};
+
+// Intro
+const IntroSection = (): React.ReactNode => {
+  return (
+    <Card>
+      <div>
+        <Title>Frontend Development</Title>
+        <Paragraph>
+          The frontend roadmap starts with the basics of web development and
+          shifts to more advanced topics like frameworks, libraries, and other
+          tools.
+        </Paragraph>
+        <Paragraph>
+          You don't need to follow exactly the same order - you can skip topics
+          that you already know. Some frameworks are optional, so you can skip
+          them if you don't want to learn them or if they don't align with your
+          goals.
+        </Paragraph>
+      </div>
+    </Card>
+  );
+};
+// Framework
+const FrontendPage = (): React.ReactNode => {
+  return (
+    <div className="flex flex-col gap-8">
+      <IntroSection />
+      <ProgrammingLanguageSection />
+    </div>
   );
 };
 

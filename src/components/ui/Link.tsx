@@ -182,6 +182,21 @@ const LinkGame = ({
     </LinkExternal>
   );
 };
+
+// Custom link component
+const LinkIconCustom = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}): React.ReactNode => {
+  return (
+    <LinkExternal href={href} className={BaseLinkStyle.withIcon}>
+      {children}
+    </LinkExternal>
+  );
+};
 export {
   LinkExternal,
   LinkInner,
@@ -189,4 +204,5 @@ export {
   LinkVideo,
   LinkReading,
   LinkGame,
+  LinkIconCustom,
 };
