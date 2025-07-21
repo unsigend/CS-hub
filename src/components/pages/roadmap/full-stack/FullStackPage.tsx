@@ -44,9 +44,10 @@ const FullStackContent = (): React.ReactNode => {
       <div className="flex flex-row gap-8">
         <div className="flex flex-col">
           <Paragraph>
-            This page is a road map for full stack development. This is a skill
-            and practice focused road map. If you want to learn more concept
-            based way can use the university courses for full stack development.
+            This page is a roadmap for full stack development. This is a skill
+            and practice-focused roadmap. If you want to learn in a more
+            concept-based way, you can use university courses for full stack
+            development.
           </Paragraph>
           <SubTitle level={3}>Reference</SubTitle>
           <LinkAligned
@@ -70,9 +71,9 @@ const FullStackContent = (): React.ReactNode => {
 
           <SubTitle level={3}>Note</SubTitle>
           <Paragraph>
-            This road map has some personal bias and may not suitable for
-            everyone. Consider this as a road map reference. If you have any
-            suggestion or feedback, please feel free to contact me.
+            This roadmap has some personal bias and may not be suitable for
+            everyone. Consider this as a roadmap reference. If you have any
+            suggestions or feedback, please feel free to contact me.
           </Paragraph>
           <Paragraph>
             This page is a work in progress. I will update it as I learn more
@@ -81,7 +82,7 @@ const FullStackContent = (): React.ReactNode => {
 
           <SubTitle level={3}>Structure</SubTitle>
           <Paragraph>
-            This road map is structured in a way that is easy to follow and
+            This roadmap is structured in a way that is easy to follow and
             understand. The structure is as follows:
           </Paragraph>
           <UnorderedList>
@@ -90,15 +91,15 @@ const FullStackContent = (): React.ReactNode => {
             <li>Database</li>
           </UnorderedList>
           <Paragraph>
-            If you want to focused on specific technique stack, you can just
-            skip the other part. And focus on which part you want.
+            If you want to focus on a specific technology stack, you can skip
+            the other parts and focus on whichever area you want to develop.
           </Paragraph>
         </div>
         <div className="flex justify-center items-center">
           <img
             src={FULLSTACKOPEN_IMAGE}
             alt="Full Stack Development"
-            className="w-full h-full"
+            className="w-64 h-auto"
           />
         </div>
       </div>

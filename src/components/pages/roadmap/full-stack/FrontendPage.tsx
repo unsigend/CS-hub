@@ -33,22 +33,201 @@ import { LinkExternal } from "@/components/ui/Link";
 import UnorderedList from "@/components/ui/UnorderedList";
 import { UniversityCoursesPath } from "@/data/content/category/categories";
 
-const FrontendPage = (): React.ReactNode => {
+const _HTMLPart = (): React.ReactNode => {
   return (
-    <Card>
-      <div>
-        <Title>Frontend Development</Title>
-        <Paragraph>
-          Frontend road map part will started from basics of web development and
-          shift to more advanced topics like Framework, Library, and etc.
-        </Paragraph>
-        <Paragraph>
-          Don't need to follow exactly as the same order, you can skip some
-          topics that you already know them. Or some of the frameworks are
-          optional, you can skip them if you don't want to learn them.
-        </Paragraph>
-      </div>
+    <div>
+      <SubTitle level={4}>HTML</SubTitle>
+      <Paragraph>
+        HTML is the standard markup language for creating web pages. It is used
+        to create the structure of a web page. It is the basic of web
+        development.
+      </Paragraph>
 
+      <UnorderedList>
+        <li>
+          <LinkReading href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content">
+            MDN HTML Tutorial
+          </LinkReading>
+        </li>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=UB1O30fR-EE&t=0s">
+            HTML Crash Course For Absolute Beginners
+          </LinkVideo>
+        </li>
+      </UnorderedList>
+
+      <Paragraph>
+        <strong>Note: </strong>HTML is the basic of web development. However you
+        don't need to understand every mark up tags in HTML, just go through the
+        important ones and use them in your project.
+      </Paragraph>
+    </div>
+  );
+};
+
+const _CSSPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={4}>CSS</SubTitle>
+      <Paragraph>
+        CSS is used to style the HTML structure. It is used to make the web page
+        more beautiful and user friendly. Learn the basics of CSS first like
+        selectors, properties, values, and etc.
+      </Paragraph>
+      <UnorderedList>
+        <li>
+          <LinkReading href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content">
+            MDN CSS Tutorial
+          </LinkReading>
+        </li>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=yfoY53QXEnI&t=0s">
+            CSS Crash Course For Absolute Beginners
+          </LinkVideo>
+        </li>
+      </UnorderedList>
+
+      <Paragraph>
+        Another important concept in CSS is the box model and layout. Below are
+        the resources for the box model and layout. Go through the concept first
+        and do the game exercise to solidify the concept.
+      </Paragraph>
+
+      <SubTitle level={4}>Flex Box</SubTitle>
+      <Paragraph>
+        CSS Flexbox is a layout method that makes it easy to arrange elements in
+        a flexible container, allowing you to control their alignment, spacing,
+        and distribution with simple properties.
+      </Paragraph>
+      <UnorderedList>
+        <li>
+          <LinkReading href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
+            CSS Flex Box
+          </LinkReading>
+        </li>
+        <li>
+          <LinkGame href="https://flexboxfroggy.com/">Flex Box Froggy</LinkGame>
+        </li>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=3YW65K6LcIA&t=0s">
+            CSS Flex Box Crash Course
+          </LinkVideo>
+        </li>
+      </UnorderedList>
+
+      <SubTitle level={4}>Grid Layout</SubTitle>
+      <Paragraph>
+        CSS Grid Layout is a two-dimensional layout system that allows you to
+        create complex layouts by defining rows and columns. Which is better for
+        complex layout.
+      </Paragraph>
+      <UnorderedList>
+        <li>
+          <LinkReading href="https://css-tricks.com/snippets/css/complete-guide-grid/">
+            CSS Grid Layout
+          </LinkReading>
+        </li>
+        <li>
+          <LinkGame href="https://cssgridgarden.com/">CSS Grid Garden</LinkGame>
+        </li>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=0xMQfnTU6oo&t=0s">
+            CSS Grid Layout Crash Course
+          </LinkVideo>
+        </li>
+      </UnorderedList>
+
+      <SubTitle level={4}>CSS Framework</SubTitle>
+      <Paragraph>
+        Below are the resources for the CSS framework and library, it is
+        optional so you can come back later on those topics. But using these
+        design can quickly build beautiful and responsive web page.
+      </Paragraph>
+      <UnorderedList>
+        <li>
+          <LinkReading href="https://tailwindcss.com/docs/installation">
+            Tailwind CSS
+          </LinkReading>
+        </li>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=dFgzHOX84xQ&t=0s">
+            Tailwind CSS Crash Course
+          </LinkVideo>
+        </li>
+        <li>
+          <LinkReading href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">
+            Bootstrap 5
+          </LinkReading>
+        </li>
+      </UnorderedList>
+    </div>
+  );
+};
+
+const IntroSection = (): React.ReactNode => {
+  return (
+    <div>
+      <Title>Frontend Development</Title>
+      <Paragraph>
+        The frontend roadmap starts with the basics of web development and
+        shifts to more advanced topics like frameworks, libraries, and other
+        tools.
+      </Paragraph>
+      <Paragraph>
+        You don't need to follow exactly the same order - you can skip topics
+        that you already know. Some frameworks are optional, so you can skip
+        them if you don't want to learn them or if they don't align with your
+        goals.
+      </Paragraph>
+    </div>
+  );
+};
+
+const _JavaScriptPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={4}>JavaScript</SubTitle>
+      <Paragraph>
+        JavaScript is used to make the web page more interactive. It is used to
+        make the web page more dynamic and responsive. It is the most important
+        concept and skills if you focus on JS and TS full stack development.
+      </Paragraph>
+
+      <Paragraph>
+        Which means only crash course is not enough, you need to learn deeper
+        and wider. The way to learn JavaScript I recommend is to quickly get
+        familiar with the basic concept and syntax. Then practice with the
+        exercise and project.
+      </Paragraph>
+
+      <UnorderedList>
+        <li>
+          <LinkVideo href="https://www.youtube.com/watch?v=hdI2bqOjy3c&t=0s">
+            JavaScript Crash Course For Absolute Beginners
+          </LinkVideo>
+        </li>
+        <li>
+          <LinkReading href="https://javascript.info/">
+            Modern JavaScript Tutorial
+          </LinkReading>
+        </li>
+      </UnorderedList>
+
+      <Paragraph>
+        Read
+        <LinkExternal href="https://javascript.info/">
+          Modern JavaScript Tutorial{" "}
+        </LinkExternal>{" "}
+        part 1 for the topics you are not familiar with, then focused on part 2
+        DOM, event, and async programming.
+      </Paragraph>
+    </div>
+  );
+};
+
+const EssentialLanguagesSection = (): React.ReactNode => {
+  return (
+    <div className="flex flex-col gap-5">
       <div>
         <SubTitle level={2}>Programming Language</SubTitle>
         <Paragraph>
@@ -69,189 +248,47 @@ const FrontendPage = (): React.ReactNode => {
           language before you start the backend development.
         </Paragraph>
       </div>
-
-      <div className="flex flex-col gap-5">
-        <div>
-          <SubTitle level={3}>Essential Programming Language</SubTitle>
-          <Paragraph>
-            The essential programming language for frontend development is HTML,
-            CSS and JavaScript.
-          </Paragraph>
-        </div>
-
-        <div>
-          <SubTitle level={4}>HTML</SubTitle>
-          <Paragraph>
-            HTML is the standard markup language for creating web pages. It is
-            used to create the structure of a web page. It is the basic of web
-            development.
-          </Paragraph>
-
-          <UnorderedList>
-            <li>
-              <LinkReading href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content">
-                MDN HTML Tutorial
-              </LinkReading>
-            </li>
-            <li>
-              <LinkVideo href="https://www.youtube.com/watch?v=UB1O30fR-EE&t=0s">
-                HTML Crash Course For Absolute Beginners
-              </LinkVideo>
-            </li>
-          </UnorderedList>
-
-          <Paragraph>
-            <strong>Note: </strong>HTML is the basic of web development. However
-            you don't need to understand every mark up tags in HTML, just go
-            through the important ones and use them in your project.
-          </Paragraph>
-        </div>
-
-        <div>
-          <SubTitle level={4}>CSS</SubTitle>
-          <Paragraph>
-            CSS is used to style the HTML structure. It is used to make the web
-            page more beautiful and user friendly. Learn the basics of CSS first
-            like selectors, properties, values, and etc.
-          </Paragraph>
-          <UnorderedList>
-            <li>
-              <LinkReading href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content">
-                MDN CSS Tutorial
-              </LinkReading>
-            </li>
-            <li>
-              <LinkVideo href="https://www.youtube.com/watch?v=yfoY53QXEnI&t=0s">
-                CSS Crash Course For Absolute Beginners
-              </LinkVideo>
-            </li>
-          </UnorderedList>
-
-          <Paragraph>
-            Another important concept in CSS is the box model and layout. Below
-            are the resources for the box model and layout. Go through the
-            concept first and do the game exercise to solidify the concept.
-          </Paragraph>
-
-          <SubTitle level={4}>Flex Box</SubTitle>
-          <UnorderedList>
-            <li>
-              <LinkReading href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
-                CSS Flex Box
-              </LinkReading>
-            </li>
-            <li>
-              <LinkGame href="https://flexboxfroggy.com/">
-                Flex Box Froggy
-              </LinkGame>
-            </li>
-            <li>
-              <LinkVideo href="https://www.youtube.com/watch?v=3YW65K6LcIA&t=0s">
-                CSS Flex Box Crash Course
-              </LinkVideo>
-            </li>
-          </UnorderedList>
-
-          <SubTitle level={4}>Grid Layout</SubTitle>
-          <UnorderedList>
-            <li>
-              <LinkReading href="https://css-tricks.com/snippets/css/complete-guide-grid/">
-                CSS Grid Layout
-              </LinkReading>
-            </li>
-            <li>
-              <LinkGame href="https://cssgridgarden.com/">
-                CSS Grid Garden
-              </LinkGame>
-            </li>
-            <li>
-              <LinkVideo href="https://www.youtube.com/watch?v=0xMQfnTU6oo&t=0s">
-                CSS Grid Layout Crash Course
-              </LinkVideo>
-            </li>
-          </UnorderedList>
-
-          <Paragraph>
-            Below are the resources for the CSS framework and library, it is
-            optional so you can come back later on those topics. But using these
-            design can quickly build beautiful and responsive web page.
-          </Paragraph>
-
-          <SubTitle level={4}>CSS Framework</SubTitle>
-          <UnorderedList>
-            <li>
-              <LinkReading href="https://tailwindcss.com/docs/installation">
-                Tailwind CSS
-              </LinkReading>
-            </li>
-            <li>
-              <LinkVideo href="https://www.youtube.com/watch?v=dFgzHOX84xQ&t=0s">
-                Tailwind CSS Crash Course
-              </LinkVideo>
-            </li>
-            <li>
-              <LinkReading href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">
-                Bootstrap 5
-              </LinkReading>
-            </li>
-          </UnorderedList>
-        </div>
-
-        <div>
-          <SubTitle level={4}>JavaScript</SubTitle>
-          <Paragraph>
-            JavaScript is used to make the web page more interactive. It is used
-            to make the web page more dynamic and responsive. It is the most
-            important concept and skills if you focus on JS and TS full stack
-            development.
-          </Paragraph>
-
-          <Paragraph>
-            Which means only crash course is not enough, you need to learn
-            deeper and wider. The way to learn JavaScript I recommend is to
-            quickly get familiar with the basic concept and syntax. Then
-            practice with the exercise and project.
-          </Paragraph>
-
-          <UnorderedList>
-            <li>
-              <LinkVideo href="https://www.youtube.com/watch?v=hdI2bqOjy3c&t=0s">
-                JavaScript Crash Course For Absolute Beginners
-              </LinkVideo>
-            </li>
-            <li>
-              <LinkReading href="https://javascript.info/">
-                Modern JavaScript Tutorial
-              </LinkReading>
-            </li>
-          </UnorderedList>
-
-          <Paragraph>
-            Read
-            <LinkExternal href="https://javascript.info/">
-              Modern JavaScript Tutorial{" "}
-            </LinkExternal>{" "}
-            part 1 for the topics you are not familiar with, then focused on
-            part 2 DOM, event, and async programming.
-          </Paragraph>
-        </div>
-      </div>
-
       <div>
-        <SubTitle level={3}>Optional Programming Language</SubTitle>
+        <SubTitle level={3}>Essential Programming Language</SubTitle>
         <Paragraph>
-          There are some optional programming language for frontend development.
-          Which can be skipped fist and learn them later. Or learn them depend
-          on your need and interest.
-        </Paragraph>
-
-        <SubTitle level={4}>TypeScript</SubTitle>
-        <Paragraph>
-          TypeScript is used to make the web development more efficient and
-          easier. It has a strong type system and can be used to make the web
-          development more reliable and secure.
+          The essential programming language for frontend development is HTML,
+          CSS and JavaScript.
         </Paragraph>
       </div>
+
+      <_HTMLPart />
+      <_CSSPart />
+      <_JavaScriptPart />
+    </div>
+  );
+};
+
+const OptionalLanguagesSection = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={3}>Optional Programming Language</SubTitle>
+      <Paragraph>
+        There are some optional programming language for frontend development.
+        Which can be skipped fist and learn them later. Or learn them depend on
+        your need and interest.
+      </Paragraph>
+
+      <SubTitle level={4}>TypeScript</SubTitle>
+      <Paragraph>
+        TypeScript is used to make the web development more efficient and
+        easier. It has a strong type system and can be used to make the web
+        development more reliable and secure.
+      </Paragraph>
+    </div>
+  );
+};
+
+const FrontendPage = (): React.ReactNode => {
+  return (
+    <Card>
+      <IntroSection />
+      <EssentialLanguagesSection />
+      <OptionalLanguagesSection />
     </Card>
   );
 };
