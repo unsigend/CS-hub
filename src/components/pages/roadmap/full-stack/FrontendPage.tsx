@@ -311,6 +311,12 @@ const _ReactPart = (): React.ReactNode => {
           </LinkReading>
         </li>
       </UnorderedList>
+      <Paragraph>
+        Can also consider this road map for the React learning path:
+        <LinkExternal href="https://roadmap.sh/react">
+          React Roadmap.sh
+        </LinkExternal>
+      </Paragraph>
     </div>
   );
 };
