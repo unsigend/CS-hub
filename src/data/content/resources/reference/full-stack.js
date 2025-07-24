@@ -153,6 +153,12 @@ const FullStackReference = [
         url: "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
         content: "Bootstrap Documentation",
       },
+      {
+        name: "React Bits",
+        id: "react-bits-docs",
+        url: "https://reactbits.dev/",
+        content: "React Bits Documentation",
+      },
     ],
   },
   {
