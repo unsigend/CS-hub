@@ -37,6 +37,7 @@ import HarvardCS50Page from "@/components/pages/university-courses/HarvardCS50Pa
 import BerkeleyCS19899Page from "@/components/pages/university-courses/BerkeleyCS198-99Page";
 import HarvardCS61Page from "@/components/pages/university-courses/HarvardCS61Page";
 import CMU15213Page from "@/components/pages/university-courses/CMU15-213Page";
+import WisconsinCS517Page from "@/components/pages/university-courses/WisconsinCS517";
 
 // road map pages
 import FullStackPage from "@/components/pages/roadmap/full-stack/FullStackPage";
@@ -249,6 +250,13 @@ const CategoryList = [
             ID: "berkeley-cs-198-99",
             page: <BerkeleyCS19899Page />,
             url: `${UniversityCoursesPath}/full-stack-development/berkeley-cs-198-99`,
+            subCategories: null,
+          },
+          {
+            name: "Wisconsin CS 517",
+            ID: "wisconsin-cs-517",
+            page: <WisconsinCS517Page />,
+            url: `${UniversityCoursesPath}/full-stack-development/wisconsin-cs-517`,
             subCategories: null,
           },
         ],
