@@ -52,7 +52,7 @@ const HelsinkiFSOPage = (): React.ReactNode => {
         >
           <img src={FSO_IMAGE} alt="Full Stack Open" width={100} height={100} />
         </div>
-        <SubTitle level={3}>About the course</SubTitle>
+        <SubTitle level={2}>About the Course</SubTitle>
         <Paragraph>
           Full Stack Open from the University of Helsinki is a course that
           teaches you how to build web applications using modern technologies
@@ -72,7 +72,7 @@ const HelsinkiFSOPage = (): React.ReactNode => {
           university.
         </Paragraph>
 
-        <SubTitle level={3}>Resources</SubTitle>
+        <SubTitle level={2}>Resources</SubTitle>
         <LinkAligned name="Course Link" href="https://fullstackopen.com/en/">
           Full Stack Open
         </LinkAligned>

@@ -37,6 +37,7 @@ const HarvardCS50Page = (): React.ReactNode => {
       prerequisites="No prerequisites"
       programmingLanguage="C, Python, SQL, JavaScript, HTML, CSS"
     >
+      <SubTitle level={2}>About the Course</SubTitle>
       <Paragraph>
         Harvard CS 50x is an introductory course to computer science. From C
         programming language to basic data structure, to Python programming
@@ -48,7 +49,7 @@ const HarvardCS50Page = (): React.ReactNode => {
         auto-grading system in github. After explore the CS 50x you can continue
         to explore the topics you like.
       </Paragraph>
-      <SubTitle level={3}>Harvard CS 50 Series</SubTitle>
+      <SubTitle level={2}>Harvard CS 50 Series</SubTitle>
       <LinkAligned
         name="Harvard CS 50x"
         href="https://cs50.harvard.edu/x/2025/"

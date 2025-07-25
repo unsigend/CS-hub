@@ -39,7 +39,7 @@ const WisconsinCS571Page = (): React.ReactNode => {
       prerequisites="Wisconsin CS 400 or any programming language experience"
       programmingLanguage="JavaScript"
     >
-      <SubTitle level={2}>About the course</SubTitle>
+      <SubTitle level={2}>About the Course</SubTitle>
       <Paragraph>
         CS 571 introduces students to modern user interface development using
         React and React Native frameworks. This course bridges the gap between

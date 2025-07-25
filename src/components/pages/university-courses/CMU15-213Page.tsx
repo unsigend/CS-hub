@@ -43,7 +43,7 @@ const CMU15213Page = (): React.ReactNode => {
       programmingLanguage="C, x86-64 Assembly"
     >
       <div>
-        <SubTitle level={3}>About the Course</SubTitle>
+        <SubTitle level={2}>About the Course</SubTitle>
         <Paragraph>
           CMU 15-213 is one of Carnegie Mellon University's most respected and
           challenging computer science courses. It provides a comprehensive

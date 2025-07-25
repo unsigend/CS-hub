@@ -43,7 +43,7 @@ const HarvardCS61Page = (): React.ReactNode => {
       programmingLanguage="C, C++, x86-64 Assembly"
     >
       <div>
-        <SubTitle level={3}>About the Course</SubTitle>
+        <SubTitle level={2}>About the Course</SubTitle>
         <Paragraph>
           Harvard CS 61 is an introduction to the fundamentals of computer
           systems programming. Topics include <strong>C</strong>,{" "}
@@ -77,7 +77,7 @@ const HarvardCS61Page = (): React.ReactNode => {
         </Paragraph>
       </div>
 
-      <SubTitle level={3}>Resources</SubTitle>
+      <SubTitle level={2}>Resources</SubTitle>
       <LinkAligned
         name="Harvard CS 61"
         href="https://cs61.seas.harvard.edu/site/2024/#gsc.tab=0"

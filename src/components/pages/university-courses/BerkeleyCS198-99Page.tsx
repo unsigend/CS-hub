@@ -42,7 +42,7 @@ const BerkeleyCS19899Page = (): React.ReactNode => {
     >
       <div className="flex flex-row gap-4 justify-between items-center">
         <div>
-          <SubTitle level={3}>About the course</SubTitle>
+          <SubTitle level={2}>About the Course</SubTitle>
           <Paragraph>
             Berkeley CS 198-99 is a course that introduce the basics of web
             development, it is a course for everyone and no prerequisites
@@ -70,7 +70,7 @@ const BerkeleyCS19899Page = (): React.ReactNode => {
         </div>
       </div>
 
-      <SubTitle level={3}>Resources</SubTitle>
+      <SubTitle level={2}>Resources</SubTitle>
       <LinkAligned name="Full Stack DeCal" href="https://fullstackdecal.com/">
         2025
       </LinkAligned>

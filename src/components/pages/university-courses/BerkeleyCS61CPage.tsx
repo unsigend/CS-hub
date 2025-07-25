@@ -43,7 +43,7 @@ const BerkeleyCS61CPage = (): React.ReactNode => {
       <div className="flex justify-center">
         <img src={CS_61C_IMAGE} alt="Berkeley CS 61C" className="w-45 h-auto" />
       </div>
-      <SubTitle level={2}>About the course</SubTitle>
+      <SubTitle level={2}>About the Course</SubTitle>
       <Paragraph>
         CS 61C explores how software translates to hardware execution, bridging
         the gap between high-level programming and physical computing systems.
