@@ -37,7 +37,7 @@ import HarvardCS50Page from "@/components/pages/university-courses/HarvardCS50Pa
 import BerkeleyCS19899Page from "@/components/pages/university-courses/BerkeleyCS198-99Page";
 import HarvardCS61Page from "@/components/pages/university-courses/HarvardCS61Page";
 import CMU15213Page from "@/components/pages/university-courses/CMU15-213Page";
-import WisconsinCS517Page from "@/components/pages/university-courses/WisconsinCS517Page";
+import WisconsinCS571Page from "@/components/pages/university-courses/WisconsinCS571Page";
 import BerkeleyCS61CPage from "@/components/pages/university-courses/BerkeleyCS61CPage";
 
 // road map pages
@@ -254,10 +254,10 @@ const CategoryList = [
             subCategories: null,
           },
           {
-            name: "Wisconsin CS 517",
-            ID: "wisconsin-cs-517",
-            page: <WisconsinCS517Page />,
-            url: `${UniversityCoursesPath}/full-stack-development/wisconsin-cs-517`,
+            name: "Wisconsin CS 571",
+            ID: "wisconsin-cs-571",
+            page: <WisconsinCS571Page />,
+            url: `${UniversityCoursesPath}/full-stack-development/wisconsin-cs-571`,
             subCategories: null,
           },
         ],

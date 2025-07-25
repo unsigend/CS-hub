@@ -271,9 +271,9 @@ const _ReactPart = (): React.ReactNode => {
         structured learning path for React and React Native, you can consider
         the
         <LinkInner
-          to={`${UniversityCoursesPath}/full-stack-development/wisconsin-cs-517`}
+          to={`${UniversityCoursesPath}/full-stack-development/wisconsin-cs-571`}
         >
-          Wisconsin CS 517 (React and React Native)
+          Wisconsin CS 571 (React and React Native)
         </LinkInner>
       </Paragraph>
       <Paragraph>

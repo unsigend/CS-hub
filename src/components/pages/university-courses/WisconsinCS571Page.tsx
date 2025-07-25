@@ -30,10 +30,10 @@ import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
 import { LinkAligned } from "@/components/ui/Link";
 
-const WisconsinCS517Page = (): React.ReactNode => {
+const WisconsinCS571Page = (): React.ReactNode => {
   return (
     <CourseCard
-      courseName="Wisconsin: CS 517: Building UI with React and React Native"
+      courseName="Wisconsin CS 571: Building UI with React and React Native"
       courseUrl="https://cs571.org/"
       from="University of Wisconsin-Madison"
       prerequisites="Wisconsin CS 400 or any programming language experience"
@@ -66,4 +66,4 @@ const WisconsinCS517Page = (): React.ReactNode => {
   );
 };
 
-export default WisconsinCS517Page;
+export default WisconsinCS571Page;
