@@ -267,6 +267,16 @@ const _ReactPart = (): React.ReactNode => {
         for frontend development.
       </Paragraph>
       <Paragraph>
+        Below are skill and documents focused learning. If you want a more
+        structured learning path for React and React Native, you can consider
+        the
+        <LinkInner
+          to={`${UniversityCoursesPath}/full-stack-development/wisconsin-cs-517`}
+        >
+          Wisconsin CS 517 (React and React Native)
+        </LinkInner>
+      </Paragraph>
+      <Paragraph>
         First, you should learn the basic concepts of React such as JSX,
         Components, Props, useState, useEffect, Hooks, and other fundamentals.
         This stage can be completed through crash courses.
