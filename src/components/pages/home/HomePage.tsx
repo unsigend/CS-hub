@@ -25,7 +25,6 @@
 // Import for the components
 import CodeBar from "@/components/ui/CodeBar";
 import MainCategoryCard from "@/components/ui/MainCategoryCard";
-import Note from "@/components/ui/Note";
 import { LinkExternal } from "@/components/ui/Link";
 import CategoryCardData from "@/data/content/category/category-cards";
 import Paragraph from "@/components/ui/Paragraph";
@@ -33,6 +32,7 @@ import { SubTitle, Title } from "@/components/ui/Title";
 
 // Import for the global data
 import global from "@/data/config/config";
+import Card from "@/components/ui/Card";
 
 // style for the Home component
 const HomePageStyle = {
@@ -93,18 +93,21 @@ const TitleBar = (): React.ReactNode => {
   );
 };
 
-const About = (): React.ReactNode => {
+const Introduction = (): React.ReactNode => {
   return (
-    <Note title="About">
-      <Paragraph>
-        This site integrates resources, road maps, practical projects,
-        top-university courses, and more. All of these resources are free and
-        open-source. Dedicated for self-learners, CS-lovers, and anyone who
-        wants to learn more about Computer Science.
-      </Paragraph>
+    <Card>
+      <div>
+        <SubTitle level={2}>About the Site</SubTitle>
+        <Paragraph>
+          This site integrates resources, road maps, practical projects,
+          top-university courses, and more. All of these resources are free and
+          open-source. Dedicated for self-learners, CS-lovers, and anyone who
+          wants to learn more about Computer Science.
+        </Paragraph>
+      </div>
 
       <div>
-        <SubTitle level={3}>How to use</SubTitle>
+        <SubTitle level={2}>How to use</SubTitle>
         <Paragraph>
           Whether you're a complete beginner starting your programming journey
           or an experienced developer looking to expand your skill set, CS-hub
@@ -130,14 +133,14 @@ const About = (): React.ReactNode => {
       </div>
 
       <div>
-        <SubTitle level={3}>Note</SubTitle>
+        <SubTitle level={2}>Contribute</SubTitle>
         <Paragraph>
           This site is a work in progress. Any suggestions and contributions are
           welcome. Contribute and fork here:
           <LinkExternal href={global.GitHubLink}>GitHub</LinkExternal>
         </Paragraph>
       </div>
-    </Note>
+    </Card>
   );
 };
 
@@ -161,7 +164,7 @@ const HomePage = (): React.ReactNode => {
     <div className={HomePageStyle.HomePage}>
       <TitleBar />
       <CategoryCardBar />
-      <About />
+      <Introduction />
     </div>
   );
 };
