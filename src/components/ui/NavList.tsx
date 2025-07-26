@@ -91,10 +91,12 @@ const NavList = () => {
         </a>
       </li>
       <li>
-        <button className={NavListStyle.NavItem}>
-          <EqualApproximately size={20} />
-          About
-        </button>
+        <Link to={`${global.BasePath}/about`}>
+          <button className={NavListStyle.NavItem}>
+            <EqualApproximately size={20} />
+            About
+          </button>
+        </Link>
       </li>
     </ul>
   );

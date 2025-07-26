@@ -31,6 +31,7 @@ import MainLayout from "@/components/layout/MainLayout";
 // Import the components for pages
 import HomePage from "@/components/pages/home/HomePage";
 import UnderConstructionPage from "@/components/pages/home/UnderConstructionPage";
+import AboutPage from "@/components/pages/home/AboutPage";
 
 // import the global data
 import CategoryList from "@/data/content/category/categories";
@@ -78,6 +79,7 @@ export default function App() {
       <Routes>
         <Route path={global.BasePath} element={<MainLayout />}>
           <Route index element={<HomePage />} />
+          <Route path={`${global.BasePath}/about`} element={<AboutPage />} />
           {/* Flattened routes for all categories */}
           {flattenRoutes(CategoryList)}
         </Route>
