@@ -406,6 +406,67 @@ const _AstroPart = (): React.ReactNode => {
   );
 };
 
+const _PythonPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={CategoryLevel}>Python</SubTitle>
+      <Paragraph>
+        Python is a programming language that is used to build the backend of
+        the web application. It is a popular language for backend development.
+        And also a multi-purpose programming language. You can use it for data
+        science like Machine Learning, LLM, data analysis, and etc.
+      </Paragraph>
+    </div>
+  );
+};
+
+const _NodeJSExpressPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={CategoryLevel}>Node.js and Express.js (JS/TS)</SubTitle>
+      <Paragraph>
+        Node.js is a runtime environment for executing JavaScript code outside
+        of a browser based on Google V8 engine. It is a popular runtime
+        environment for backend development.
+      </Paragraph>
+      <Paragraph>
+        Express.js is a fast, unopinionated, minimalist web framework. It is
+        based on Node.js.
+      </Paragraph>
+      <Paragraph>
+        The recommended learning order is learn the basic of Node.js first and
+        then learn Express.js.
+      </Paragraph>
+    </div>
+  );
+};
+
+const _FastAPIPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={CategoryLevel}>FastAPI (Python)</SubTitle>
+      <Paragraph>
+        FastAPI is a modern, fast (high-performance), web framework for building
+        APIs with Python based on standard Python type hints. It is a easy and
+        lightweight framework for backend python development.
+      </Paragraph>
+    </div>
+  );
+};
+
+const _DjangoPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={CategoryLevel}>Django (Python)</SubTitle>
+      <Paragraph>
+        Django is a high-level Python web framework that encourages rapid
+        development and clean, pragmatic design. It is also the most popular
+        framework for backend development in Python.
+      </Paragraph>
+    </div>
+  );
+};
+
 export {
   _HTMLPart,
   _CSSPart,
@@ -416,4 +477,8 @@ export {
   _ReduxPart,
   _NextJSPart,
   _AstroPart,
+  _PythonPart,
+  _NodeJSExpressPart,
+  _FastAPIPart,
+  _DjangoPart,
 };
