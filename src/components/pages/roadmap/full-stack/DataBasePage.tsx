@@ -25,6 +25,7 @@
 import Card from "@/components/ui/Card";
 import Paragraph from "@/components/ui/Paragraph";
 import { Title } from "@/components/ui/Title";
+import { _MongoDBPart, _PostgreSQLPart } from "./_Part";
 
 const SQLDatabaseSection = (): React.ReactNode => {
   const _Intro = (): React.ReactNode => {
@@ -42,6 +43,7 @@ const SQLDatabaseSection = (): React.ReactNode => {
   return (
     <Card>
       <_Intro />
+      <_PostgreSQLPart />
     </Card>
   );
 };
@@ -62,6 +64,7 @@ const NoSQLDatabaseSection = (): React.ReactNode => {
   return (
     <Card>
       <_Intro />
+      <_MongoDBPart />
     </Card>
   );
 };

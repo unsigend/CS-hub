@@ -467,6 +467,31 @@ const _DjangoPart = (): React.ReactNode => {
   );
 };
 
+const _MongoDBPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={CategoryLevel}>MongoDB</SubTitle>
+      <Paragraph>
+        MongoDB is a NoSQL database that is used to store the data in a flexible
+        and scalable way. It use document-oriented and collection database
+        model.
+      </Paragraph>
+    </div>
+  );
+};
+
+const _PostgreSQLPart = (): React.ReactNode => {
+  return (
+    <div>
+      <SubTitle level={CategoryLevel}>PostgreSQL</SubTitle>
+      <Paragraph>
+        PostgreSQL is a powerful, open source object-relational database system,
+        which is a new trend in SQL database.
+      </Paragraph>
+    </div>
+  );
+};
+
 export {
   _HTMLPart,
   _CSSPart,
@@ -481,4 +506,6 @@ export {
   _NodeJSExpressPart,
   _FastAPIPart,
   _DjangoPart,
+  _MongoDBPart,
+  _PostgreSQLPart,
 };
