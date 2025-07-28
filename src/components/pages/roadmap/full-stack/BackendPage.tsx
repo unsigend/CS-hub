@@ -23,13 +23,75 @@
  */
 
 import Card from "@/components/ui/Card";
+import Paragraph from "@/components/ui/Paragraph";
 import { Title } from "@/components/ui/Title";
+
+import { _JavaScriptPart, _TypeScriptPart } from "./_Part";
+
+const IntroSection = (): React.ReactNode => {
+  return (
+    <Card>
+      <div>
+        <Title>Backend Development Roadmap</Title>
+        <Paragraph>
+          Backend development is the server side of the website. It is used to
+          store and retrieve data from the database. The database part is
+          divided into a separate section.
+        </Paragraph>
+        <Paragraph>
+          You don't need to follow exactly the same order - you can skip topics
+          that you already know.
+        </Paragraph>
+        <Paragraph>
+          The backend roadmap is fairly flexible, you can choose using
+          JavaScript and TypeScript as backend with Express.js and Node.js if
+          you already familiar with the JS/TS stack. And also can choose Django
+          and FastAPI if you prefer with python.
+        </Paragraph>
+      </div>
+    </Card>
+  );
+};
+
+const ProgrammingLanguageSection = (): React.ReactNode => {
+  const _Intro = (): React.ReactNode => {
+    return (
+      <div>
+        <Title>Programming Language</Title>
+      </div>
+    );
+  };
+  return (
+    <Card>
+      <_Intro />
+      <_JavaScriptPart />
+      <_TypeScriptPart />
+    </Card>
+  );
+};
+
+const FrameworkSection = (): React.ReactNode => {
+  const _Intro = (): React.ReactNode => {
+    return (
+      <div>
+        <Title>Framework</Title>
+      </div>
+    );
+  };
+  return (
+    <Card>
+      <_Intro />
+    </Card>
+  );
+};
 
 const BackendPage = (): React.ReactNode => {
   return (
-    <Card>
-      <Title>Backend Development</Title>
-    </Card>
+    <div className="flex flex-col gap-8">
+      <IntroSection />
+      <ProgrammingLanguageSection />
+      <FrameworkSection />
+    </div>
   );
 };
 
