@@ -23,9 +23,9 @@
  */
 
 const global = {
-  GitHubLink: "https://github.com/unsigend/CS-hub.git",
-  Author: "Qiu Yixiang",
-  BasePath: "/CS-hub",
+    GitHubLink: "https://github.com/unsigend/CS-hub.git",
+    Author: "Qiu Yixiang",
+    BasePath: "/CS-hub",
 };
 
 export default global;

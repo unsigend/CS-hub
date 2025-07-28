@@ -28,80 +28,81 @@ import { Title } from "@/components/ui/Title";
 import { _MongoDBPart, _PostgreSQLPart } from "./_Part";
 
 const SQLDatabaseSection = (): React.ReactNode => {
-  const _Intro = (): React.ReactNode => {
+    const _Intro = (): React.ReactNode => {
+        return (
+            <div>
+                <Title>SQL Database</Title>
+                <Paragraph>
+                    SQL is a Structured Query Language that is used to manage
+                    relational databases. It is a standard language for managing
+                    relational databases.
+                </Paragraph>
+            </div>
+        );
+    };
     return (
-      <div>
-        <Title>SQL Database</Title>
-        <Paragraph>
-          SQL is a Structured Query Language that is used to manage relational
-          databases. It is a standard language for managing relational
-          databases.
-        </Paragraph>
-      </div>
+        <Card>
+            <_Intro />
+            <_PostgreSQLPart />
+        </Card>
     );
-  };
-  return (
-    <Card>
-      <_Intro />
-      <_PostgreSQLPart />
-    </Card>
-  );
 };
 
 const NoSQLDatabaseSection = (): React.ReactNode => {
-  const _Intro = (): React.ReactNode => {
+    const _Intro = (): React.ReactNode => {
+        return (
+            <div>
+                <Title>NoSQL Database</Title>
+                <Paragraph>
+                    NoSQL is a non-relational database that is used to manage
+                    non-relational databases like MongoDB, Cassandra, and etc.
+                    Which is more flexible and easy to use.
+                </Paragraph>
+            </div>
+        );
+    };
     return (
-      <div>
-        <Title>NoSQL Database</Title>
-        <Paragraph>
-          NoSQL is a non-relational database that is used to manage
-          non-relational databases like MongoDB, Cassandra, and etc. Which is
-          more flexible and easy to use.
-        </Paragraph>
-      </div>
+        <Card>
+            <_Intro />
+            <_MongoDBPart />
+        </Card>
     );
-  };
-  return (
-    <Card>
-      <_Intro />
-      <_MongoDBPart />
-    </Card>
-  );
 };
 
 const IntroSection = (): React.ReactNode => {
-  return (
-    <Card>
-      <div>
-        <Title>Database Roadmap</Title>
-        <Paragraph>
-          Database is the core of the backend development. It is used to store
-          and retrieve data from the database. Make the data persistent and
-          accessible.
-        </Paragraph>
-        <Paragraph>
-          The roadmap is divided into two parts: SQL and NoSQL. You can choose
-          to use SQL or NoSQL as your database. Like for use{" "}
-          <strong>MongoDB</strong> as NoSQL database, and use{" "}
-          <strong>MySQL</strong> or <strong>PostgreSQL</strong> as SQL database.
-        </Paragraph>
-        <Paragraph>
-          You don't need to follow exactly the same order - you can skip topics
-          that you already know.
-        </Paragraph>
-      </div>
-    </Card>
-  );
+    return (
+        <Card>
+            <div>
+                <Title>Database Roadmap</Title>
+                <Paragraph>
+                    Database is the core of the backend development. It is used
+                    to store and retrieve data from the database. Make the data
+                    persistent and accessible.
+                </Paragraph>
+                <Paragraph>
+                    The roadmap is divided into two parts: SQL and NoSQL. You
+                    can choose to use SQL or NoSQL as your database. Like for
+                    use <strong>MongoDB</strong> as NoSQL database, and use{" "}
+                    <strong>MySQL</strong> or <strong>PostgreSQL</strong> as SQL
+                    database.
+                </Paragraph>
+                <Paragraph>
+                    You don't need to follow exactly the same order - you can
+                    skip topics that you already know.
+                </Paragraph>
+            </div>
+        </Card>
+    );
 };
 
 const DataBasePage = (): React.ReactNode => {
-  return (
-    <div className="flex flex-col gap-8">
-      <IntroSection />
-      <SQLDatabaseSection />
-      <NoSQLDatabaseSection />
-    </div>
-  );
+    return (
+        <div className="flex flex-col gap-8">
+            <IntroSection />
+            <SQLDatabaseSection />
+            <NoSQLDatabaseSection />
+        </div>
+    );
 };
 
 export default DataBasePage;

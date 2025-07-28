@@ -32,7 +32,7 @@ import { SideBarContext } from "@/context/SideBarContext";
 
 // Style for the HamburgerMenu component
 const HamburgerMenuStyle = {
-  HamburgerMenu: `
+    HamburgerMenu: `
     flex items-center justify-center
     md:hidden
     p-2 rounded-lg
@@ -44,13 +44,16 @@ const HamburgerMenuStyle = {
 };
 
 const HamburgerMenu = () => {
-  const { isOpen, toggleSideBar } = useContext(SideBarContext);
+    const { isOpen, toggleSideBar } = useContext(SideBarContext);
 
-  return (
-    <div className={HamburgerMenuStyle.HamburgerMenu} onClick={toggleSideBar}>
-      {isOpen ? <X size={24} /> : <Menu size={24} />}
-    </div>
-  );
+    return (
+        <div
+            className={HamburgerMenuStyle.HamburgerMenu}
+            onClick={toggleSideBar}
+        >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </div>
+    );
 };
 
 export default HamburgerMenu;

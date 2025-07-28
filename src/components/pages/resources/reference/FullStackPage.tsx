@@ -32,52 +32,53 @@ import Card from "@/components/ui/Card";
 import FullStackReference from "@/data/content/resources/reference/full-stack";
 
 const Style = {
-  Container: `
+    Container: `
     flex flex-col gap-4
     `,
 };
 
 const ConstructReference = ({ Category }: { Category: any }) => {
-  return (
-    <div>
-      <SubTitle level={2}>{Category.name}</SubTitle>
-      {Category.subContent.map((item: any) => (
-        <LinkAligned key={item.id} name={item.name} href={item.url}>
-          {item.content}
-        </LinkAligned>
-      ))}
-    </div>
-  );
+    return (
+        <div>
+            <SubTitle level={2}>{Category.name}</SubTitle>
+            {Category.subContent.map((item: any) => (
+                <LinkAligned key={item.id} name={item.name} href={item.url}>
+                    {item.content}
+                </LinkAligned>
+            ))}
+        </div>
+    );
 };
 
 const FullStackReferenceTitle = (): React.ReactNode => {
-  return (
-    <div>
-      <Title>Full Stack Reference</Title>
-      <Paragraph>
-        Here are some quick reference for full stack development. Divided into
-        different categories. Each of them has a curated list of resources about
-        frameworks, libraries, and tools.
-      </Paragraph>
-      <Paragraph>
-        This page is a collection of reference for full stack development. Only
-        meant for quick reference, not for comprehensive learning.
-      </Paragraph>
-    </div>
-  );
+    return (
+        <div>
+            <Title>Full Stack Reference</Title>
+            <Paragraph>
+                Here are some quick reference for full stack development.
+                Divided into different categories. Each of them has a curated
+                list of resources about frameworks, libraries, and tools.
+            </Paragraph>
+            <Paragraph>
+                This page is a collection of reference for full stack
+                development. Only meant for quick reference, not for
+                comprehensive learning.
+            </Paragraph>
+        </div>
+    );
 };
 
 const FullStackReferencePage = (): React.ReactNode => {
-  return (
-    <Card>
-      <div className={Style.Container}>
-        <FullStackReferenceTitle />
-        {FullStackReference.map((item) => (
-          <ConstructReference Category={item} key={item.id} />
-        ))}
-      </div>
-    </Card>
-  );
+    return (
+        <Card>
+            <div className={Style.Container}>
+                <FullStackReferenceTitle />
+                {FullStackReference.map((item) => (
+                    <ConstructReference Category={item} key={item.id} />
+                ))}
+            </div>
+        </Card>
+    );
 };
 
 export default FullStackReferencePage;

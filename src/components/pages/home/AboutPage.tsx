@@ -29,29 +29,30 @@ import Paragraph from "@/components/ui/Paragraph";
 import { SubTitle } from "@/components/ui/Title";
 
 const AboutPage = (): React.ReactNode => {
-  return (
-    <Card>
-      <div>
-        <SubTitle level={2}>Preface</SubTitle>
-        <Paragraph>
-          I am inspired by the CS open-source community
-          <LinkExternal href="https://github.com/ossu/computer-science">
-            OSSU
-          </LinkExternal>{" "}
-          . And I want to create a site that integrates resources, road maps and
-          much more as a guide for self-learners.
-        </Paragraph>
-      </div>
-      <div>
-        <SubTitle level={2}>About Me</SubTitle>
-        <Paragraph>
-          I am a self-learner who is passionate about Computer Science. Mainly
-          focused on low-level system architecture and system implementation.
-          More about me: <LinkExternal href="#">My Blog</LinkExternal>
-        </Paragraph>
-      </div>
-    </Card>
-  );
+    return (
+        <Card>
+            <div>
+                <SubTitle level={2}>Preface</SubTitle>
+                <Paragraph>
+                    I am inspired by the CS open-source community
+                    <LinkExternal href="https://github.com/ossu/computer-science">
+                        OSSU
+                    </LinkExternal>{" "}
+                    . And I want to create a site that integrates resources,
+                    road maps and much more as a guide for self-learners.
+                </Paragraph>
+            </div>
+            <div>
+                <SubTitle level={2}>About Me</SubTitle>
+                <Paragraph>
+                    I am a self-learner who is passionate about Computer
+                    Science. Mainly focused on low-level system architecture and
+                    system implementation. More about me:{" "}
+                    <LinkExternal href="#">My Blog</LinkExternal>
+                </Paragraph>
+            </div>
+        </Card>
+    );
 };
 
 export default AboutPage;

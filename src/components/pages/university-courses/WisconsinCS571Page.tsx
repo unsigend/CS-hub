@@ -31,39 +31,42 @@ import { SubTitle } from "@/components/ui/Title";
 import { LinkAligned } from "@/components/ui/Link";
 
 const WisconsinCS571Page = (): React.ReactNode => {
-  return (
-    <CourseCard
-      courseName="Wisconsin CS 571: Building UI with React and React Native"
-      courseUrl="https://cs571.org/"
-      from="University of Wisconsin-Madison"
-      prerequisites="Wisconsin CS 400 or any programming language experience"
-      programmingLanguage="JavaScript"
-    >
-      <SubTitle level={2}>About the Course</SubTitle>
-      <Paragraph>
-        CS 571 introduces students to modern user interface development using
-        React and React Native frameworks. This course bridges the gap between
-        traditional web development and contemporary component-based
-        architecture, preparing students to build dynamic, interactive
-        applications for both web and mobile platforms.
-      </Paragraph>
-      <Paragraph>
-        This course is mainly focused on front-end development using React and
-        React Native also include some topics like Design and UX.
-      </Paragraph>
-      <Paragraph>
-        The assignment, lecture, video are all open to the public. You can even
-        get a student ID using your email to access the resources.
-      </Paragraph>
-      <SubTitle level={2}>Resources</SubTitle>
-      <LinkAligned href="https://cs571.org/" name="CS 571 latest">
-        Main Page
-      </LinkAligned>
-      <LinkAligned href="https://cs571.org/auth" name="Register Page">
-        Badger ID
-      </LinkAligned>
-    </CourseCard>
-  );
+    return (
+        <CourseCard
+            courseName="Wisconsin CS 571: Building UI with React and React Native"
+            courseUrl="https://cs571.org/"
+            from="University of Wisconsin-Madison"
+            prerequisites="Wisconsin CS 400 or any programming language experience"
+            programmingLanguage="JavaScript"
+        >
+            <SubTitle level={2}>About the Course</SubTitle>
+            <Paragraph>
+                CS 571 introduces students to modern user interface development
+                using React and React Native frameworks. This course bridges the
+                gap between traditional web development and contemporary
+                component-based architecture, preparing students to build
+                dynamic, interactive applications for both web and mobile
+                platforms.
+            </Paragraph>
+            <Paragraph>
+                This course is mainly focused on front-end development using
+                React and React Native also include some topics like Design and
+                UX.
+            </Paragraph>
+            <Paragraph>
+                The assignment, lecture, video are all open to the public. You
+                can even get a student ID using your email to access the
+                resources.
+            </Paragraph>
+            <SubTitle level={2}>Resources</SubTitle>
+            <LinkAligned href="https://cs571.org/" name="CS 571 latest">
+                Main Page
+            </LinkAligned>
+            <LinkAligned href="https://cs571.org/auth" name="Register Page">
+                Badger ID
+            </LinkAligned>
+        </CourseCard>
+    );
 };
 
 export default WisconsinCS571Page;

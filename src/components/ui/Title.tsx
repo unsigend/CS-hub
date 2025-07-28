@@ -24,72 +24,72 @@
 
 // Style for the Title component
 const TitleStyle = {
-  Title: `
+    Title: `
     text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6
     `,
-  SubTitle1: `
+    SubTitle1: `
     text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6
     `,
-  SubTitle2: `
+    SubTitle2: `
     text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-5
     `,
-  SubTitle3: `
+    SubTitle3: `
     text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4
     `,
-  SubTitle4: `
+    SubTitle4: `
     text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3
     `,
-  SubTitle5: `
+    SubTitle5: `
     text-sm sm:text-base font-bold text-gray-900 mb-2 sm:mb-3
     `,
 };
 
 const Title = ({ children }: { children: React.ReactNode }) => {
-  return <h1 className={TitleStyle.Title}>{children}</h1>;
+    return <h1 className={TitleStyle.Title}>{children}</h1>;
 };
 
 const SubTitle = ({
-  children,
-  level = 2,
+    children,
+    level = 2,
 }: {
-  children: React.ReactNode;
-  level: number;
+    children: React.ReactNode;
+    level: number;
 }): React.ReactNode => {
-  // Map level to style and tag
-  const getSubTitleStyle = (level: number) => {
+    // Map level to style and tag
+    const getSubTitleStyle = (level: number) => {
+        switch (level) {
+            case 1:
+                return TitleStyle.SubTitle1;
+            case 2:
+                return TitleStyle.SubTitle2;
+            case 3:
+                return TitleStyle.SubTitle3;
+            case 4:
+                return TitleStyle.SubTitle4;
+            case 5:
+                return TitleStyle.SubTitle5;
+            default:
+                return TitleStyle.SubTitle2;
+        }
+    };
+
+    // Create the appropriate heading tag based on level
+    const style = getSubTitleStyle(level);
+
     switch (level) {
-      case 1:
-        return TitleStyle.SubTitle1;
-      case 2:
-        return TitleStyle.SubTitle2;
-      case 3:
-        return TitleStyle.SubTitle3;
-      case 4:
-        return TitleStyle.SubTitle4;
-      case 5:
-        return TitleStyle.SubTitle5;
-      default:
-        return TitleStyle.SubTitle2;
+        case 1:
+            return <h1 className={style}>{children}</h1>;
+        case 2:
+            return <h2 className={style}>{children}</h2>;
+        case 3:
+            return <h3 className={style}>{children}</h3>;
+        case 4:
+            return <h4 className={style}>{children}</h4>;
+        case 5:
+            return <h5 className={style}>{children}</h5>;
+        default:
+            return <h2 className={style}>{children}</h2>;
     }
-  };
-
-  // Create the appropriate heading tag based on level
-  const style = getSubTitleStyle(level);
-
-  switch (level) {
-    case 1:
-      return <h1 className={style}>{children}</h1>;
-    case 2:
-      return <h2 className={style}>{children}</h2>;
-    case 3:
-      return <h3 className={style}>{children}</h3>;
-    case 4:
-      return <h4 className={style}>{children}</h4>;
-    case 5:
-      return <h5 className={style}>{children}</h5>;
-    default:
-      return <h2 className={style}>{children}</h2>;
-  }
 };
 
 export { Title, SubTitle };

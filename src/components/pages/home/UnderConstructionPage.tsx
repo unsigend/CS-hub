@@ -35,11 +35,11 @@ import global from "@/data/config/config";
  * @returns {React.ReactNode} - The under construction page component
  */
 const UnderConstructionStyle = {
-  Container: `
+    Container: `
     flex flex-col
     px-4 py-12 mx-auto
     `,
-  Card: `
+    Card: `
     w-full max-w-xl
     bg-white
     border border-gray-200
@@ -47,36 +47,38 @@ const UnderConstructionStyle = {
     p-10 sm:p-16 md:p-20
     text-center
     `,
-  Description: `
+    Description: `
     text-gray-500 leading-relaxed mb-12
     text-lg sm:text-xl
     `,
 };
 
 const UnderConstructionPage = ({ pageName }: { pageName: string }) => {
-  return (
-    <div className={UnderConstructionStyle.Container}>
-      <div className={UnderConstructionStyle.Card}>
-        {/* Main Title */}
-        <Title>{`${pageName} Page Not Found`}</Title>
+    return (
+        <div className={UnderConstructionStyle.Container}>
+            <div className={UnderConstructionStyle.Card}>
+                {/* Main Title */}
+                <Title>{`${pageName} Page Not Found`}</Title>
 
-        {/* Subtitle */}
-        <SubTitle level={3}>This page is currently being developed</SubTitle>
+                {/* Subtitle */}
+                <SubTitle level={3}>
+                    This page is currently being developed
+                </SubTitle>
 
-        {/* Description */}
-        <Paragraph>
-          Currently, working on something. Coming soon. Go back to{" "}
-          <LinkInner to={global.BasePath}>Home</LinkInner>
-        </Paragraph>
+                {/* Description */}
+                <Paragraph>
+                    Currently, working on something. Coming soon. Go back to{" "}
+                    <LinkInner to={global.BasePath}>Home</LinkInner>
+                </Paragraph>
 
-        {/* Contribution */}
-        <Paragraph>
-          Contributions are welcome.{" "}
-          <LinkExternal href={global.GitHubLink}>Github</LinkExternal>
-        </Paragraph>
-      </div>
-    </div>
-  );
+                {/* Contribution */}
+                <Paragraph>
+                    Contributions are welcome.{" "}
+                    <LinkExternal href={global.GitHubLink}>Github</LinkExternal>
+                </Paragraph>
+            </div>
+        </div>
+    );
 };
 
 export default UnderConstructionPage;

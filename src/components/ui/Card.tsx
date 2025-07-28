@@ -28,7 +28,7 @@
 
 // Style for the Card component
 const CardStyle = {
-  Card: `
+    Card: `
     w-[95%] max-w-6xl
     bg-gradient-to-br from-gray-50 to-white
     rounded-xl sm:rounded-2xl border border-gray-200
@@ -41,7 +41,7 @@ const CardStyle = {
 };
 
 const Card = ({ children }: { children: React.ReactNode }) => {
-  return <div className={CardStyle.Card}>{children}</div>;
+    return <div className={CardStyle.Card}>{children}</div>;
 };
 
 export default Card;

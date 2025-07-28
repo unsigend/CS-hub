@@ -35,8 +35,8 @@ import NavList from "@/components/ui/NavList";
  *         Hides on scroll down, shows on scroll up
  */
 const NavBarStyle = {
-  NavBar: "w-full fixed top-0 z-50 bg-white",
-  _NavBar: `w-[80%] mx-auto 
+    NavBar: "w-full fixed top-0 z-50 bg-white",
+    _NavBar: `w-[80%] mx-auto 
     flex flex-row 
     justify-between items-center
     `,
@@ -50,39 +50,39 @@ const NavBarStyle = {
  * if the user scrolls up, the NavBar will show
  */
 const NavBar = (): React.ReactNode => {
-  // State for the scroll behavior
-  const [lastScrollY, setLastScrollY] = useState<number>(0);
-  const [isVisible, setIsVisible] = useState<boolean>(true);
+    // State for the scroll behavior
+    const [lastScrollY, setLastScrollY] = useState<number>(0);
+    const [isVisible, setIsVisible] = useState<boolean>(true);
 
-  // Effect for the scroll behavior
-  useEffect(() => {
-    const scrollHandler = () => {
-      const currentScrollY: number = window.scrollY;
+    // Effect for the scroll behavior
+    useEffect(() => {
+        const scrollHandler = () => {
+            const currentScrollY: number = window.scrollY;
 
-      // hidden the NavBar when the user scrolls down past 100px
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-      setLastScrollY(currentScrollY);
-    };
-    window.addEventListener("scroll", scrollHandler);
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, [lastScrollY]);
+            // hidden the NavBar when the user scrolls down past 100px
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setIsVisible(false);
+            } else {
+                setIsVisible(true);
+            }
+            setLastScrollY(currentScrollY);
+        };
+        window.addEventListener("scroll", scrollHandler);
+        return () => window.removeEventListener("scroll", scrollHandler);
+    }, [lastScrollY]);
 
-  return (
-    <nav
-      className={`${NavBarStyle.NavBar} 
+    return (
+        <nav
+            className={`${NavBarStyle.NavBar} 
             ${isVisible ? "translate-y-0" : "-translate-y-full"}
             transition-transform duration-300 ease-in-out`}
-    >
-      <div className={NavBarStyle._NavBar}>
-        <Logo />
-        <NavList />
-      </div>
-    </nav>
-  );
+        >
+            <div className={NavBarStyle._NavBar}>
+                <Logo />
+                <NavList />
+            </div>
+        </nav>
+    );
 };
 
 export default NavBar;

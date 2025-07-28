@@ -24,7 +24,7 @@
 
 // Style for the Paragraph component
 const ParagraphStyle = {
-  Paragraph: `
+    Paragraph: `
     text-gray-700 leading-relaxed
     text-base sm:text-lg mb-4
     [&>p]:mb-4 [&>p:last-child]:mb-0
@@ -36,11 +36,11 @@ const ParagraphStyle = {
 };
 
 const Paragraph = ({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }): React.ReactNode => {
-  return <p className={ParagraphStyle.Paragraph}>{children}</p>;
+    return <p className={ParagraphStyle.Paragraph}>{children}</p>;
 };
 
 export default Paragraph;

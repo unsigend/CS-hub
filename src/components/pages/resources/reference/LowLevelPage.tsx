@@ -33,54 +33,56 @@ import LowLevelReference from "@/data/content/resources/reference/low-level";
 
 // Style for the LowLevelPage component
 const Style = {
-  Container: `
+    Container: `
     flex flex-col gap-4
     `,
 };
 
 // Function to construct the reference for each category
 const ConstructReference = ({ Category }: { Category: any }) => {
-  return (
-    <div>
-      <SubTitle level={2}>{Category.name}</SubTitle>
-      {Category.subContent.map((item: any) => (
-        <LinkAligned key={item.id} name={item.name} href={item.url}>
-          {item.content}
-        </LinkAligned>
-      ))}
-    </div>
-  );
+    return (
+        <div>
+            <SubTitle level={2}>{Category.name}</SubTitle>
+            {Category.subContent.map((item: any) => (
+                <LinkAligned key={item.id} name={item.name} href={item.url}>
+                    {item.content}
+                </LinkAligned>
+            ))}
+        </div>
+    );
 };
 
 // Function to construct the title for the page
 const LowLevelReferenceTitle = (): React.ReactNode => {
-  return (
-    <div>
-      <Title>Low Level Reference</Title>
-      <Paragraph>
-        Here are some quick reference for low level development. Divided into
-        different categories. Each of them has a curated list of resources about
-        programming languages, tools, and other related topics.
-      </Paragraph>
-      <Paragraph>
-        This page is a collection of reference for low level development. Only
-        meant for quick reference, not for comprehensive learning.
-      </Paragraph>
-    </div>
-  );
+    return (
+        <div>
+            <Title>Low Level Reference</Title>
+            <Paragraph>
+                Here are some quick reference for low level development. Divided
+                into different categories. Each of them has a curated list of
+                resources about programming languages, tools, and other related
+                topics.
+            </Paragraph>
+            <Paragraph>
+                This page is a collection of reference for low level
+                development. Only meant for quick reference, not for
+                comprehensive learning.
+            </Paragraph>
+        </div>
+    );
 };
 
 const LowLevelReferencePage = (): React.ReactNode => {
-  return (
-    <Card>
-      <div className={Style.Container}>
-        <LowLevelReferenceTitle />
-        {LowLevelReference.map((item) => (
-          <ConstructReference Category={item} key={item.id} />
-        ))}
-      </div>
-    </Card>
-  );
+    return (
+        <Card>
+            <div className={Style.Container}>
+                <LowLevelReferenceTitle />
+                {LowLevelReference.map((item) => (
+                    <ConstructReference Category={item} key={item.id} />
+                ))}
+            </div>
+        </Card>
+    );
 };
 
 export default LowLevelReferencePage;

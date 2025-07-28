@@ -26,18 +26,18 @@
 import { Outlet } from "react-router-dom";
 
 const HeroStyle = {
-  Hero: `flex flex-col 
+    Hero: `flex flex-col 
     mt-20 mb-10
     w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] mx-auto
     `,
 };
 
 const Hero = (): React.ReactNode => {
-  return (
-    <div className={HeroStyle.Hero}>
-      <Outlet />
-    </div>
-  );
+    return (
+        <div className={HeroStyle.Hero}>
+            <Outlet />
+        </div>
+    );
 };
 
 export default Hero;

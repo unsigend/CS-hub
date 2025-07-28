@@ -32,7 +32,7 @@
  * @returns {React.ReactNode} - The note component
  */
 const NoteStyle = {
-  Note: `
+    Note: `
     w-[90%] sm:w-[85%] md:w-[80%] max-w-4xl
     bg-gradient-to-br from-gray-50 to-white
     rounded-xl sm:rounded-2xl border border-gray-200
@@ -41,13 +41,13 @@ const NoteStyle = {
     transition-all duration-300
     mx-auto
     `,
-  NoteTitle: `
+    NoteTitle: `
     text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6
     relative inline-block
     after:absolute after:bottom-0 after:left-0
     after:w-8 sm:after:w-12 after:h-1 after:bg-black after:rounded-full
     `,
-  NoteContent: `
+    NoteContent: `
     text-gray-700 leading-relaxed
     text-base sm:text-lg
     flex flex-col gap-4
@@ -55,18 +55,18 @@ const NoteStyle = {
 };
 
 const Note = ({
-  title,
-  children,
+    title,
+    children,
 }: {
-  title: string;
-  children: React.ReactNode;
+    title: string;
+    children: React.ReactNode;
 }): React.ReactNode => {
-  return (
-    <div className={NoteStyle.Note}>
-      <h1 className={NoteStyle.NoteTitle}>{title}</h1>
-      <div className={NoteStyle.NoteContent}>{children}</div>
-    </div>
-  );
+    return (
+        <div className={NoteStyle.Note}>
+            <h1 className={NoteStyle.NoteTitle}>{title}</h1>
+            <div className={NoteStyle.NoteContent}>{children}</div>
+        </div>
+    );
 };
 
 export default Note;

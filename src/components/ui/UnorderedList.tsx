@@ -23,7 +23,7 @@
  */
 
 const UnorderedListStyle = {
-  UnorderedList: `
+    UnorderedList: `
     list-none space-y-1 mb-4 sm:mb-6 ml-0
     [&>li]:relative [&>li]:pl-6 [&>li]:text-gray-700 
     [&>li]:text-base [&>li]:sm:text-lg [&>li]:leading-relaxed
@@ -37,11 +37,11 @@ const UnorderedListStyle = {
 };
 
 const UnorderedList = ({
-  children,
+    children,
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }): React.ReactNode => {
-  return <ul className={UnorderedListStyle.UnorderedList}>{children}</ul>;
+    return <ul className={UnorderedListStyle.UnorderedList}>{children}</ul>;
 };
 
 export default UnorderedList;

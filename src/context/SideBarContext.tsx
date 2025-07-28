@@ -26,89 +26,93 @@ import { createContext, useState } from "react";
 
 // Create the context
 const SideBarContext = createContext({
-  isOpen: false,
-  toggleSideBar: () => {},
-  openSideBar: () => {},
-  closeSideBar: () => {},
+    isOpen: false,
+    toggleSideBar: () => {},
+    openSideBar: () => {},
+    closeSideBar: () => {},
 });
 
 // Create the provider
 const SideBarProvider = ({ children }: { children: React.ReactNode }) => {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-  // Open the sidebar
-  const openSideBar = () => {
-    if (window.innerWidth <= 768) {
-      setIsOpen(true);
-      const sideBar = document.getElementById("SideBar");
+    // Open the sidebar
+    const openSideBar = () => {
+        if (window.innerWidth <= 768) {
+            setIsOpen(true);
+            const sideBar = document.getElementById("SideBar");
 
-      if (sideBar) {
-        // Show overlay with smooth transitions
-        Object.assign(sideBar.style, {
-          display: "flex",
-          position: "fixed",
-          top: "0",
-          left: "0",
-          width: "100vw",
-          height: "100vh",
-          zIndex: "1000",
-          backgroundColor: "rgba(0, 0, 0, 0.6)",
-          backdropFilter: "blur(4px)",
-          transition: "all 0.3s ease-in-out",
-        });
+            if (sideBar) {
+                // Show overlay with smooth transitions
+                Object.assign(sideBar.style, {
+                    display: "flex",
+                    position: "fixed",
+                    top: "0",
+                    left: "0",
+                    width: "100vw",
+                    height: "100vh",
+                    zIndex: "1000",
+                    backgroundColor: "rgba(0, 0, 0, 0.6)",
+                    backdropFilter: "blur(4px)",
+                    transition: "all 0.3s ease-in-out",
+                });
 
-        // Animate in
-        setTimeout(() => {
-          if (sideBar) sideBar.style.opacity = "1";
-        }, 10);
-      }
+                // Animate in
+                setTimeout(() => {
+                    if (sideBar) sideBar.style.opacity = "1";
+                }, 10);
+            }
 
-      // Prevent body scroll
-      document.body.style.overflow = "hidden";
-    }
-  };
-
-  // Close the sidebar
-  const closeSideBar = () => {
-    if (window.innerWidth <= 768) {
-      setIsOpen(false);
-      const sideBar = document.getElementById("SideBar");
-
-      if (sideBar) {
-        Object.assign(sideBar.style, {
-          opacity: "0",
-          backgroundColor: "rgba(0, 0, 0, 0)",
-          backdropFilter: "blur(0px)",
-        });
-      }
-
-      // Restore body scroll
-      document.body.style.overflow = "unset";
-
-      // Complete hide after transition
-      setTimeout(() => {
-        if (sideBar) {
-          Object.assign(sideBar.style, {
-            display: "none",
-            zIndex: "0",
-          });
+            // Prevent body scroll
+            document.body.style.overflow = "hidden";
         }
-      }, 300);
-    }
-  };
+    };
 
-  // Toggle the sidebar
-  const toggleSideBar = () => {
-    isOpen ? closeSideBar() : openSideBar();
-  };
+    // Close the sidebar
+    const closeSideBar = () => {
+        if (window.innerWidth <= 768) {
+            setIsOpen(false);
+            const sideBar = document.getElementById("SideBar");
 
-  return (
-    <SideBarContext.Provider
-      value={{ isOpen, toggleSideBar, openSideBar, closeSideBar }}
-    >
-      {children}
-    </SideBarContext.Provider>
-  );
+            if (sideBar) {
+                Object.assign(sideBar.style, {
+                    opacity: "0",
+                    backgroundColor: "rgba(0, 0, 0, 0)",
+                    backdropFilter: "blur(0px)",
+                });
+            }
+
+            // Restore body scroll
+            document.body.style.overflow = "unset";
+
+            // Complete hide after transition
+            setTimeout(() => {
+                if (sideBar) {
+                    Object.assign(sideBar.style, {
+                        display: "none",
+                        zIndex: "0",
+                    });
+                }
+            }, 300);
+        }
+    };
+
+    // Toggle the sidebar
+    const toggleSideBar = () => {
+        if (isOpen) {
+            closeSideBar();
+        } else {
+            openSideBar();
+        }
+    };
+
+    return (
+        <SideBarContext.Provider
+            value={{ isOpen, toggleSideBar, openSideBar, closeSideBar }}
+        >
+            {children}
+        </SideBarContext.Provider>
+    );
 };
 
 // Export the context and provider

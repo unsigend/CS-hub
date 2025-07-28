@@ -34,61 +34,70 @@ import { LinkInner } from "@/components/ui/Link";
 import { UniversityCoursesPath } from "@/data/content/category/categories";
 
 const HarvardCS61Page = (): React.ReactNode => {
-  return (
-    <CourseCard
-      courseName="Harvard CS 61: Systems Programming and Machine Organization"
-      courseUrl="https://cs61.seas.harvard.edu/site/2024/#gsc.tab=0"
-      from="Harvard University"
-      prerequisites="CS 50, CS 51"
-      programmingLanguage="C, C++, x86-64 Assembly"
-    >
-      <div>
-        <SubTitle level={2}>About the Course</SubTitle>
-        <Paragraph>
-          Harvard CS 61 is an introduction to the fundamentals of computer
-          systems programming. Topics include <strong>C</strong>,{" "}
-          <strong>C++</strong>, and <strong>x86-64</strong> assembly language
-          programming, performance analysis and improvement strategies, memory
-          management, caching, concurrency, threads, and synchronization.
-        </Paragraph>
+    return (
+        <CourseCard
+            courseName="Harvard CS 61: Systems Programming and Machine Organization"
+            courseUrl="https://cs61.seas.harvard.edu/site/2024/#gsc.tab=0"
+            from="Harvard University"
+            prerequisites="CS 50, CS 51"
+            programmingLanguage="C, C++, x86-64 Assembly"
+        >
+            <div>
+                <SubTitle level={2}>About the Course</SubTitle>
+                <Paragraph>
+                    Harvard CS 61 is an introduction to the fundamentals of
+                    computer systems programming. Topics include{" "}
+                    <strong>C</strong>, <strong>C++</strong>, and{" "}
+                    <strong>x86-64</strong> assembly language programming,
+                    performance analysis and improvement strategies, memory
+                    management, caching, concurrency, threads, and
+                    synchronization.
+                </Paragraph>
 
-        <Paragraph>
-          The problem sets are quite interesting each one of them are a program
-          enhance a specific concept.
-        </Paragraph>
+                <Paragraph>
+                    The problem sets are quite interesting each one of them are
+                    a program enhance a specific concept.
+                </Paragraph>
 
-        <UnorderedList>
-          <li>Problem Set 1: Memory Debugging Allocator</li>
-          <li>Problem Set 2: Binary Bomb</li>
-          <li>Problem Set 3: WeensyOS implement some part of the kernel</li>
-          <li>Problem Set 4: Implement a Stdio Library</li>
-          <li>Problem Set 5: Implement a simple shell</li>
-          <li>
-            Problem Set 6: Flockchain for synchronization for buffered I/O
-          </li>
-        </UnorderedList>
+                <UnorderedList>
+                    <li>Problem Set 1: Memory Debugging Allocator</li>
+                    <li>Problem Set 2: Binary Bomb</li>
+                    <li>
+                        Problem Set 3: WeensyOS implement some part of the
+                        kernel
+                    </li>
+                    <li>Problem Set 4: Implement a Stdio Library</li>
+                    <li>Problem Set 5: Implement a simple shell</li>
+                    <li>
+                        Problem Set 6: Flockchain for synchronization for
+                        buffered I/O
+                    </li>
+                </UnorderedList>
 
-        <Paragraph>
-          This course has similar content with
-          <LinkInner to={`${UniversityCoursesPath}/computer-system/cmu-15-213`}>
-            CMU 15-213
-          </LinkInner>{" "}
-          can be learned before as a prerequisite. Or learn together with.
-        </Paragraph>
-      </div>
+                <Paragraph>
+                    This course has similar content with
+                    <LinkInner
+                        to={`${UniversityCoursesPath}/computer-system/cmu-15-213`}
+                    >
+                        CMU 15-213
+                    </LinkInner>{" "}
+                    can be learned before as a prerequisite. Or learn together
+                    with.
+                </Paragraph>
+            </div>
 
-      <SubTitle level={2}>Resources</SubTitle>
-      <LinkAligned
-        name="Harvard CS 61"
-        href="https://cs61.seas.harvard.edu/site/2024/#gsc.tab=0"
-      >
-        Harvard CS 61
-      </LinkAligned>
-      <LinkAligned name="Textbook" href="https://csapp.cs.cmu.edu/">
-        CSAPP 2nd Edition
-      </LinkAligned>
-    </CourseCard>
-  );
+            <SubTitle level={2}>Resources</SubTitle>
+            <LinkAligned
+                name="Harvard CS 61"
+                href="https://cs61.seas.harvard.edu/site/2024/#gsc.tab=0"
+            >
+                Harvard CS 61
+            </LinkAligned>
+            <LinkAligned name="Textbook" href="https://csapp.cs.cmu.edu/">
+                CSAPP 2nd Edition
+            </LinkAligned>
+        </CourseCard>
+    );
 };
 
 export default HarvardCS61Page;

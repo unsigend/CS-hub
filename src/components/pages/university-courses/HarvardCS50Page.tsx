@@ -29,44 +29,48 @@ import { SubTitle } from "@/components/ui/Title";
 import { LinkAligned } from "@/components/ui/Link";
 
 const HarvardCS50Page = (): React.ReactNode => {
-  return (
-    <CourseCard
-      courseName="Harvard CS 50: Introduction to Computer Science"
-      courseUrl="https://cs50.harvard.edu/x/"
-      from="Harvard University"
-      prerequisites="No prerequisites"
-      programmingLanguage="C, Python, SQL, JavaScript, HTML, CSS"
-    >
-      <SubTitle level={2}>About the Course</SubTitle>
-      <Paragraph>
-        Harvard CS 50x is an introductory course to computer science. From C
-        programming language to basic data structure, to Python programming
-        language. In the end introduce to the basic of SQL and web development.
-      </Paragraph>
-      <Paragraph>
-        This course is a series course: Harvard CS 50x, Harvard CS 50P about
-        Python, Harvard CS 50AI about AI. And all of them provided a
-        auto-grading system in github. After explore the CS 50x you can continue
-        to explore the topics you like.
-      </Paragraph>
-      <SubTitle level={2}>Harvard CS 50 Series</SubTitle>
-      <LinkAligned
-        name="Harvard CS 50x"
-        href="https://cs50.harvard.edu/x/2025/"
-      >
-        Harvard CS 50x 2025 Link
-      </LinkAligned>
-      <LinkAligned
-        name="Harvard CS 50P"
-        href="https://cs50.harvard.edu/python/"
-      >
-        Harvard CS 50P Link
-      </LinkAligned>
-      <LinkAligned name="Harvard CS 50AI" href="https://cs50.harvard.edu/ai/">
-        Harvard CS 50AI Link
-      </LinkAligned>
-    </CourseCard>
-  );
+    return (
+        <CourseCard
+            courseName="Harvard CS 50: Introduction to Computer Science"
+            courseUrl="https://cs50.harvard.edu/x/"
+            from="Harvard University"
+            prerequisites="No prerequisites"
+            programmingLanguage="C, Python, SQL, JavaScript, HTML, CSS"
+        >
+            <SubTitle level={2}>About the Course</SubTitle>
+            <Paragraph>
+                Harvard CS 50x is an introductory course to computer science.
+                From C programming language to basic data structure, to Python
+                programming language. In the end introduce to the basic of SQL
+                and web development.
+            </Paragraph>
+            <Paragraph>
+                This course is a series course: Harvard CS 50x, Harvard CS 50P
+                about Python, Harvard CS 50AI about AI. And all of them provided
+                a auto-grading system in github. After explore the CS 50x you
+                can continue to explore the topics you like.
+            </Paragraph>
+            <SubTitle level={2}>Harvard CS 50 Series</SubTitle>
+            <LinkAligned
+                name="Harvard CS 50x"
+                href="https://cs50.harvard.edu/x/2025/"
+            >
+                Harvard CS 50x 2025 Link
+            </LinkAligned>
+            <LinkAligned
+                name="Harvard CS 50P"
+                href="https://cs50.harvard.edu/python/"
+            >
+                Harvard CS 50P Link
+            </LinkAligned>
+            <LinkAligned
+                name="Harvard CS 50AI"
+                href="https://cs50.harvard.edu/ai/"
+            >
+                Harvard CS 50AI Link
+            </LinkAligned>
+        </CourseCard>
+    );
 };
 
 export default HarvardCS50Page;

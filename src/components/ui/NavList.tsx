@@ -42,12 +42,12 @@ import global from "@/data/config/config";
  *         Each nav item is a card-style element with hover effects
  */
 const NavListStyle = {
-  NavList: `
+    NavList: `
     hidden
     gap-2
     sm:flex sm:flex-row
     `,
-  NavItem: `
+    NavItem: `
     flex flex-row items-center gap-2
     relative px-6 py-3
     text-gray-700 font-medium
@@ -71,35 +71,35 @@ const NavListStyle = {
 };
 
 const NavList = () => {
-  return (
-    <ul className={NavListStyle.NavList}>
-      <li>
-        <Link to="/CS-hub" className={NavListStyle.NavItem}>
-          <Home size={20} />
-          Home
-        </Link>
-      </li>
-      <li>
-        <a
-          href={global.GitHubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={NavListStyle.NavItem}
-        >
-          <Github size={20} />
-          Github
-        </a>
-      </li>
-      <li>
-        <Link to={`${global.BasePath}/about`}>
-          <button className={NavListStyle.NavItem}>
-            <EqualApproximately size={20} />
-            About
-          </button>
-        </Link>
-      </li>
-    </ul>
-  );
+    return (
+        <ul className={NavListStyle.NavList}>
+            <li>
+                <Link to="/CS-hub" className={NavListStyle.NavItem}>
+                    <Home size={20} />
+                    Home
+                </Link>
+            </li>
+            <li>
+                <a
+                    href={global.GitHubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={NavListStyle.NavItem}
+                >
+                    <Github size={20} />
+                    Github
+                </a>
+            </li>
+            <li>
+                <Link to={`${global.BasePath}/about`}>
+                    <button className={NavListStyle.NavItem}>
+                        <EqualApproximately size={20} />
+                        About
+                    </button>
+                </Link>
+            </li>
+        </ul>
+    );
 };
 
 export default NavList;

@@ -40,7 +40,7 @@ import { SideBarContext } from "@/context/SideBarContext";
  *         Beautiful overlay on mobile with backdrop and slide-in animation
  */
 const SideBarStyle = {
-  SideBar: `
+    SideBar: `
     hidden
     justify-start items-start
     fixed top-30 left-10
@@ -53,8 +53,8 @@ const SideBarStyle = {
     md:max-h-[calc(100vh-8rem)]
     md:overflow-y-auto
     `,
-  // Mobile sidebar content container
-  SideBarMobileContent: `
+    // Mobile sidebar content container
+    SideBarMobileContent: `
     bg-white shadow-2xl
     w-80 max-w-[85vw] h-full
     flex flex-col gap-4
@@ -67,47 +67,49 @@ const SideBarStyle = {
 };
 
 const SideBar = (): React.ReactNode => {
-  // Get the closeSideBar function from the context
-  const { closeSideBar } = useContext(SideBarContext);
+    // Get the closeSideBar function from the context
+    const { closeSideBar } = useContext(SideBarContext);
 
-  // Handle backdrop click to close sidebar
-  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Only close if clicking the backdrop (empty space), not the sidebar content
-    if ((e.target as HTMLDivElement).id === "SideBar") {
-      closeSideBar();
-    }
-  };
+    // Handle backdrop click to close sidebar
+    const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        // Only close if clicking the backdrop (empty space), not the sidebar content
+        if ((e.target as HTMLDivElement).id === "SideBar") {
+            closeSideBar();
+        }
+    };
 
-  return (
-    <div
-      className={SideBarStyle.SideBar}
-      id="SideBar"
-      onClick={handleBackdropClick}
-    >
-      {/* Desktop sidebar content - hidden on mobile */}
-      <div className="hidden md:flex md:flex-col gap-3 w-[calc(100%-2.5rem)]">
-        {CategoryList.map((category) => (
-          <Category key={category.ID} category={category} depth={0} />
-        ))}
-      </div>
+    return (
+        <div
+            className={SideBarStyle.SideBar}
+            id="SideBar"
+            onClick={handleBackdropClick}
+        >
+            {/* Desktop sidebar content - hidden on mobile */}
+            <div className="hidden md:flex md:flex-col gap-3 w-[calc(100%-2.5rem)]">
+                {CategoryList.map((category) => (
+                    <Category key={category.ID} category={category} depth={0} />
+                ))}
+            </div>
 
-      {/* Mobile sidebar content - slide in from left */}
-      <div className={`${SideBarStyle.SideBarMobileContent} md:hidden`}>
-        <div className="mb-4">
-          <h2 className="text-xl font-bold text-gray-800 mb-2">Categories</h2>
-          <div className="w-12 h-1 bg-black rounded-full"></div>
+            {/* Mobile sidebar content - slide in from left */}
+            <div className={`${SideBarStyle.SideBarMobileContent} md:hidden`}>
+                <div className="mb-4">
+                    <h2 className="text-xl font-bold text-gray-800 mb-2">
+                        Categories
+                    </h2>
+                    <div className="w-12 h-1 bg-black rounded-full"></div>
+                </div>
+
+                {CategoryList.map((category) => (
+                    <Category
+                        key={`mobile-${category.ID}`}
+                        category={category}
+                        depth={0}
+                    />
+                ))}
+            </div>
         </div>
-
-        {CategoryList.map((category) => (
-          <Category
-            key={`mobile-${category.ID}`}
-            category={category}
-            depth={0}
-          />
-        ))}
-      </div>
-    </div>
-  );
+    );
 };
 
 export default SideBar;

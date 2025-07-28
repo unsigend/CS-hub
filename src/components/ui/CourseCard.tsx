@@ -30,18 +30,18 @@ import Card from "@/components/ui/Card";
 
 // Style for the CourseCard component
 const CourseCardStyle = {
-  Container: `
+    Container: `
     text-base
     flex flex-col gap-4 
     sm:gap-6 w-[95%] sm:w-[90%] md:w-[85%] lg:w-[80%]
     `,
-  Header: `
+    Header: `
     border-b border-gray-200 pb-3 sm:pb-4
     `,
-  CourseTitle: `
+    CourseTitle: `
     text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6
     `,
-  CourseTitleLink: `
+    CourseTitleLink: `
     text-2xl sm:text-3xl font-bold text-black mb-4 sm:mb-6
     hover:text-gray-700 transition-colors duration-200
     relative
@@ -50,90 +50,96 @@ const CourseCardStyle = {
     after:transition-all after:duration-300
     hover:after:w-full
     `,
-  InfoSection: `
+    InfoSection: `
     flex flex-col gap-2 sm:gap-3 md:gap-4
     `,
-  InfoItem: `
+    InfoItem: `
     flex flex-row gap-2 sm:gap-3 items-start
     `,
-  InfoLabel: `
+    InfoLabel: `
     text-sm sm:text-base lg:text-lg font-semibold text-black tracking-wide
     min-w-fit flex-shrink-0
     `,
-  InfoContent: `
+    InfoContent: `
     text-sm sm:text-base lg:text-lg text-black leading-relaxed
     flex-1
     `,
-  ContentArea: `
+    ContentArea: `
     pt-2 sm:pt-3 border-t border-gray-100
     `,
 };
 
 const CourseCard = ({
-  courseName,
-  courseUrl,
-  from,
-  prerequisites,
-  programmingLanguage,
-  children,
+    courseName,
+    courseUrl,
+    from,
+    prerequisites,
+    programmingLanguage,
+    children,
 }: {
-  courseName: string;
-  courseUrl: string;
-  from: string;
-  prerequisites: string;
-  programmingLanguage: string;
-  children: React.ReactNode;
+    courseName: string;
+    courseUrl: string;
+    from: string;
+    prerequisites: string;
+    programmingLanguage: string;
+    children: React.ReactNode;
 }) => {
-  const courseContent = (
-    <div className={CourseCardStyle.Container}>
-      {/* Course Header */}
-      <div className={CourseCardStyle.Header}>
-        {courseUrl ? (
-          <a
-            href={courseUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={CourseCardStyle.CourseTitleLink}
-          >
-            {courseName}
-          </a>
-        ) : (
-          <h3 className={CourseCardStyle.CourseTitle}>{courseName}</h3>
-        )}
-      </div>
+    const courseContent = (
+        <div className={CourseCardStyle.Container}>
+            {/* Course Header */}
+            <div className={CourseCardStyle.Header}>
+                {courseUrl ? (
+                    <a
+                        href={courseUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={CourseCardStyle.CourseTitleLink}
+                    >
+                        {courseName}
+                    </a>
+                ) : (
+                    <h3 className={CourseCardStyle.CourseTitle}>
+                        {courseName}
+                    </h3>
+                )}
+            </div>
 
-      {/* Course Information */}
-      <div className={CourseCardStyle.InfoSection}>
-        <div className={CourseCardStyle.InfoItem}>
-          <div className={CourseCardStyle.InfoLabel}>From:</div>
-          <span className={CourseCardStyle.InfoContent}>
-            {from || "Not specified"}
-          </span>
+            {/* Course Information */}
+            <div className={CourseCardStyle.InfoSection}>
+                <div className={CourseCardStyle.InfoItem}>
+                    <div className={CourseCardStyle.InfoLabel}>From:</div>
+                    <span className={CourseCardStyle.InfoContent}>
+                        {from || "Not specified"}
+                    </span>
+                </div>
+
+                <div className={CourseCardStyle.InfoItem}>
+                    <div className={CourseCardStyle.InfoLabel}>
+                        Prerequisites:
+                    </div>
+                    <span className={CourseCardStyle.InfoContent}>
+                        {prerequisites || "Not specified"}
+                    </span>
+                </div>
+
+                <div className={CourseCardStyle.InfoItem}>
+                    <div className={CourseCardStyle.InfoLabel}>
+                        Programming Language:
+                    </div>
+                    <span className={CourseCardStyle.InfoContent}>
+                        {programmingLanguage || "Not specified"}
+                    </span>
+                </div>
+            </div>
+
+            {/* Additional Content */}
+            {children && (
+                <div className={CourseCardStyle.ContentArea}>{children}</div>
+            )}
         </div>
+    );
 
-        <div className={CourseCardStyle.InfoItem}>
-          <div className={CourseCardStyle.InfoLabel}>Prerequisites:</div>
-          <span className={CourseCardStyle.InfoContent}>
-            {prerequisites || "Not specified"}
-          </span>
-        </div>
-
-        <div className={CourseCardStyle.InfoItem}>
-          <div className={CourseCardStyle.InfoLabel}>Programming Language:</div>
-          <span className={CourseCardStyle.InfoContent}>
-            {programmingLanguage || "Not specified"}
-          </span>
-        </div>
-      </div>
-
-      {/* Additional Content */}
-      {children && (
-        <div className={CourseCardStyle.ContentArea}>{children}</div>
-      )}
-    </div>
-  );
-
-  return <Card>{courseContent}</Card>;
+    return <Card>{courseContent}</Card>;
 };
 
 export default CourseCard;

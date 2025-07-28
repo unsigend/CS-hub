@@ -27,98 +27,101 @@ import Paragraph from "@/components/ui/Paragraph";
 import { Title } from "@/components/ui/Title";
 
 import {
-  _JavaScriptPart,
-  _TypeScriptPart,
-  _PythonPart,
-  _DjangoPart,
-  _FastAPIPart,
-  _NodeJSExpressPart,
+    _JavaScriptPart,
+    _TypeScriptPart,
+    _PythonPart,
+    _DjangoPart,
+    _FastAPIPart,
+    _NodeJSExpressPart,
 } from "./_Part";
 
 const IntroSection = (): React.ReactNode => {
-  return (
-    <Card>
-      <div>
-        <Title>Backend Development Roadmap</Title>
-        <Paragraph>
-          Backend development is the server side of the website. It is used to
-          store and retrieve data from the database. The database part is
-          divided into a separate section.
-        </Paragraph>
-        <Paragraph>
-          You don't need to follow exactly the same order - you can skip topics
-          that you already know.
-        </Paragraph>
-        <Paragraph>
-          The backend roadmap is fairly flexible, you can choose using
-          JavaScript and TypeScript as backend with Express.js and Node.js if
-          you already familiar with the JS/TS stack. And also can choose Django
-          and FastAPI if you prefer with python.
-        </Paragraph>
-      </div>
-    </Card>
-  );
+    return (
+        <Card>
+            <div>
+                <Title>Backend Development Roadmap</Title>
+                <Paragraph>
+                    Backend development is the server side of the website. It is
+                    used to store and retrieve data from the database. The
+                    database part is divided into a separate section.
+                </Paragraph>
+                <Paragraph>
+                    You don't need to follow exactly the same order - you can
+                    skip topics that you already know.
+                </Paragraph>
+                <Paragraph>
+                    The backend roadmap is fairly flexible, you can choose using
+                    JavaScript and TypeScript as backend with Express.js and
+                    Node.js if you already familiar with the JS/TS stack. And
+                    also can choose Django and FastAPI if you prefer with
+                    python.
+                </Paragraph>
+            </div>
+        </Card>
+    );
 };
 
 const ProgrammingLanguageSection = (): React.ReactNode => {
-  const _Intro = (): React.ReactNode => {
+    const _Intro = (): React.ReactNode => {
+        return (
+            <div>
+                <Title>Programming Language</Title>
+                <Paragraph>
+                    Programming language is the foundation of backend
+                    development. You can choose to use JavaScript and TypeScript
+                    as backend or python with Django and FastAPI.
+                </Paragraph>
+            </div>
+        );
+    };
     return (
-      <div>
-        <Title>Programming Language</Title>
-        <Paragraph>
-          Programming language is the foundation of backend development. You can
-          choose to use JavaScript and TypeScript as backend or python with
-          Django and FastAPI.
-        </Paragraph>
-      </div>
+        <Card>
+            <_Intro />
+            <_JavaScriptPart />
+            <_TypeScriptPart />
+            <_PythonPart />
+        </Card>
     );
-  };
-  return (
-    <Card>
-      <_Intro />
-      <_JavaScriptPart />
-      <_TypeScriptPart />
-      <_PythonPart />
-    </Card>
-  );
 };
 
 const FrameworkSection = (): React.ReactNode => {
-  const _Intro = (): React.ReactNode => {
+    const _Intro = (): React.ReactNode => {
+        return (
+            <div>
+                <Title>Framework</Title>
+                <Paragraph>
+                    A backend framework provides the structure and tools needed
+                    to build your server-side application efficiently. It
+                    handles common tasks like routing, database connections, and
+                    security.
+                </Paragraph>
+                <Paragraph>
+                    The selection of the backend framework is based on the
+                    programming language you choose. Or you can choose both if
+                    you want to get a broader overview of the backend
+                    development with different ecosystem.
+                </Paragraph>
+            </div>
+        );
+    };
     return (
-      <div>
-        <Title>Framework</Title>
-        <Paragraph>
-          A backend framework provides the structure and tools needed to build
-          your server-side application efficiently. It handles common tasks like
-          routing, database connections, and security.
-        </Paragraph>
-        <Paragraph>
-          The selection of the backend framework is based on the programming
-          language you choose. Or you can choose both if you want to get a
-          broader overview of the backend development with different ecosystem.
-        </Paragraph>
-      </div>
+        <Card>
+            <_Intro />
+            <_NodeJSExpressPart />
+            <_FastAPIPart />
+            <_DjangoPart />
+        </Card>
     );
-  };
-  return (
-    <Card>
-      <_Intro />
-      <_NodeJSExpressPart />
-      <_FastAPIPart />
-      <_DjangoPart />
-    </Card>
-  );
 };
 
 const BackendPage = (): React.ReactNode => {
-  return (
-    <div className="flex flex-col gap-8">
-      <IntroSection />
-      <ProgrammingLanguageSection />
-      <FrameworkSection />
-    </div>
-  );
+    return (
+        <div className="flex flex-col gap-8">
+            <IntroSection />
+            <ProgrammingLanguageSection />
+            <FrameworkSection />
+        </div>
+    );
 };
 
 export default BackendPage;

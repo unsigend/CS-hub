@@ -36,7 +36,7 @@ import HamburgerMenu from "@/components/ui/HamburgerMenu";
  *         Using white and black as the theme color
  */
 const LogoStyle = {
-  Logo: `
+    Logo: `
         flex items-center gap-2
         px-3 py-2 my-3
         bg-white
@@ -48,10 +48,10 @@ const LogoStyle = {
         transition-all duration-200 ease-in-out
         cursor-pointer
     `,
-  LogoContainer: `
+    LogoContainer: `
         flex flex-row items-center gap-4
     `,
-  LogoFrame: `
+    LogoFrame: `
         flex items-center justify-center
         w-9 h-9
         bg-black
@@ -59,7 +59,7 @@ const LogoStyle = {
         rounded
         select-none
     `,
-  LogoText: `
+    LogoText: `
         text-black font-bold text-xl
         select-none
         tracking-tight
@@ -67,15 +67,15 @@ const LogoStyle = {
 };
 
 const Logo = () => {
-  return (
-    <div className={LogoStyle.LogoContainer}>
-      <HamburgerMenu />
-      <div className={LogoStyle.Logo}>
-        <div className={LogoStyle.LogoFrame}>CS</div>
-        <div className={LogoStyle.LogoText}>Hub</div>
-      </div>
-    </div>
-  );
+    return (
+        <div className={LogoStyle.LogoContainer}>
+            <HamburgerMenu />
+            <div className={LogoStyle.Logo}>
+                <div className={LogoStyle.LogoFrame}>CS</div>
+                <div className={LogoStyle.LogoText}>Hub</div>
+            </div>
+        </div>
+    );
 };
 
 export default Logo;
