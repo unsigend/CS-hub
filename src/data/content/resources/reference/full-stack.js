@@ -183,6 +183,12 @@ const FullStackReference = [
                 url: "https://react-icons.github.io/react-icons/",
                 content: "React Icons Documentation",
             },
+            {
+                name: "Simple Icons",
+                id: "simple-icons-docs",
+                url: "https://simpleicons.org/",
+                content: "Simple Icons Documentation",
+            },
         ],
     },
     {
@@ -230,6 +236,24 @@ const FullStackReference = [
                 id: "postgresql-docs",
                 url: "https://www.postgresql.org/docs/current/",
                 content: "PostgreSQL Documentation",
+            },
+            {
+                name: "Redis",
+                id: "redis-docs",
+                url: "https://redis.io/docs/",
+                content: "Redis Documentation",
+            },
+            {
+                name: "MySQL",
+                id: "mysql-docs",
+                url: "https://dev.mysql.com/doc/",
+                content: "MySQL Documentation",
+            },
+            {
+                name: "SQLite",
+                id: "sqlite-docs",
+                url: "https://www.sqlite.org/docs.html",
+                content: "SQLite Documentation",
             },
         ],
     },
