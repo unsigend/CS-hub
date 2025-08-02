@@ -47,6 +47,16 @@ import FrontendPage from "@/components/pages/roadmap/full-stack/FrontendPage";
 import BackendPage from "@/components/pages/roadmap/full-stack/BackendPage";
 import DataBasePage from "@/components/pages/roadmap/full-stack/DataBasePage";
 
+// TypeScript interface for category objects
+export interface CategoryType {
+    name: string;
+    ID: string;
+    url: string | null;
+    page?: React.ReactNode | null;
+    subCategories?: CategoryType[] | null;
+    hidden_sub_categories?: boolean;
+}
+
 // Path for the pages
 // Base Path is the base path for the website : /CS-hub
 // Make sure the consistency of the path is maintained
