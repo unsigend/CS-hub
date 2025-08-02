@@ -293,6 +293,54 @@ const FullStackReference = [
             },
         ],
     },
+    {
+        name: "Testing Framework",
+        id: "testing-framework",
+        subContent: [
+            {
+                name: "Jest",
+                id: "jest-docs",
+                url: "https://jestjs.io/docs/getting-started",
+                content: "Jest Documentation",
+            },
+            {
+                name: "Playwright",
+                id: "playwright-docs",
+                url: "https://playwright.dev/docs/intro",
+                content: "Playwright Documentation",
+            },
+            {
+                name: "Cypress",
+                id: "cypress-docs",
+                url: "https://docs.cypress.io/guides/overview/why-cypress",
+                content: "Cypress Documentation",
+            },
+        ],
+    },
+    {
+        name: "Database Schema Diagram Tools",
+        id: "database-schema-diagram-tools",
+        subContent: [
+            {
+                name: "DBDiagram",
+                id: "dbdiagram-docs",
+                url: "https://dbdiagram.io/home",
+                content: "DBDiagram Documentation",
+            },
+            {
+                name: "Lucidchart",
+                id: "lucidchart-docs",
+                url: "https://www.lucidchart.com/pages/",
+                content: "Lucidchart Documentation",
+            },
+            {
+                name: "Draw.io",
+                id: "drawio-docs",
+                url: "https://www.draw.io/",
+                content: "Draw.io Documentation",
+            },
+        ],
+    },
 ];
 
 export default FullStackReference;
