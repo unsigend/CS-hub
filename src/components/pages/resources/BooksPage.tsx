@@ -21,3 +21,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
+import { Card } from "@/components/ui/card";
+
+const BooksPage = () => {
+    return <div>BooksPage</div>;
+};
+
+export default BooksPage;

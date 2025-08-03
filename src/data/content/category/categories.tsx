@@ -26,6 +26,7 @@
 import global from "@/data/config/config";
 
 // Import the pages
+import BooksPage from "@/components/pages/resources/BooksPage";
 
 // reference pages
 import FullStackReferencePage from "@/components/pages/resources/reference/FullStackPage";
@@ -292,7 +293,7 @@ const CategoryList = [
             {
                 name: "Books",
                 ID: "books",
-                page: null,
+                page: <BooksPage />,
                 url: `${ResourcesPath}/books`,
             },
             {
