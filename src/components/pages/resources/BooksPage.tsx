@@ -22,10 +22,21 @@
  * SOFTWARE.
  */
 
-import { Card } from "@/components/ui/card";
+import Card from "@/components/ui/Card";
+import Paragraph from "@/components/ui/Paragraph";
+import { Title } from "@/components/ui/Title";
 
 const BooksPage = () => {
-    return <div>BooksPage</div>;
+    return (
+        <Card>
+            <Title>Books</Title>
+            <Paragraph>
+                This page is a collection of books that categorized by different
+                categories. From Computer Science to specific topics like
+                programming language, web frameworks, etc.
+            </Paragraph>
+        </Card>
+    );
 };
 
 export default BooksPage;
