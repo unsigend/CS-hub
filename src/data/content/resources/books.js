@@ -24,23 +24,83 @@
 
 const booksReference = [
     {
-        category: "Computer System",
+        name: "Computer System",
+        id: "computer-system",
         books: [
             {
                 name: "Computer System: A Programmer's Perspective",
                 author: "Randal E. Bryant, David R. O'Hallaron",
-                url: "https://www.amazon.com/Computer-System-Programmers-Perspective-3rd/dp/013409266X",
+                id: "computer-system-programmers-perspective",
+                url: "https://csapp.cs.cmu.edu/",
             },
         ],
     },
     {
-        category: "Operating System",
+        name: "Operating System",
+        id: "operating-system",
         books: [
             {
                 name: "Operating System: Three Easy Pieces",
                 author: "Remzi H. Arpaci-Dusseau, Andrea C. Arpaci-Dusseau",
-                url: "https://www.amazon.ca/Operating-Systems-Three-Easy-Pieces/dp/198508659X/ref=sr_1_1?crid=O4JW4RR1NS48&dib=eyJ2IjoiMSJ9.A2D4LdKri8DPDe_j0VVX82N-mD41SDXmxMlPQV1xd61fGNe72e_Bnk6Dbl3UhVwTNi5gJR2VcDCU075_v5K-XYPoZ3y0haDGmjpQ72K_OT7VJI19C8zplk3z9c-OgtHs6rLvOQN7Q7n-G44ev6ILTmxlaW94YebdyeqAXjOzGMRLiLXPUx5HRePJPTxFEuf0.eXGSftQkN5EEXyiLlaae6FEphPP_pnHQC4KRoSaAJlU&dib_tag=se&keywords=operating+systems+three+easy+pieces&qid=1754855332&sprefix=operating%2Caps%2C116&sr=8-1",
+                id: "operating-system-three-easy-pieces",
+                url: "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+            },
+        ],
+    },
+    {
+        name: "Computer Network",
+        id: "computer-network",
+        books: [
+            {
+                name: "Computer Network: A top-down approach",
+                author: "Jim Kurose, Keith Ross",
+                id: "computer-network-a-top-down-approach",
+                url: "https://gaia.cs.umass.edu/kurose_ross/online_lectures.htm",
+            },
+        ],
+    },
+    {
+        name: "Database",
+        id: "database",
+        books: [
+            {
+                name: "Database System Concepts",
+                author: "Abraham Silberschatz, Henry F. Korth, S. Sudarshan",
+                id: "database-system-concepts",
+                url: "https://www.db-book.com/",
+            },
+        ],
+    },
+    {
+        name: "Algorithm",
+        id: "algorithm",
+        books: [
+            {
+                name: "Introduction to Algorithms",
+                author: "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+                id: "introduction-to-algorithms",
+                url: "https://mitpress.mit.edu/books/introduction-algorithms-third-edition",
+            },
+            {
+                name: "Algorithms",
+                author: "Robert Sedgewick, Kevin Wayne",
+                id: "algorithms",
+                url: "https://algs4.cs.princeton.edu/home/",
+            },
+        ],
+    },
+    {
+        name: "Application",
+        id: "application",
+        books: [
+            {
+                name: "Designing Data-Intensive Applications",
+                author: "Martin Kleppmann",
+                id: "designing-data-intensive-applications",
+                url: "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/",
             },
         ],
     },
 ];
+
+export default booksReference;

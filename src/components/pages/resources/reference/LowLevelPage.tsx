@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * MIT License
  *
@@ -30,13 +31,6 @@ import Card from "@/components/ui/Card";
 
 // Import for the data
 import LowLevelReference from "@/data/content/resources/reference/low-level";
-
-// Style for the LowLevelPage component
-const Style = {
-    Container: `
-    flex flex-col gap-4
-    `,
-};
 
 // Function to construct the reference for each category
 const ConstructReference = ({ Category }: { Category: any }) => {
@@ -75,8 +69,8 @@ const LowLevelReferenceTitle = (): React.ReactNode => {
 const LowLevelReferencePage = (): React.ReactNode => {
     return (
         <Card>
-            <div className={Style.Container}>
-                <LowLevelReferenceTitle />
+            <LowLevelReferenceTitle />
+            <div className="flex flex-col gap-6">
                 {LowLevelReference.map((item) => (
                     <ConstructReference Category={item} key={item.id} />
                 ))}
