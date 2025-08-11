@@ -22,9 +22,13 @@
  * SOFTWARE.
  */
 
+// Import for the components
 import Card from "@/components/ui/Card";
 import Paragraph from "@/components/ui/Paragraph";
 import { Title } from "@/components/ui/Title";
+import UnorderedList from "@/components/ui/UnorderedList";
+import { LinkGame, LinkReading } from "@/components/ui/Link";
+
 import { _MongoDBPart, _PostgreSQLPart } from "./_Part";
 
 const SQLDatabaseSection = (): React.ReactNode => {
@@ -36,6 +40,26 @@ const SQLDatabaseSection = (): React.ReactNode => {
                     SQL is a Structured Query Language that is used to manage
                     relational databases. It is a standard language for managing
                     relational databases.
+                </Paragraph>
+                <Paragraph>
+                    Firstly learn the general pattern of SQL database. It is
+                    good option to pick an interactive website like{" "}
+                    <strong>SQLBolt</strong> to learn the SQL.
+                </Paragraph>
+                <UnorderedList>
+                    <li>
+                        <LinkGame href="https://sqlbolt.com/">SQLBolt</LinkGame>
+                    </li>
+                    <li>
+                        <LinkReading href="https://www.amazon.ca/SQL-Minutes-Sams-Teach-Yourself/dp/0135182794/ref=sr_1_7?crid=1F7GK3UIHLAWE&dib=eyJ2IjoiMSJ9.j243ax-ZZAwsGoQeEud7RGXUQd_x6dK-xxHjnUlGuuBXIffagIZomACzVmuKyvWN8tN77RFD_t1XamM2coB9paTVo71YFVdJwYqEGoI8sDSlQ9YZTAsxWDe53RjZV2bpCga-88rBTKR_ZF4tkAmZP9SOYWmgLzPw5y_QCaoN-AQPWqD-cp2zhuqY2GVSb2IoocSkdxSiUFs6rcni2yRg8IU6_6O0G0fCu90blOtR5mvrDrVm-KU0fIgqMehJBZhKsNnaTE_b0K2XV3UTAJdyRNQ6t_A9lt9MfO6Y1SbpZac.QfMVE24QPdTafuQBl3Tbq9RmyJaZFuXX_0N77LT74r0&dib_tag=se&keywords=sql&qid=1754951499&sprefix=sql%2Caps%2C113&sr=8-7">
+                            SQL in 10 minutes a day
+                        </LinkReading>
+                    </li>
+                </UnorderedList>
+                <Paragraph>
+                    After you have a basic understanding of SQL, you can start
+                    to learn the specific SQL database or learn more advanced
+                    data base pattern.
                 </Paragraph>
             </div>
         );
