@@ -213,6 +213,18 @@ const FullStackReference = [
                 url: "https://docs.djangoproject.com/en/5.2/",
                 content: "Django Documentation",
             },
+            {
+                name: "FastAPI",
+                id: "fastapi-docs",
+                url: "https://fastapi.tiangolo.com/",
+                content: "FastAPI Documentation",
+            },
+            {
+                name: "NestJS",
+                id: "nestjs-docs",
+                url: "https://docs.nestjs.com/",
+                content: "NestJS Documentation",
+            },
         ],
     },
     {
